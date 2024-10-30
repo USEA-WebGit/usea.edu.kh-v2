@@ -1,0 +1,12 @@
+/tailwind style live update
+npx tailwindcss -i ./src/input.css -o ./src/assets/tailwind.css --watch
+
+//install vue router 
+npm install vue-router@4
+
+//install pinia statemanagement
+npm install pinia
+
+
+//install headlessui ui component
+npm install @headlessui/vue
