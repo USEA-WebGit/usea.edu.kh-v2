@@ -14,6 +14,8 @@ export default {
     },
     fontFamily: {
       Source_Sans_Pro: ["Source_Sans_Pro", "sans-serif"],
+      Roboto: ["Roboto", "sans-serif"],
+      Poppins: ["Poppins", "sans-serif"],
     },
     screens: {
       'xs': '320px',

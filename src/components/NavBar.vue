@@ -1,13 +1,13 @@
 <template>
-    <div class="flex justify-between items-center font-Source_Sans_Pro font-bold">
+    <div class="flex justify-between items-center font-Poppins font-bold">
         <router-link to="/" class="flex-1 flex justify-center">
             <img :src="TitleLogo" alt="Title Logo" class="w-1/2">
         </router-link>
         <nav class="flex-1 pt-10">
-            <ul class="flex align-top gap-8 text-xl font-bold text-[#002060] relative">
+            <ul class="flex align-top gap-8 text-lg font-bold text-[#002060] relative">
                 <li class="nav-item pb-10 group relative">
                     About
-                    <ul class="mega-menu hidden absolute -left-[780px] top-full w-max bg-white shadow-lg px-20 py-12 grid grid-cols-3 gap-x-5 z-50 rounded-md">
+                    <ul class="mega-menu hidden absolute -left-[620px] top-full w-max bg-white shadow-lg px-20 py-12 grid grid-cols-3 gap-x-5 z-50 rounded-md">
                         <div class="mega-menu-item">  
                             <h3 class="font-bold text-xl pb-7 text-[#002060]">Organization</h3>
                             <ul class="text-lg text-gray-500">
@@ -126,8 +126,8 @@ import Faq from '@/assets/nav-icon/comment-regular.svg';
     content: '';
     position: absolute;
     width: 0;
-    height: 5px;
-    background-color: red;
+    height: 7px;
+    background-color: #D71818;
     bottom: -5px;
     left: 0;
     transition: width 0.3s ease;
@@ -135,7 +135,7 @@ import Faq from '@/assets/nav-icon/comment-regular.svg';
 }
 
 .nav-item:hover {
-    color: red;
+    color: #D71818;
 }
 
 .nav-item:hover::after {
@@ -152,6 +152,7 @@ import Faq from '@/assets/nav-icon/comment-regular.svg';
 
 .mega-menu li:hover {
     color: #002060;
+    opacity: .75;
 }
 
 .mega-menu li::after {
