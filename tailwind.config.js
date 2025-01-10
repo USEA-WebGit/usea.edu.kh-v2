@@ -9,13 +9,24 @@ export default {
         "usea_primary" : "#3389D4",
         "container_color" : "#E8ECF2",
         "active_color" : "#893B01",
+        "title_color" : "#ffcc00",
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific column configuration
+        'footer': '200px minmax(900px, 1fr) 100px',
+      }
       
     },
     fontFamily: {
       Source_Sans_Pro: ["Source_Sans_Pro", "sans-serif"],
       Roboto: ["Roboto", "sans-serif"],
       Poppins: ["Poppins", "sans-serif"],
+      Product_Sans: ["Product Sans", "Poppins"],
+      Trirong: ["Trirong", "serif"],
+      Ubuntu: ["Ubuntu", "sans-serif"],
     },
     screens: {
       'xs': '320px',

@@ -1,11 +1,15 @@
 <template>
-    <div>
-        <div class="bg-green-600 p-5">Events</div>
+    <div class="grid grid-cols-[70%_30%] gap-3 mx-32">
+      <!-- Latest News Section -->
+      <LatestNews />
+      <!-- Events Section -->
+      <Events />
     </div>
-</template>
 
-<script>
-    export default {
-        
-    }
-</script>
+  </template>
+  
+  <script setup>
+  import LatestNews from '../../components/Events/LatestNews.vue';
+  import Events from '../../components/Events/Events.vue';
+  </script>
+  
