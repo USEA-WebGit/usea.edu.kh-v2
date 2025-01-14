@@ -1,11 +1,11 @@
 <template>
     <div class=" mt-10 mb-10">
         <div class="flex flex-col text-center items-center">
-            <div class="text-red-600 text-[2.5rem] font-bold">EVENTS</div>
+            <div class="text-red-600 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">EVENTS</div>
             <div class="h-1 w-[5%] bg-red-600"></div>
         </div>
         <div class="flex flex-col items-center w-full max-w-md mx-auto mt-5">
-            <div class="flex text-2xl justify-center">
+            <div class="flex 2xl:text-2xl xl:text-xl justify-center">
                 <button
                     v-for="(tab, index) in tabs"
                     :key="index"
@@ -19,7 +19,7 @@
                 </button>
             </div>
             <div class="mt-4">
-                <div v-if="activeTab === 'Upcoming Events'">
+                <div v-if="activeTab === 'Upcoming'">
                     <div class="flex gap-5 mb-5">
                         <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 16</div>
                         <div>
@@ -75,7 +75,7 @@
                     
                 </div>
 
-                <div v-else-if="activeTab === 'Current Events'">
+                <div v-else-if="activeTab === 'Current'">
                     <div class="flex gap-5 mb-5">
                         <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 13</div>
                         <div>
@@ -113,7 +113,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const tabs = ['Upcoming Events', 'Current Events'];
+const tabs = ['Upcoming', 'Current'];
 const activeTab = ref(tabs[0]); // Default to the first tab
 </script>
 

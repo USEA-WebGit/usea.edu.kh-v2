@@ -1,5 +1,5 @@
 <template>
-    <div class="relative overflow-hidden w-full h-[523px]">
+    <div class="relative overflow-hidden w-full h-auto">
       <div
         class="flex transition-transform duration-500 ease-in-out"
         :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
@@ -24,7 +24,7 @@
       </button>
   
       <!-- Indicators -->
-      <div class="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 p-2">
+      <div class="absolute 2xl:bottom-0 bottom-0 left-0 right-0 flex justify-center space-x-2 p-2">
         <button
           v-for="(image, index) in images"
           :key="index"

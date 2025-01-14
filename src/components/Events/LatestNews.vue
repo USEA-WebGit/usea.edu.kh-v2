@@ -1,10 +1,10 @@
 <template>
     <div class="text-center mt-10 mb-10">
         <div class="flex flex-col mb-10 text-center items-center">
-            <h1 class="text-red-600 text-[2.5rem] font-bold">LATEST NEWS</h1>
+            <h1 class="text-red-600 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">LATEST NEWS</h1>
             <div class="h-1 w-[5%] bg-red-600"></div>
         </div>
-        <div class="grid grid-cols-2 gap-10 text-center mb-10">
+        <div class="grid grid-cols-1 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-10 text-center mb-10">
             <!-- Card 1 -->
             <div class="overflow-hidden">
                 <img 

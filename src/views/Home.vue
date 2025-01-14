@@ -9,10 +9,10 @@
 </template>
 <script setup>
 import Carousel from '../components/carousel/Carousel.vue';
-import Events from '../views/Events-News/Events.vue';
-import CareerCenter from './Career-Center/CareerCenter.vue';
-import Partnerships from '../views/Partnerships/Partnerships.vue';
-import FacultyCollege from './Faculty-College/FacultyCollege.vue';
+import Events from './Home/Events-News/EventsMasterHome.vue';
+import CareerCenter from './Home/Career-Center/CareerCenterHome.vue';
+import Partnerships from './Home/Partnerships/Partnerships.vue';
+import FacultyCollege from './Home/Faculty-College/FacultyCollege.vue';
 // import Accordion from '../components/Accordion.vue';
 
 </script>

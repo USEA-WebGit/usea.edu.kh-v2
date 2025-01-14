@@ -1,50 +1,50 @@
 <template>
     <div class="bg-[#002060]">
-        <div class="grid grid-cols-4 gap-8 justify-items-center p-10">
-            <!-- Quick Links -->
-            <div class="flex flex-col gap-5 w-[75%]">
-                <span class="font-bold text-2xl text-white">Quick Links</span>
-                <div class="text-white flex flex-col gap-3 links">
-                    <a href="#" class="block">History & Logo Meaning</a>
-                    <a href="#" class="block">Vision & Mission</a>
-                    <a href="#" class="block">Facilities</a>
-                    <a href="#" class="block">Location</a>
-                    <a href="#" class="block">Message from President</a>
-                    <a href="#" class="block">Board of Trustees</a>
-                    <a href="#" class="block">Recognition & Accreditation</a>
-                </div>
-            </div>
-            <!-- Faculty & Information -->
-            <div class="flex flex-col gap-5 w-[75%]">
-                <span class="font-bold text-2xl text-white">Faculty & Information</span>
-                <div class="text-white flex flex-col gap-3 links">
-                    <a href="#" class="block">Faculty of Economics, Business & Tourism</a>
-                    <a href="#" class="block">Faculty of Sciences & Technology</a>
-                    <a href="#" class="block">Faculty of Social Science & Law</a>
-                    <a href="#" class="block">Faculty of Arts Humanities Language</a>
-                    <a href="#" class="block">Events & News</a>
-                    <a href="#" class="block">FAQ</a>
-                </div>
-            </div>
-            <!-- Contact Us -->
-            <div class="flex flex-col gap-5 w-[75%]">
-                <span class="font-bold text-2xl text-white">Contact Us</span>
-                <div class="text-white flex flex-col gap-3 text-sm leading-relaxed">
-                    <p><span class="font-bold">Address:</span> Wat Bo Village, SangKat Salakamroek Siemreap Municipality, Cambodia (Opposite Angkor High School)</p>
-                    <p>(+855) 63 900 090</p>
-                    <p>(+855) 92 429 966</p>
-                    <p>(+855) 77 667 873</p>
-                </div>
-            </div>
-            <!-- Logo -->
-            <div class="flex justify-center items-center w-[75%]">
-                <img :src="UseaLogo" alt="logo" class="w-3/4">
+    <div class="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 gap-8 justify-items-center items-stretch p-10">
+        <!-- Quick Links -->
+        <div class="flex flex-col gap-5 w-[75%] h-full">
+            <span class="font-bold 2xl:text-2xl text-white">Quick Links</span>
+            <div class="text-white flex flex-col gap-3 links 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
+                <router-link :to="{name: 'history'}"><li class="block">History & Logo Meaning</li></router-link>
+                <router-link :to="{name: 'vision'}"><li class="block">Vision & Mission</li></router-link>
+                <router-link :to="{name: 'location'}"><li class="block">Location</li></router-link>
+                <router-link :to="{name: 'message'}"><li class="block">Message from President</li></router-link>
+                <router-link :to="{name: 'board-trustee'}"><li class="block">Board of Trustees</li></router-link>
+                <router-link :to="{name: 'recognition'}"><li class="block">Recognition & Accreditation</li></router-link>
             </div>
         </div>
-        <div class="bg-[#002060] text-center border-t-[1px] border-white p-5">
-            <p class="text-white text-lg">Copyright © 2006 University of South-East Asia, All rights reserved.</p>
+        <!-- Faculty & Information -->
+        <div class="flex flex-col gap-5 w-[75%] h-full">
+            <span class="font-bold 2xl:text-2xl text-white">Faculty & Information</span>
+            <div class="text-white flex flex-col gap-3 links 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
+                <router-link :to="{name: 'faculty-economic'}"><li class="block">Faculty of Economics, Business & Tourism</li></router-link>
+                <router-link :to="{name: 'faculty-technology'}"><li class="block">Faculty of Sciences & Technology</li></router-link>
+                <router-link :to="{name: 'faculty-law'}"><li class="block">Faculty of Social Science & Law</li></router-link>
+                <router-link :to="{name: 'faculty-language'}"><li class="block">Faculty of Arts Humanities Language</li></router-link>
+                <router-link :to="{name: 'news-events'}"><li class="block">Events & News</li></router-link>
+                <router-link :to="{name: 'faq'}"><li class="block">FAQ</li></router-link>
+            </div>
+        </div>
+        <!-- Contact Us -->
+        <div class="flex flex-col gap-5 w-[75%]">
+            <span class="font-bold 2xl:text-2xl text-white">Contact Us</span>
+            <div class="text-white flex flex-col gap-3 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm leading-relaxed">
+                <p><span class="font-bold">Address:</span> Wat Bo Village, SangKat Salakamroek Siemreap Municipality, Cambodia (Opposite Angkor High School)</p>
+                <p>(+855) 63 900 090</p>
+                <p>(+855) 92 429 966</p>
+                <p>(+855) 77 667 873</p>
+            </div>
+        </div>
+        <!-- Logo -->
+        <div class="flex justify-center items-center w-[75%]">
+            <router-link :to="{name: 'Home'}"><img :src="UseaLogo" alt="logo" class="w-3/4"></router-link>
         </div>
     </div>
+    <div class="bg-[#002060] text-center border-t-[1px] border-white p-5 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
+        <p class="text-white 2xl:text-sm">Copyright © 2006 University of South-East Asia, All rights reserved.</p>
+    </div>
+</div>
+
 </template>
 
 <script setup>
