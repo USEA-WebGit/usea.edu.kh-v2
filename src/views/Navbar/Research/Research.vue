@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Research Components
+        <Titlebg title="Research" breadcrumb="Research" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

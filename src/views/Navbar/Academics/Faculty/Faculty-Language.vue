@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Faculty Foreign Language Components
+        <Titlebg title="Faculty of Art, Humanities and Language" breadcrumb="Faculty of Art, Humanities and Language" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Career Center Components
+        <Titlebg title="Career Center" breadcrumb="Career Center" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

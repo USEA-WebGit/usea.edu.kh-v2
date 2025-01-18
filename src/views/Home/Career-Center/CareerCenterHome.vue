@@ -1,7 +1,7 @@
 <template>
     <div class="h-auto bg-gray-300 relative">
         <img :src="CareerCenterBg" alt="career center bg" class="absolute bottom-0 opacity-5">
-        <div class="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 justify-items-center items-center 2xl:gap-10 xl:gap-10 lg:gap-10 md:gap-10 sm:gap-10 gap-10 2xl:mx-32 xl:mx-32 2xl:py-28 mx-6 py-6">
+        <div class="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 justify-items-center items-center 2xl:gap-0 xl:gap-10 lg:gap-10 md:gap-10 sm:gap-10 gap-10 2xl:py-28 py-6 mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px]">
             <!-- Text Content -->
             <div class="z-[1]">
                 <div>

@@ -6,38 +6,29 @@
           { 'shrink-navbar': isShrunk, 'fixed-navbar': isFixed }
         ]"
       >
-      <div class="flex-1 flex 2xl:justify-center xl:justify-center lg:justify-center md:justify-between md:px-5 sm:justify-between sm:px-5 sm:items-center justify-between items-center px-5">
-  <!-- Desktop Logo -->
-  <router-link to="/" v-if="!showMobileMenu">
-    <img
-      :src="TitleLogo"
-      alt="Title Logo"
-      :class="[
-        'transition-all duration-300',
-        isShrunk
-          ? '2xl:w-[400px] xl:w-[350px] lg:w-[300px] sm:w-[300px] w-[200px]'
-          : '2xl:w-[500px] xl:w-[400px] lg:w-[400px] sm:w-[400px] w-[300px]'
-      ]"
-    />
-  </router-link>
+        <div class="flex-1 flex 2xl:justify-center xl:justify-center lg:justify-center md:justify-between md:px-5 sm:justify-between sm:px-5 sm:items-center justify-between items-center px-5">
+          <!-- Desktop Logo -->
+          <router-link :to="{name: 'Home'}" v-if="!showMobileMenu">
+            <img
+              :src="TitleLogo"
+              alt="Title Logo"
+              :class="[
+                'transition-all duration-300',
+                isShrunk
+                  ? '2xl:w-[400px] xl:w-[350px] lg:w-[300px] sm:w-[300px] w-[200px]'
+                  : '2xl:w-[500px] xl:w-[400px] lg:w-[400px] sm:w-[400px] w-[200px]'
+              ]"
+            />
+          </router-link>
 
-  <!-- Mobile Logo -->
-  <router-link to="/" v-else>
-    <img
-      :src="TitleMobile"
-      alt="Mobile Title Logo"
-      class="w-[150px] sm:w-[200px] transition-all duration-300"
-    />
-  </router-link>
-
-  <!-- Hamburger Menu Icon -->
-  <div
-    class="2xl:hidden xl:hidden lg:hidden md:flex justify-center items-center text-2xl cursor-pointer hover:text-usea_primary"
-    @click="toggleSidebar"
-  >
-    <i class="fa-solid fa-bars"></i>
-  </div>
-</div>
+          <!-- Hamburger Menu Icon -->
+          <div
+            class="2xl:hidden xl:hidden lg:hidden md:flex justify-center items-center text-2xl cursor-pointer hover:text-usea_primary"
+            @click="toggleSidebar"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
 
         <nav
           class="flex-1 pt-10 2xl:text-lg xl:text-md lg:text-md 2xl:flex xl:flex lg:flex md:hidden sm:hidden hidden font-bold text-[#002060] relative"
@@ -91,8 +82,8 @@
                   <ul class="text-lg text-gray-500">
                     <router-link :to="{name: 'faculty-economic'}"><li class="flex gap-2">Faculty of Economics, Business & Tourism</li></router-link>
                     <router-link :to="{name: 'faculty-technology'}"><li class="flex gap-2">Faculty of Sciences & Technology</li></router-link>
-                    <router-link :to="{name: 'faculty-language'}"><li class="flex gap-2">Faculty of Social Science & Law</li></router-link>
-                    <router-link :to="{name: 'faculty-law'}"><li class="flex gap-2">Faculty of Art, Humanities & Language</li></router-link>
+                    <router-link :to="{name: 'faculty-law'}"><li class="flex gap-2">Faculty of Social Science & Law</li></router-link>
+                    <router-link :to="{name: 'faculty-language'}"><li class="flex gap-2">Faculty of Art, Humanities & Language</li></router-link>
                   </ul>
                 </div>
                 <div class="mega-menu-item px-12 w-full">
@@ -124,7 +115,7 @@
             </li>
   
             <!-- Additional Navbar Items -->
-            <li class="nav-item pb-10">RESEARCH</li>
+            <router-link :to="{name: 'research'}"><li class="nav-item pb-10">RESEARCH</li></router-link>
             <li class="nav-item group relative pb-10">
               SERVICES
               <ul
@@ -144,183 +135,196 @@
         
       </div>
       <!-- Mobile Menu -->
-<nav
-  v-if="showMobileMenu"
-  class="fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-start px-5 pt-10 overflow-y-auto"
->
-  <button
-    class="absolute top-5 right-5 text-3xl text-usea_primary"
-    @click="toggleSidebar"
-  >
-    <i class="fa-solid fa-xmark"></i>
-  </button>
-  <ul class="w-full space-y-4 text-xl font-bold text-[#002060]">
-    <!-- About Menu -->
-    <li>
-      <div
-        @click="toggleSubNav('about')"
-        class="flex justify-between items-center cursor-pointer mt-10"
+      <nav
+        v-if="showMobileMenu"
+        class="fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-start px-5 pt-10 overflow-y-auto"
       >
-        About
-        <i
-          :class="subNavs.about ? 'fa-chevron-up' : 'fa-chevron-down'"
-          class="fa-solid"
-        ></i>
-      </div>
-      <transition name="slide">
-        <ul
-          v-if="subNavs.about"
-          class="pl-4 space-y-2 text-gray-500 text-lg mt-5"
+        <button
+          class="absolute top-5 right-5 text-3xl text-usea_primary"
+          @click="toggleSidebar"
         >
-          <li>History & Logo Meaning</li>
-          <li>Vision & Mission</li>
-          <li>Location</li>
-          <li>Message from President</li>
-          <li>Board of Trustees</li>
-          <li>Recognition & Accreditation</li>
-          <li>News & Events</li>
-          <li>FAQ</li>
-          <li>Contact</li>
-        </ul>
-      </transition>
-    </li>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="w-full space-y-4 text-xl font-bold text-[#002060] flex flex-col">
+          <!-- About Menu -->
+          <li>
+            <div
+              @click="toggleSubNav('about')"
+              class="flex justify-between items-center cursor-pointer mt-10"
+            >
+              About
+              <i
+                :class="subNavs.about ? 'fa-chevron-up' : 'fa-chevron-down'"
+                class="fa-solid"
+              ></i>
+            </div>
+            <transition name="slide">
+              <ul
+                v-if="subNavs.about"
+                class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
+              >
+                <router-link :to="{name: 'history'}" @click.native="navigateAndClose('history')"><li>History & Logo Meaning</li></router-link>
+                <router-link :to="{name: 'vision'}" @click.native="navigateAndClose('vision')"><li>Vision & Mission</li></router-link>
+                <router-link :to="{name: 'location'}" @click.native="navigateAndClose('location')"><li>Location</li></router-link>
+                <router-link :to="{name: 'message'}" @click.native="navigateAndClose('message')"><li>Message from President</li></router-link>
+                <router-link :to="{name: 'board-trustee'}" @click.native="navigateAndClose('board-trustee')"><li>Board of Trustees</li></router-link>
+                <router-link :to="{name: 'recognition'}" @click.native="navigateAndClose('recognition')"><li>Recognition & Accreditation</li></router-link>
+                <router-link :to="{name: 'news-events'}" @click.native="navigateAndClose('news-events')"><li>News & Events</li></router-link>
+                <router-link :to="{name: 'faq'}" @click.native="navigateAndClose('faq')"><li>FAQ</li></router-link>
+                <router-link :to="{name: 'contact'}" @click.native="navigateAndClose('contact')"><li>Contact</li></router-link>
+              </ul>
+            </transition>
+          </li>
 
-    <!-- Academics Menu -->
-    <li>
-      <div
-        @click="toggleSubNav('academics')"
-        class="flex justify-between items-center cursor-pointer"
-      >
-        Academics
-        <i
-          :class="subNavs.academics ? 'fa-chevron-up' : 'fa-chevron-down'"
-          class="fa-solid"
-        ></i>
-      </div>
-      <transition name="slide">
-        <ul
-          v-if="subNavs.academics"
-          class="pl-4 space-y-2 text-gray-500 text-lg mt-5"
-        >
-          <li>Faculty of Economics, Business & Tourism</li>
-          <li>Faculty of Sciences & Technology</li>
-          <li>Faculty of Social Science & Law</li>
-          <li>Faculty of Art, Humanities & Language</li>
-          <li>International College</li>
-          <li>Post Graduate</li>
-          <li>Foreign Language Center</li>
-          <li>Short Course</li>
-        </ul>
-      </transition>
-    </li>
+          <!-- Academics Menu -->
+          <li>
+            <div
+              @click="toggleSubNav('academics')"
+              class="flex justify-between items-center cursor-pointer"
+            >
+              Academics
+              <i
+                :class="subNavs.academics ? 'fa-chevron-up' : 'fa-chevron-down'"
+                class="fa-solid"
+              ></i>
+            </div>
+            <transition name="slide">
+              <ul
+                v-if="subNavs.academics"
+                class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
+              >
+                <router-link :to="{name: 'faculty-economic'}" @click.native="navigateAndClose('faculty-economic')"><li>Faculty of Economics, Business & Tourism</li></router-link>
+                <router-link :to="{name: 'faculty-technology'}" @click.native="navigateAndClose('faculty-technology')"><li>Faculty of Sciences & Technology</li></router-link>
+                <router-link :to="{name: 'faculty-law'}" @click.native="navigateAndClose('faculty-law')"><li>Faculty of Social Science & Law</li></router-link>
+                <router-link :to="{name: 'faculty-language'}" @click.native="navigateAndClose('faculty-language')"><li>Faculty of Art, Humanities & Language</li></router-link>
+                <router-link :to="{name: 'internationa-college'}" @click.native="navigateAndClose('internationa-college')"><li>International College</li></router-link>
+                <router-link :to="{name: 'post-graduate'}" @click.native="navigateAndClose('post-graduate')"><li>Post Graduate</li></router-link>
+                <router-link :to="{name: 'language-center'}" @click.native="navigateAndClose('language-center')"><li>Foreign Language Center</li></router-link>
+                <router-link :to="{name: 'short-course'}" @click.native="navigateAndClose('short-course')"><li>Short Course</li></router-link>
+              </ul>
+            </transition>
+          </li>
 
-    <!-- Partnership Menu -->
-    <li>
-      <div
-        @click="toggleSubNav('partnership')"
-        class="flex justify-between items-center cursor-pointer"
-      >
-        Partnership
-        <i
-          :class="subNavs.partnership ? 'fa-chevron-up' : 'fa-chevron-down'"
-          class="fa-solid"
-        ></i>
-      </div>
-      <transition name="slide">
-        <ul
-          v-if="subNavs.partnership"
-          class="pl-4 space-y-2 text-gray-500 text-lg mt-5"
-        >
-          <li>Local Partner</li>
-          <li>International Partner</li>
-        </ul>
-      </transition>
-    </li>
+          <!-- Partnership Menu -->
+          <li>
+            <div
+              @click="toggleSubNav('partnership')"
+              class="flex justify-between items-center cursor-pointer"
+            >
+              Partnership
+              <i
+                :class="subNavs.partnership ? 'fa-chevron-up' : 'fa-chevron-down'"
+                class="fa-solid"
+              ></i>
+            </div>
+            <transition name="slide">
+              <ul
+                v-if="subNavs.partnership"
+                class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
+              >
+                <router-link :to="{name: 'local-partnership'}" @click.native="navigateAndClose('local-partnership')"><li>Local Partner</li></router-link>
+                <router-link :to="{name: 'international-partnership'}" @click.native="navigateAndClose('international-partnership')"><li>International Partner</li></router-link>
+              </ul>
+            </transition>
+          </li>
 
-    <!-- Research -->
-    <li>Research</li>
+          <!-- Research -->
+          <router-link :to="{name: 'research'}" @click.native="navigateAndClose('research')"><li>Research</li></router-link>
 
-    <!-- Services Menu -->
-    <li>
-      <div
-        @click="toggleSubNav('services')"
-        class="flex justify-between items-center cursor-pointer"
-      >
-        Services
-        <i
-          :class="subNavs.services ? 'fa-chevron-up' : 'fa-chevron-down'"
-          class="fa-solid"
-        ></i>
-      </div>
-      <transition name="slide">
-        <ul
-          v-if="subNavs.services"
-          class="pl-4 space-y-2 text-gray-500 text-lg mt-5"
-        >
-          <li>Health Services</li>
-          <li>IT Services</li>
-          <li>Library</li>
-          <li>Career Center</li>
+          <!-- Services Menu -->
+          <li>
+            <div
+              @click="toggleSubNav('services')"
+              class="flex justify-between items-center cursor-pointer"
+            >
+              Services
+              <i
+                :class="subNavs.services ? 'fa-chevron-up' : 'fa-chevron-down'"
+                class="fa-solid"
+              ></i>
+            </div>
+            <transition name="slide">
+              <ul
+                v-if="subNavs.services"
+                class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
+              >
+                <router-link :to="{name: 'health-services'}" @click.native="navigateAndClose('health-services')"><li>Health Services</li></router-link>
+                <router-link :to="{name: 'it-services'}" @click.native="navigateAndClose('it-services')"><li>IT Services</li></router-link>
+                <router-link :to="{name: 'library-services'}" @click.native="navigateAndClose('library-services')"><li>Library</li></router-link>
+                <router-link :to="{name: 'career-center'}" @click.native="navigateAndClose('career-center')"><li>Career Center</li></router-link>
+              </ul>
+            </transition>
+          </li>
         </ul>
-      </transition>
-    </li>
-  </ul>
-</nav>
+      </nav>
 
     </div>
   </template>
   
   <script setup>
-  import { ref, onMounted, onUnmounted } from "vue";
-  import TitleLogo from "@/assets/title/usea-title-1.png";
-  import TitleMobile from "@/assets/title/title-mobile.png";
-  import Building from "@/assets/navbar/usea_building.png";
-  // States for navbar behavior
-  const isShrunk = ref(false);
-  const isFixed = ref(false);
-  
-  // Mobile menu state
-  const showMobileMenu = ref(false);
-  
-  // Sub-nav visibility states
-  const subNavs = ref({
-    about: false,
-    academics: false,
-    partnership: false,
-    services: false,
-  });
-  
-  // Handle scroll event
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    isShrunk.value = scrollY > 80; // Shrink navbar on scroll
-    isFixed.value = scrollY > 0; // Fix navbar on any scroll
-  };
-  
-  // Toggle mobile menu visibility
-  const toggleSidebar = () => {
-    showMobileMenu.value = !showMobileMenu.value;
-  };
-  
-  // Toggle individual sub-nav visibility
-  const toggleSubNav = (menu) => {
-    for (const key in subNavs.value) {
-      if (key === menu) {
-        subNavs.value[key] = !subNavs.value[key]; // Toggle clicked menu
-      } else {
-        subNavs.value[key] = false; // Close other menus
-      }
+import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter } from "vue-router";
+import TitleLogo from "@/assets/title/usea-title-1.png";
+import TitleMobile from "@/assets/title/title-mobile.png";
+import Building from "@/assets/navbar/usea_building.png";
+
+// States for navbar behavior
+const isShrunk = ref(false);
+const isFixed = ref(false);
+
+// Mobile menu state
+const showMobileMenu = ref(false);
+
+// Sub-nav visibility states
+const subNavs = ref({
+  about: false,
+  academics: false,
+  partnership: false,
+  services: false,
+});
+
+// Router instance for navigation
+const router = useRouter();
+
+// Handle scroll event
+const handleScroll = () => {
+  const scrollY = window.scrollY;
+  isShrunk.value = scrollY > 80; // Shrink navbar on scroll
+  isFixed.value = scrollY > 0; // Fix navbar on any scroll
+};
+
+// Toggle mobile menu visibility
+const toggleSidebar = () => {
+  showMobileMenu.value = !showMobileMenu.value;
+};
+
+// Toggle individual sub-nav visibility
+const toggleSubNav = (menu) => {
+  for (const key in subNavs.value) {
+    if (key === menu) {
+      subNavs.value[key] = !subNavs.value[key]; // Toggle clicked menu
+    } else {
+      subNavs.value[key] = false; // Close other menus
     }
-  };
-  
-  onMounted(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
-  
-  onUnmounted(() => {
-    window.removeEventListener("scroll", handleScroll);
-  });
-  </script>
+  }
+};
+
+// Close sidebar and navigate
+const navigateAndClose = (routeName) => {
+  showMobileMenu.value = false; // Close the mobile menu
+  router.push({ name: routeName }); // Navigate to the selected route
+};
+
+// Add and remove scroll listener
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>
+
   
     <style scoped>
     /* Base navbar styles */

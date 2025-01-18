@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Local Partner Components
+        <Titlebg title="Local Partnership" breadcrumb="Local Partnership" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

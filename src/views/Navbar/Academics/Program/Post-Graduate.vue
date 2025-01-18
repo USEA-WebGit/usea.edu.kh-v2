@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Post Graduate Components
+        <Titlebg title="Post Graduate" breadcrumb="Post Graduate" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

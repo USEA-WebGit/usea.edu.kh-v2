@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Location Components
+        <Titlebg title="Location" breadcrumb="Location" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

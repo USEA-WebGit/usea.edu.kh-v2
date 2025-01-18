@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is International Partner Components
+        <Titlebg title="International Partnership" breadcrumb="International Partnership" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

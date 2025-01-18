@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is International College Components
+        <Titlebg title="International College" breadcrumb="International College" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

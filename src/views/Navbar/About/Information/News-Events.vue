@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is News and Events Components
+        <Titlebg title="News-Events" breadcrumb="News-Events" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -5,7 +5,7 @@
             <div class="h-1 w-[5%] bg-red-600"></div>
         </div>
         
-        <div class="grid 2xl:grid-rows-2 2xl:grid-flow-col xl:grid-rows-2 xl:grid-flow-col lg:grid-rows-3 lg:grid-flow-col md:grid-rows-3 md:grid-flow-col 2xl:justify-between xl:justify-between items-center gap-12 my-28 text-2xl">
+        <div class="grid 2xl:grid-rows-2 2xl:grid-flow-col xl:grid-rows-2 xl:grid-flow-col lg:grid-rows-3 lg:grid-flow-col md:grid-rows-3 md:grid-flow-col 2xl:justify-between xl:justify-between items-center gap-12 my-28 text-2xl mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px]">
             <div>
                 <a href="#" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
                     <img :src="FacultyBusiness" alt="business">

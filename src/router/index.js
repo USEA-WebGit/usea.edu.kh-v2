@@ -30,7 +30,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { title: 'Home - USEA' },
   },
 
   // about navbar 
@@ -42,46 +43,55 @@ const routes = [
         path: 'history',
         name: 'history',
         component: History,
+        meta: { title: 'History-Logo Meaning' },
       },
       {
         path: 'vision-mission',
         name: 'vision',
         component: Vision,
+        meta: {title: 'Vision-Mission'},
       },
       {
         path: 'location',
         name: 'location',
         component: Location,
+        meta: {title: 'Location - USEA'},
       },
       {
         path: 'contact',
         name: 'contact',
         component: Contact,
+        meta: {title: 'Contact - USEA'},
       },
       {
         path: 'news-events',
         name: 'news-events',
         component: NewsEvents,
+        meta: {title: 'News-Events'},
       },
       {
         path: 'faq',
         name: 'faq',
         component: Faq,
+        meta: {title: 'FAQ'},
       },
       {
         path: 'board-trustee',
         name: 'board-trustee',
         component: BoardTrustee,
+        meta: {title: 'Board Trustees'},
       },
       {
         path: 'message',
         name: 'message',
         component: Message,
+        meta: {title: "President's Message"},
       },
       {
         path: 'recognition',
         name: 'recognition',
         component: Recognition,
+        meta: {title: 'Recognition & Accreditation'},
       },
     ],
   },
@@ -92,42 +102,50 @@ const routes = [
       {
         path: 'internationa-college',
         name: 'internationa-college',
-        component: InternationalCollege
+        component: InternationalCollege,
+        meta: {title: 'International-College'},
       },
       {
         path: 'language-center',
         name: 'language-center',
-        component: LanguageCenter
+        component: LanguageCenter,
+        meta: {title: 'Language Center'},
       },
       {
         path: 'post-graduate',
         name: 'post-graduate',
-        component: PostGraduate
+        component: PostGraduate,
+        meta: {title: 'Post Graduate'},
       },
       {
         path: 'short-course',
         name: 'short-course',
-        component: ShortCourse
+        component: ShortCourse,
+        meta: {title: 'Short-Course'},
       },
       {
         path: 'faculty-economic',
         name: 'faculty-economic',
-        component: FacultyEconomic
+        component: FacultyEconomic,
+        meta: {title: 'Faculty Economics, Business and Tourism'},
       },
       {
         path: 'faculty-technology',
         name: 'faculty-technology',
-        component: FacultyIT
+        component: FacultyIT,
+        meta: {title: 'Faculty Sciences and Technology'},
       },
       {
         path: 'faculty-language',
         name: 'faculty-language',
-        component: FacultyLanguage
+        component: FacultyLanguage,
+        meta: {title: 'Faculty Art, Humanities and Language'},
       },
       {
         path: 'faculty-law',
         name: 'faculty-law',
-        component: FacultyLaw
+        component: FacultyLaw,
+        meta: {title: 'Faculty Social Science and Law'},
       },
     
     ]
@@ -139,12 +157,14 @@ const routes = [
       {
         path: 'local-partnership',
         name: 'local-partnership',
-        component: LocalPartnership
+        component: LocalPartnership,
+        meta: {title: 'Local Partnership'},
       },
       {
         path: 'international-partnership',
         name: 'international-partnership',
-        component: InternationalPartnership
+        component: InternationalPartnership,
+        meta: {title: 'International Partnership'},
       },
     ]
   },
@@ -152,6 +172,7 @@ const routes = [
     path: '/research',
     name: 'research',
     component: Research,
+    meta: {title: 'Research'},
   },
   {
     path: '/services',
@@ -160,22 +181,26 @@ const routes = [
       {
         path: 'health-services',
         name: 'health-services',
-        component: HealthServices
+        component: HealthServices,
+        meta: {title: 'Health Services'},
       },
       {
         path: 'it-services',
         name: 'it-services',
-        component: ITServices
+        component: ITServices,
+        meta: {title: 'IT Services'},
       },
       {
         path: 'library-services',
         name: 'library-services',
-        component: LibraryServices
+        component: LibraryServices,
+        meta: {title: 'Library Services'},
       },
       {
         path: 'career-center',
         name: 'career-center',
-        component: CareerCenter
+        component: CareerCenter,
+        meta: {title: 'Career Center'},
       },
     ]
   }

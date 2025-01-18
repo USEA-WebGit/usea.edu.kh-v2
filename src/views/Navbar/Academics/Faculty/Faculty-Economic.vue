@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Faculty Economic Components
+        <Titlebg title="Faculty of Economics Business and Tourism" breadcrumb="Faculty of Economics Business and Economic" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

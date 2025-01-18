@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Recognition and Accreditation Components
+        <Titlebg title="Recognition and Accreditation" breadcrumb="Recognition and Accreditatiton" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>

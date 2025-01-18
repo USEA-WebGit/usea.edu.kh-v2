@@ -1,13 +1,9 @@
 <template>
     <div>
-        This is Health Services Components
+        <Titlebg title="Health Services" breadcrumb="Health Services" />
     </div>
 </template>
 
 <script setup>
-
+import Titlebg from '@/components/Slide/TitleBg.vue';
 </script>
-
-<style lang="scss" scoped>
-
-</style>
