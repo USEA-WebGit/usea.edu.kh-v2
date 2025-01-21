@@ -45,10 +45,17 @@
                     Organization
                   </h3>
                   <ul class="text-lg text-gray-500">
-                    <router-link :to="{name: 'history'}"><li class="flex gap-2">History & Logo Meaning</li></router-link>
-                    <router-link :to="{name: 'vision'}"><li class="flex gap-2">Vision & Mission</li></router-link>
-                    <router-link :to="{name: 'location'}"><li class="flex gap-2">Location</li></router-link>
+                    <li class="flex gap-2">
+                      <router-link :to="{ name: 'history' }" class="link active" >History & Logo Meaning</router-link>
+                    </li>
+                    <li class="flex gap-2">
+                      <router-link :to="{ name: 'vision' }">Vision & Mission</router-link>
+                    </li>
+                    <li class="flex gap-2">
+                      <router-link :to="{ name: 'location' }">Location</router-link>
+                    </li>
                   </ul>
+
                 </div>
                 <div class="mega-menu-item px-12 w-full">
                   <h3 class="font-bold text-lg pb-7 text-[#002060]">
@@ -286,6 +293,7 @@ const subNavs = ref({
 // Router instance for navigation
 const router = useRouter();
 
+const isActive = (name) => route.name === name;
 // Handle scroll event
 const handleScroll = () => {
   const scrollY = window.scrollY;
@@ -326,7 +334,7 @@ onUnmounted(() => {
 </script>
 
   
-    <style scoped>
+<style scoped>
     /* Base navbar styles */
     .navbar {
       position: relative;
@@ -358,7 +366,9 @@ onUnmounted(() => {
       cursor: pointer;
       transition: color 0.3s ease;
     }
-    
+    .link.active {
+    color: red;
+  }
     .nav-item::after {
       content: "";
       position: absolute;
