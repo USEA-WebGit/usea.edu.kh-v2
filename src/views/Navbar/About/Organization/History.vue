@@ -9,7 +9,7 @@
                     <p class="text-justify">The University of South-East Asia was established on July 7, 2006 by four dedicated Cambodian shareholders in response to the government educational development program of building and enhancing human resources through higher education. It is located in Siem Reap province, Cambodia and about 314 km from Phnom Penh, the capital city of Cambodia. Siem Reap province is one of the important economic regions in Cambodia. Because it is rich in ancient temples and other resorts that attract local and international visitors. USEA was recognized by the Royal Government of Cambodia and operating through Sub-decree No. 63 duly signed by his Excellency Prime Minister Hun Sen. The Ministry of Education, Youth and Sports (MoEYS) recognized USEA by issuing Prakas No. 802 dated 09 July 2007.  USEA gained its double accreditation in 2006-2009 and 2010-13 granted by the Accreditation Committee of Cambodia (ACC). USEA had its first enrollment of 600 bachelor students and at present with a total enrollment of 2,980.  The enrollment in the undergraduate program is 2,780 and 200 in the MBA program. The top three faculties are: Faculty of Business and Tourism, Faculty of Art, Humanities and Languages and Faculty of Science and Technology. The graduate rate of employment is 95%.</p>
                     <img :src="Building" alt="building" class="w-full object-cover">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col gap-10">
                     <span class="text-red-600 text-2xl font-bold ">Logo's Meaning</span>
                     <div class="grid grid-cols-2 justify-items-center items-center">
                         <div class="text-justify">
@@ -22,10 +22,10 @@
                         </div>
                         <img :src="USEA" alt="logo" width="400px">
                     </div>
-                    <div>
-                        <img :src="LOGOVONE" alt="logo-v1">
-                        <img :src="LOGOV2" alt="logo-v2">
-                        <img :src="LOGOV3" alt="logo-v3">
+                    <div class="flex ">
+                        <img :src="USEAVONE" alt="logo-v1">
+                        <img :src="USEAV2" alt="logo-v2">
+                        <img :src="USEAV3" alt="logo-v3">
                     </div>
                 </div>
             </div>
