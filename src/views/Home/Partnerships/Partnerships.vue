@@ -3,8 +3,8 @@
         <div class="py-16 mx-8">
             <!-- Title Section -->
             <div class="flex flex-col mb-16 text-center items-center">
-                <h1 class="text-red-600 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold text-nowrap">OUR PARTNERS</h1>
-                <div class="h-1 w-[5%] bg-red-600"></div>
+                <h1 class="text-usea_secondary 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold text-nowrap">OUR PARTNERS</h1>
+                <div class="h-1 w-[5%] bg-usea_secondary"></div>
             </div>
             
             <!-- Carousel Section -->

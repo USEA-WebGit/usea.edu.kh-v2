@@ -31,7 +31,7 @@
         </div>
 
         <nav
-          class="flex-1 pt-10 2xl:text-lg xl:text-md lg:text-md 2xl:flex xl:flex lg:flex md:hidden sm:hidden hidden font-bold text-[#002060] relative"
+          class="flex-1 pt-10 2xl:text-lg xl:text-md lg:text-md 2xl:flex xl:flex lg:flex md:hidden sm:hidden hidden font-bold text-usea_secondary relative"
         >
           <ul class="flex align-top gap-8 relative">
             <!-- Submenu: About -->
@@ -41,12 +41,12 @@
                 class="mega-menu hidden absolute -left-[600px] top-full w-max bg-white shadow-lg px-20 py-20 grid grid-cols-3 gap-x-5 z-50 rounded-md"
               >
                 <div class="mega-menu-item">
-                  <h3 class="font-bold text-xl pb-7 text-[#002060]">
+                  <h3 class="font-bold text-xl pb-7 text-usea_secondary">
                     Organization
                   </h3>
                   <ul class="text-lg text-gray-500">
                     <li class="flex gap-2">
-                      <router-link :to="{ name: 'history' }" class="link active" >History & Logo Meaning</router-link>
+                      <router-link :to="{ name: 'history' }" class="link" >History & Logo Meaning</router-link>
                     </li>
                     <li class="flex gap-2">
                       <router-link :to="{ name: 'vision' }">Vision & Mission</router-link>
@@ -58,7 +58,7 @@
 
                 </div>
                 <div class="mega-menu-item px-12 w-full">
-                  <h3 class="font-bold text-lg pb-7 text-[#002060]">
+                  <h3 class="font-bold text-lg pb-7 text-usea_secondary">
                     Governance & Accreditation
                   </h3>
                   <ul class="text-lg text-gray-500">
@@ -68,7 +68,7 @@
                   </ul>
                 </div>
                 <div class="mega-menu-item px-12 w-full">
-                  <h3 class="font-bold text-lg pb-7 text-[#002060]">Information</h3>
+                  <h3 class="font-bold text-lg pb-7 text-usea_secondary">Information</h3>
                   <ul class="text-lg text-gray-500">
                     <router-link :to="{name: 'news-events'}"><li class="flex gap-2">News & Events</li></router-link>
                     <router-link :to="{name: 'faq'}"><li class="flex gap-2">FAQ</li></router-link>
@@ -85,7 +85,7 @@
                 class="mega-menu hidden absolute -left-[900px] top-full w-max bg-white shadow-lg px-12 py-12 grid grid-cols-3 gap-x-5 z-50 rounded-md"
               >
                 <div class="mega-menu-item">
-                  <h3 class="font-bold text-xl pb-7 text-[#002060]">Faculty</h3>
+                  <h3 class="font-bold text-xl pb-7 text-usea_secondary">Faculty</h3>
                   <ul class="text-lg text-gray-500">
                     <router-link :to="{name: 'faculty-economic'}"><li class="flex gap-2">Faculty of Economics, Business & Tourism</li></router-link>
                     <router-link :to="{name: 'faculty-technology'}"><li class="flex gap-2">Faculty of Sciences & Technology</li></router-link>
@@ -94,7 +94,7 @@
                   </ul>
                 </div>
                 <div class="mega-menu-item px-12 w-full">
-                  <h3 class="font-bold text-lg pb-7 text-[#002060]">
+                  <h3 class="font-bold text-lg pb-7 text-usea_secondary">
                     Programs & Courses
                   </h3>
                   <ul class="text-lg text-gray-500">
@@ -136,7 +136,7 @@
             </li>
           </ul>
           <!-- <div class="absolute right-[17rem] top-[2rem] ml-8">
-            <button class="bg-[#002060] px-5 py-3 rounded-md text-white">Journal</button>
+            <button class="bg-usea_secondary px-5 py-3 rounded-md text-white">Journal</button>
           </div> -->
         </nav>
         
@@ -152,7 +152,7 @@
         >
           <i class="fa-solid fa-xmark"></i>
         </button>
-        <ul class="w-full space-y-4 text-xl font-bold text-[#002060] flex flex-col">
+        <ul class="w-full space-y-4 text-xl font-bold text-usea_secondary flex flex-col">
           <!-- About Menu -->
           <li>
             <div

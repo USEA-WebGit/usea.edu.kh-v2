@@ -1,8 +1,8 @@
 <template>
     <div class=" mt-10 mb-10">
         <div class="flex flex-col text-center items-center">
-            <div class="text-red-600 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">EVENTS</div>
-            <div class="h-1 w-[5%] bg-red-600"></div>
+            <div class="text-usea_secondary 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">EVENTS</div>
+            <div class="h-1 w-[5%] bg-usea_secondary"></div>
         </div>
         <div class="flex flex-col items-center w-full max-w-md mx-auto mt-5">
             <div class="flex 2xl:text-2xl xl:text-xl justify-center">
@@ -104,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <button class="bg-red-600 p-2 rounded-md text-white hover:bg-red-500">More Events</button>
+            <button class="bg-usea_secondary p-2 rounded-md text-white  hover:bg-white hover:text-usea_secondary hover:border-usea_secondary hover:border">More Events</button>
         </div>
         
 </div>

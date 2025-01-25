@@ -1,8 +1,8 @@
 <template>
     <div class="text-center mt-10 mb-10">
         <div class="flex flex-col mb-10 text-center items-center">
-            <h1 class="text-red-600 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">LATEST NEWS</h1>
-            <div class="h-1 w-[5%] bg-red-600"></div>
+            <h1 class="text-usea_secondary 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">LATEST NEWS</h1>
+            <div class="h-1 w-[5%] bg-usea_secondary"></div>
         </div>
         <div class="grid grid-cols-1 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-10 text-center mb-10">
             <!-- Card 1 -->
@@ -92,7 +92,7 @@
             </div>
 
         </div>
-        <button class="text-center bg-red-600 p-2 rounded-md text-white hover:bg-red-500">More News</button>
+        <button class="text-center bg-usea_secondary p-2 rounded-md text-white hover:bg-white hover:text-usea_secondary hover:border-usea_secondary hover:border">More News</button>
         
 
     </div>

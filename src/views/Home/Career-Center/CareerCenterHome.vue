@@ -5,7 +5,7 @@
             <!-- Text Content -->
             <div class="z-[1]">
                 <div>
-                    <span class="text-red-600 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold block">Career Center</span>
+                    <span class="text-usea_secondary 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold block">Career Center</span>
                 
                     <p class="text-base md:text-xl mt-4 md:mt-5 text-justify">
                         <span class="font-bold block">About University of South East Asia Career Center</span> 
