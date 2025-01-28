@@ -21,7 +21,7 @@
                 /
             </span>
 
-            <a href="#" class="text-gray-600 dark:text-blue-400 hover:underline font-bold">
+            <a href="#" class="text-gray-600 hover:underline font-bold">
                 {{ breadcrumb }}
             </a>
         </div>

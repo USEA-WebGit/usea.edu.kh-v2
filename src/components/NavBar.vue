@@ -113,26 +113,26 @@
             <!-- Submenu: Partnership -->
             <li class="nav-item group relative pb-10">
               PARTNERSHIP
-              <ul
-                class="mega-menu hidden absolute top-full left-0 w-max bg-white shadow-lg p-7 grid grid-cols-1 z-50 rounded-md"
-              >
-              <router-link :to="{name: 'local-partnership'}"><li class="flex gap-2">Local Partner</li></router-link>
-              <router-link :to="{name: 'international-partnership'}"><li class="flex gap-2">International Partner</li></router-link>
-              </ul>
+              <div class="mega-menu hidden absolute top-full left-0 w-max bg-white p-7 z-50 rounded-md">
+                <ul class="text-lg text-gray-500">
+                  <router-link :to="{name: 'local-partnership'}"><li class="flex gap-2">Local Partner</li></router-link>
+                  <router-link :to="{name: 'international-partnership'}"><li class="flex gap-2">International Partner</li></router-link>
+                </ul>
+              </div>
             </li>
   
             <!-- Additional Navbar Items -->
             <router-link :to="{name: 'research'}"><li class="nav-item pb-10">RESEARCH</li></router-link>
             <li class="nav-item group relative pb-10">
               SERVICES
-              <ul
-                class="mega-menu hidden absolute top-full left-0 w-max bg-white shadow-lg p-7 grid grid-cols-1 z-50 rounded-md"
-              >
-              <router-link :to="{name: 'health-services'}"><li class="flex gap-2">Health Services</li></router-link>
-              <router-link :to="{name: 'it-services'}"><li class="flex gap-2">IT Services</li></router-link>
-              <router-link :to="{name: 'library-services'}"><li class="flex gap-2">Library</li></router-link>
-              <router-link :to="{name: 'career-center'}"><li class="flex gap-2">Career Center</li></router-link>
-              </ul>
+              <div class="mega-menu hidden absolute top-full left-0 w-max bg-white shadow-lg p-7 grid grid-cols-1 z-50 rounded-md">
+                <ul class="text-lg text-gray-500">
+                  <router-link :to="{name: 'health-services'}"><li class="flex gap-2">Health Services</li></router-link>
+                  <router-link :to="{name: 'it-services'}"><li class="flex gap-2">IT Services</li></router-link>
+                  <router-link :to="{name: 'library-services'}"><li class="flex gap-2">Library</li></router-link>
+                  <router-link :to="{name: 'career-center'}"><li class="flex gap-2">Career Center</li></router-link>
+                </ul>
+              </div>
             </li>
           </ul>
           <!-- <div class="absolute right-[17rem] top-[2rem] ml-8">
@@ -342,7 +342,7 @@ onUnmounted(() => {
       width: 100%;
       z-index: 50;
       background-color: white;
-      opacity: 0.9;
+      /* opacity: 0.9; */
       transition: all 0.3s ease-in-out;
     }
     
@@ -396,7 +396,7 @@ onUnmounted(() => {
     
     .mega-menu li:hover {
       color: red;
-      opacity: 0.8;
+      /* opacity: 0.8; */
       transform: translateX(3px);
     }
     
