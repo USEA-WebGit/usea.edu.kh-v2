@@ -7,6 +7,5 @@ npm install vue-router@4
 //install pinia statemanagement
 npm install pinia
 
-
 //install headlessui ui component
 npm install @headlessui/vue

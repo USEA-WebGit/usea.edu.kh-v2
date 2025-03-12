@@ -114,7 +114,7 @@
 import { ref } from 'vue';
 
 const tabs = ['Upcoming', 'Current'];
-const activeTab = ref(tabs[0]); // Default to the first tab
+const activeTab = ref(tabs[0]);
 </script>
 
 <style>

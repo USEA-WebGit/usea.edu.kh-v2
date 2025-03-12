@@ -1,76 +1,87 @@
 <template>
     <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Organization Info +</h1>
+            <h1 class="text-[#002060] font-bold">Contact +</h1>
             <router-link
                 :to="{ name: 'history' }"
                 class="link"
                 :class="{ active: isActive('history') }"
             >
-                <span>History & Logo Meaning</span>
+                <span>About Faculty</span>
             </router-link>
             <router-link
                 :to="{ name: 'vision' }"
                 class="link"
                 :class="{ active: isActive('vision') }"
             >
-                <span>Vision & Mission</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'location' }"
-                class="link"
-                :class="{ active: isActive('location') }"
-            >
-                <span>Location</span>
+                <span>Faculty's Staff</span>
             </router-link>
         </div>
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Governance & Accreditation +</h1>
+            <h1 class="text-[#002060] font-bold">Association's Degree +</h1>
             <router-link
                 :to="{ name: 'message' }"
                 class="link"
                 :class="{ active: isActive('message') }"
             >
-                <span>Message from President</span>
+                <span>Civil Engineering</span>
             </router-link>
             <router-link
                 :to="{ name: 'board-trustee' }"
                 class="link"
                 :class="{ active: isActive('board-trustee') }"
             >
-                <span>Board of Trustees</span>
+                <span>Information Technology</span>
             </router-link>
             <router-link
                 :to="{ name: 'recognition' }"
                 class="link"
                 :class="{ active: isActive('recognition') }"
             >
-                <span>Recognition & Accreditation</span>
+                <span>Mathematics</span>
             </router-link>
         </div>
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Information +</h1>
+            <h1 class="text-[#002060] font-bold">Bachelor's Degree +</h1>
             <router-link
                 :to="{ name: 'news-events' }"
                 class="link"
                 :class="{ active: isActive('news-events') }"
             >
-                <span>Event & News</span>
+                <span>Architecture</span>
             </router-link>
             <router-link
                 :to="{ name: 'faq' }"
                 class="link"
                 :class="{ active: isActive('faq') }"
             >
-                <span>FAQ</span>
+                <span>Civil Engineering</span>
             </router-link>
             <router-link
                 :to="{ name: 'contact' }"
                 class="link"
                 :class="{ active: isActive('contact') }"
             >
-                <span>Contact</span>
+                <span>Information Technology</span>
             </router-link>
+            <router-link
+                :to="{ name: 'contact' }"
+                class="link"
+                :class="{ active: isActive('contact') }"
+            >
+                <span>Mathematics</span>
+            </router-link>
+        </div>
+        <div class="flex flex-col">
+            <h1 class="text-[#002060] font-bold">Master's Degree +</h1>
+            <router-link
+                :to="{ name: 'news-events' }"
+                class="link"
+                :class="{ active: isActive('news-events') }"
+            >
+                <span>Information Technology</span>
+            </router-link>
+           
         </div>
     </div>
 </template>

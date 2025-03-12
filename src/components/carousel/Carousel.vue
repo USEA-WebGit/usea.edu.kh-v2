@@ -42,9 +42,8 @@
   import { ref } from 'vue';
   
   const images = [
-    'https://wowslider.com/sliders/demo-93/data1/images/sunset.jpg',
-    'https://wowslider.com/sliders/demo-93/data1/images/lake.jpg',
-    'https://wowslider.com/sliders/demo-93/data1/images/landscape.jpg',
+    'https://usea.edu.kh/media/slider/2024-2025.png',
+    'https://usea.edu.kh/media/slider/acca-slider.webp',
   ];
   
   const activeIndex = ref(0);
