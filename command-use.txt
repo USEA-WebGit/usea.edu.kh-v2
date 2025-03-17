@@ -9,3 +9,9 @@ npm install pinia
 
 //install headlessui ui component
 npm install @headlessui/vue
+
+//install FlyonUI tailwind
+npm install flyonui
+
+//install FlyonUI third party animation plugin
+npm i -d tailwindcss-motion

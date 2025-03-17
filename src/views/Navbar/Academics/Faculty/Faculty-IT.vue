@@ -6,21 +6,92 @@
         <div>
             <section class="mb-12">
                 <div class="bg-usea_secondary flex flex-col justify-center items-center mb-5">
-                    <span class="text-white 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">ABOUT FACULTY</span>
-                    <div class="h-1 w-[5%] bg-usea_secondary"></div>
+                    <span class="text-white 2xl:text-[2rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">ABOUT FACULTY</span>
+                    <div class="h-1 w-[3%] bg-usea_secondary"></div>
                 </div>
                 <!-- <span class="flex justify-center items-center mb-5 text-2xl font-bold">About Faculty</span> -->
-                <div class="flex gap-5">
-                    <img :src="demo" alt="">
+                <div class="flex flex-col gap-5">
+                    <img :src="demo" alt="" class="h-[200px] object-cover">
                     <p class="text-justify">Faculty of Science and Technology will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.</p>
                 </div>
             </section>
             <section class="mb-12">
                 <div class="bg-usea_secondary flex flex-col justify-center items-center mb-5">
-                    <span class="text-white 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">MAJORS</span>
+                    <span class="text-white 2xl:text-[2rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">MAJORS</span>
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
                 <!-- <span class="flex justify-center items-center mb-5 text-2xl font-bold mt-5">Majors</span> -->
+                <nav class="tabs tabs-bordered overflow-x-auto" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="tab active-tab:tab-active active" id="tabs-icons-item-1" data-tab="#tabs-icons-1" aria-controls="tabs-icons-1" role="tab" aria-selected="true">
+                        <span class="icon-[tabler--home] size-5 flex-shrink-0 me-2"></span>
+                        Associate's Degree 
+                    </button>
+                    <button type="button" class="tab active-tab:tab-active" id="tabs-icons-item-2" data-tab="#tabs-icons-2" aria-controls="tabs-icons-2" role="tab" aria-selected="false">
+                        <span class="icon-[tabler--user] size-5 flex-shrink-0 me-2"></span>
+                        Bachelor's Degree
+                    </button>
+                    <button type="button" class="tab active-tab:tab-active" id="tabs-icons-item-3" data-tab="#tabs-icons-3" aria-controls="tabs-icons-3" role="tab" aria-selected="false">
+                        <span class="icon-[tabler--message] size-5 flex-shrink-0 me-2"></span>
+                        Master's Degree
+                    </button>
+                </nav>
+
+                    <div class="mt-3">
+                        <div class="grid grid-cols-3 gap-5 mb-5" id="tabs-icons-1" role="tabpanel" aria-labelledby="tabs-icons-item-1">
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right ">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Information Technology</h2>
+                                </div>
+                            </div>
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right ">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Marketing</h2>
+                                </div>
+                            </div>
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right ">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Marketing</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabs-icons-2" class="grid grid-cols-3 gap-5 mb-5 hidden" role="tabpanel" aria-labelledby="tabs-icons-item-2">
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Architecture</h2>
+                                </div>
+                            </div>
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Civil Engineering</h2>
+                                </div>
+                            </div>
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Information Technology</h2>
+                                </div>
+                            </div>
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Mathematics</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabs-icons-3" class="hidden" role="tabpanel" aria-labelledby="tabs-icons-item-3">
+                            <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                                <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title mb-2.5 text-white">Information Technology</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="flex 2xl:text-2xl xl:text-xl justify-center mb-8">
                     <button
                         v-for="(tab, index) in tabs"
@@ -35,95 +106,63 @@
                     </button>
                 </div>
                 <div v-if="activeTab === `Associate's Degree`" class="grid grid-cols-3 gap-5 mb-5">
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Civil Engineering</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right ">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Information Technology</h2>
                         </div>
                     </div>
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Information Technology</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right ">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Marketing</h2>
                         </div>
                     </div>
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Mathematics</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right ">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Marketing</h2>
                         </div>
                     </div>
                 </div>
                 <div v-if="activeTab === `Bachelor's Degree`" class="grid grid-cols-3 gap-5 mb-5">
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Architecture</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Architecture</h2>
                         </div>
                     </div>
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Civil Engineering</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Civil Engineering</h2>
                         </div>
                     </div>
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Information Technology</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Information Technology</h2>
                         </div>
                     </div>
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Mathematics</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Mathematics</h2>
                         </div>
                     </div>
                 </div>
                 <div v-if="activeTab === `Master's Degree`" class="grid grid-cols-3 gap-5 mb-5">
-                    <div>
-                        <div class="overflow-hidden">
-                            <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-red-600 font-bold text-xl">Information Technology</span>
-                            </div>
+                    <div class="card image-full sm:max-w-sm motion-preset-slide-right">
+                        <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png" alt="overlay image" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title mb-2.5 text-white">Information Technology</h2>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="mb-12">
                 <div class="bg-usea_secondary flex flex-col justify-center items-center mb-5">
-                    <span class="text-white 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">FACULTY'S MEMBERS</span>
+                    <span class="text-white 2xl:text-[2rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">FACULTY'S MEMBERS</span>
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
                 <!-- <span class="flex justify-center items-center mb-5 text-2xl font-bold mt-5">Faculty's Staff</span> -->
@@ -176,7 +215,7 @@
             </section>
             <section>
                 <div class="bg-usea_secondary flex flex-col justify-center items-center mb-5">
-                    <span class="text-white 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">ACTIVITIES</span>
+                    <span class="text-white 2xl:text-[2rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">ACTIVITIES</span>
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
                 <!-- <span class="flex justify-center items-center mb-5 text-2xl font-bold mt-5">Activities</span> -->
@@ -189,6 +228,7 @@
                 </div>
             </section>
         </div>
+        
         <div>
             <RightNavIT />
         </div>

@@ -1,11 +1,11 @@
 <template>
     <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Contact +</h1>
+            <span class="text-[#002060] text-xl font-bold">Contact +</span>
             <router-link
-                :to="{ name: 'history' }"
+                :to="{ name: 'faculty-technology' }"
                 class="link"
-                :class="{ active: isActive('history') }"
+                :class="{ active: isActive('faculty-technology') }"
             >
                 <span>About Faculty</span>
             </router-link>
@@ -18,7 +18,7 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Association's Degree +</h1>
+            <span class="text-[#002060] text-xl font-bold">Association's Degree +</span>
             <router-link
                 :to="{ name: 'message' }"
                 class="link"
@@ -42,7 +42,7 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Bachelor's Degree +</h1>
+            <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
                 :to="{ name: 'news-events' }"
                 class="link"
@@ -73,7 +73,7 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <h1 class="text-[#002060] font-bold">Master's Degree +</h1>
+            <span class="text-[#002060] text-xl font-bold">Master's Degree +</span>
             <router-link
                 :to="{ name: 'news-events' }"
                 class="link"

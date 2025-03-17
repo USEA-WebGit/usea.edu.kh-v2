@@ -1,5 +1,5 @@
 <template>
-    <div class=" mt-10 mb-10">
+    <div class=" mt-10 mb-10 motion-preset-slide-left ">
         <div class="flex flex-col text-center items-center">
             <div class="text-usea_secondary 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold">EVENTS</div>
             <div class="h-1 w-[5%] bg-usea_secondary"></div>

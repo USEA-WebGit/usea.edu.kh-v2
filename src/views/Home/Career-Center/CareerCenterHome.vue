@@ -3,7 +3,7 @@
         <img :src="CareerCenterBg" alt="career center bg" class="absolute bottom-0 opacity-5">
         <div class="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 justify-items-center items-center 2xl:gap-0 xl:gap-10 lg:gap-10 md:gap-10 sm:gap-10 gap-10 2xl:py-28 py-6 mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px]">
             <!-- Text Content -->
-            <div class="z-[1]">
+            <div class="z-[1] motion-preset-slide-right ">
                 <div>
                     <span class="text-usea_secondary 2xl:text-[2.5rem] xl:text-[2.3rem] lg:text-[2.3rem] md:text-[2.3rem] sm:text-[2.3rem] text-[1.5rem] font-bold block">Career Center</span>
                 
@@ -32,7 +32,7 @@
             </div>
 
             <!-- Image Section -->
-            <div>
+            <div class="motion-preset-slide-left">
                 <img :src="CareerCenter" alt="logo" class="max-w-full">
             </div>
         </div>
