@@ -10,9 +10,9 @@
                 <span>About Faculty</span>
             </router-link>
             <router-link
-                :to="{ name: 'vision' }"
+                :to="{ name: 'faculty-staff' }"
                 class="link"
-                :class="{ active: isActive('vision') }"
+                :class="{ active: isActive('faculty-staff') }"
             >
                 <span>Faculty's Staff</span>
             </router-link>

@@ -21,7 +21,7 @@
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
                 <!-- <span class="flex justify-center items-center mb-5 text-2xl font-bold mt-5">Majors</span> -->
-                <nav class="tabs tabs-bordered overflow-x-auto" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                <!-- <nav class="tabs tabs-bordered overflow-x-auto" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                     <button type="button" class="tab active-tab:tab-active active" id="tabs-icons-item-1" data-tab="#tabs-icons-1" aria-controls="tabs-icons-1" role="tab" aria-selected="true">
                         <span class="icon-[tabler--home] size-5 flex-shrink-0 me-2"></span>
                         Associate's Degree 
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 <div class="flex 2xl:text-2xl xl:text-xl justify-center mb-8">
                     <button
                         v-for="(tab, index) in tabs"

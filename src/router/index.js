@@ -13,10 +13,11 @@ import InternationalCollege from '../views/Navbar/Academics/Program/Internationa
 import LanguageCenter from '../views/Navbar/Academics/Program/Language-Center.vue';
 import PostGraduate from '../views/Navbar/Academics/Program/Post-Graduate.vue';
 import ShortCourse from '../views/Navbar/Academics/Program/Short-Course.vue';
-import FacultyEconomic from '../views/Navbar/Academics/Faculty/Faculty-Economic.vue';
-import FacultyIT from '../views/Navbar/Academics/Faculty/Faculty-IT.vue';
-import FacultyLanguage from '../views/Navbar/Academics/Faculty/Faculty-Language.vue';
-import FacultyLaw from '../views/Navbar/Academics/Faculty/Faculty-Law.vue';
+import FacultyEconomic from '../views/Navbar/Academics/Faculty/FacultyEconomic/Faculty-Economic.vue';
+import FacultyIT from '../views/Navbar/Academics/Faculty/FacultyIT/Faculty-IT.vue';
+import FacultyStaff from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyStaff.vue';
+import FacultyLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/Faculty-Language.vue';
+import FacultyLaw from '../views/Navbar/Academics/Faculty/FacultyLaw/Faculty-Law.vue';
 import LocalPartnership from '../views/Navbar/Partnership/Local.vue';
 import InternationalPartnership from '../views/Navbar/Partnership/International-Partner.vue';
 import Research from '../views/Navbar/Research/Research.vue';
@@ -100,7 +101,7 @@ const routes = [
     name: 'Academic',
     children: [
       {
-        path: 'internationa-college',
+        path: 'international-college',
         name: 'internationa-college',
         component: InternationalCollege,
         meta: {title: 'International-College'},
@@ -134,6 +135,14 @@ const routes = [
         name: 'faculty-technology',
         component: FacultyIT,
         meta: {title: 'Faculty Sciences and Technology'},
+        children:[
+          {
+            path: 'faculty-staff',
+            name: 'faculty-staff',
+            component: FacultyStaff,
+            meta: {title: 'Faculty Staff'},
+          }
+        ]
       },
       {
         path: 'faculty-language',
