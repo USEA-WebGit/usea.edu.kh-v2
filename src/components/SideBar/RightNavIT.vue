@@ -20,9 +20,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Association's Degree +</span>
             <router-link
-                :to="{ name: 'message' }"
+                :to="{ name: 'civil-engineering' }"
                 class="link"
-                :class="{ active: isActive('message') }"
+                :class="{ active: isActive('civil-engineering') }"
             >
                 <span>Civil Engineering</span>
             </router-link>
@@ -71,17 +71,6 @@
             >
                 <span>Mathematics</span>
             </router-link>
-        </div>
-        <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Master's Degree +</span>
-            <router-link
-                :to="{ name: 'news-events' }"
-                class="link"
-                :class="{ active: isActive('news-events') }"
-            >
-                <span>Information Technology</span>
-            </router-link>
-           
         </div>
     </div>
 </template>

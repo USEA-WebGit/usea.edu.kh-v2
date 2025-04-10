@@ -13,11 +13,16 @@ import InternationalCollege from '../views/Navbar/Academics/Program/Internationa
 import LanguageCenter from '../views/Navbar/Academics/Program/Language-Center.vue';
 import PostGraduate from '../views/Navbar/Academics/Program/Post-Graduate.vue';
 import ShortCourse from '../views/Navbar/Academics/Program/Short-Course.vue';
-import FacultyEconomic from '../views/Navbar/Academics/Faculty/FacultyEconomic/Faculty-Economic.vue';
-import FacultyIT from '../views/Navbar/Academics/Faculty/FacultyIT/Faculty-IT.vue';
+import FacultyEconomic from '../views/Navbar/Academics/Faculty/FacultyEconomic/FacultyBusinessEconomicTourism.vue';
+
+//FacultyIT
+import FacultyIT from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyScience.vue';
 import FacultyStaff from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyStaff.vue';
-import FacultyLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/Faculty-Language.vue';
-import FacultyLaw from '../views/Navbar/Academics/Faculty/FacultyLaw/Faculty-Law.vue';
+import CivilEngineering from '../views/Navbar/Academics/Faculty/FacultyIT/Association/CivilEngineering.vue';
+
+
+import FacultyLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/FacultyArtLanguage.vue';
+import FacultyLaw from '../views/Navbar/Academics/Faculty/FacultyLaw/FacultySocialScience.vue';
 import LocalPartnership from '../views/Navbar/Partnership/Local.vue';
 import InternationalPartnership from '../views/Navbar/Partnership/International-Partner.vue';
 import Research from '../views/Navbar/Research/Research.vue';
@@ -130,20 +135,26 @@ const routes = [
         component: FacultyEconomic,
         meta: {title: 'Faculty Economics, Business and Tourism'},
       },
+      //Faculty Sciences and Technology
       {
         path: 'faculty-technology',
         name: 'faculty-technology',
         component: FacultyIT,
         meta: {title: 'Faculty Sciences and Technology'},
-        children:[
-          {
-            path: 'faculty-staff',
-            name: 'faculty-staff',
-            component: FacultyStaff,
-            meta: {title: 'Faculty Staff'},
-          }
-        ]
       },
+      {
+        path: 'faculty-staff',
+        name: 'faculty-staff',
+        component: FacultyStaff,
+        meta: {title: 'Faculty Staff'},
+      },
+      {
+        path: 'civil-engineering',
+        name: 'civil-engineering',
+        component: CivilEngineering,
+        meta: {title: 'Civil Engineering'},
+      },
+
       {
         path: 'faculty-language',
         name: 'faculty-language',
@@ -212,7 +223,8 @@ const routes = [
         meta: {title: 'Career Center'},
       },
     ]
-  }
+  },
+  
 
 
 ];

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
+    <div class="bg-gray-200 p-5 flex flex-col gap-5 2xl:text-lg xl:text-lg lg:text-sm rounded-md">
         <div class="flex flex-col">
             <h1 class="text-[#002060] font-bold">Organization Info +</h1>
             <router-link

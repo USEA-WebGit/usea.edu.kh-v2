@@ -2,7 +2,7 @@
     <div>
         <Titlebg title="News-Events" breadcrumb="News-Events" />
     </div>
-    <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
+    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
             <div class="mt-10 mb-10">
                 <div class="flex 2xl:text-2xl xl:text-xl justify-center mb-8">
@@ -18,7 +18,7 @@
                         {{ tab }}
                     </button>
                 </div>
-                <div v-if="activeTab === 'All'" class="grid grid-cols-3 gap-5">
+                <div v-if="activeTab === 'All'" class="grid 2xl:2xl:grid-cols-3 gap-5">
                     <div>
                         <div class="overflow-hidden">
                             <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="activeTab === 'News'" class="grid grid-cols-3 gap-5">
+                <div v-if="activeTab === 'News'" class="grid 2xl:grid-cols-3 gap-5">
                     <div>
                         <div class="overflow-hidden">
                             <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="activeTab === 'Current'" class="grid grid-cols-3 gap-5">
+                <div v-if="activeTab === 'Current'" class="grid 2xl:grid-cols-3 gap-5">
                     <div>
                         <div class="overflow-hidden">
                             <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="activeTab === 'Upcoming'" class="grid grid-cols-3 gap-5">
+                <div v-if="activeTab === 'Upcoming'" class="grid 2xl:grid-cols-3 gap-5">
                     <div>
                         <div class="overflow-hidden">
                             <img :src="demo" alt="test" class="w-full object-cover transform transition-transform duration-300 hover:scale-105">

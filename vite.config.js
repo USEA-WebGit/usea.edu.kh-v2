@@ -10,7 +10,7 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
-  assetsInclude: ['**/*.zip', '**/*.docx'],  
+  assetsInclude: ['**/*.zip', '**/*.docx', '**/*.JPG'],  
   // server: {
   //   host: getIPAddress()
   // }

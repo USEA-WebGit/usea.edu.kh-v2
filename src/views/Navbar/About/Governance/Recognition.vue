@@ -2,10 +2,10 @@
     <div>
         <Titlebg title="Recognition and Accreditatiton" breadcrumb="Recognition and Accreditatiton" />
     </div>
-    <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 mb-10">
+    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 mb-10">
         <div class="flex flex-col gap-10">
             <!-- Selected Board Member Details -->
-            <div v-for="(board, index) in boards" :key="index" class="grid grid-cols-2 gap-5">
+            <div v-for="(board, index) in boards" :key="index" class="grid 2xl:grid-cols-2 xl:grid-cols-2 gap-5">
                 <div class="overflow-hidden rounded-lg border border-gray-300 shadow-xl">
                     <img :src="board.img" alt="recognition-image" class="h-full w-full transform transition-transform duration-300 hover:scale-105">
                 </div>

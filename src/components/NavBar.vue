@@ -38,7 +38,7 @@
             <li class="nav-item pb-10 group relative">
               ABOUT
               <ul
-                class="mega-menu hidden absolute -left-[600px] top-full w-max bg-white shadow-lg px-20 py-20 grid grid-cols-3 gap-x-5 z-50 rounded-md"
+                class="mega-menu hidden absolute 2xl:-left-[600px] -left-[535px] top-full w-max bg-white shadow-lg px-20 py-20 grid grid-cols-3 gap-x-5 z-50 rounded-md"
               >
                 <div class="mega-menu-item">
                   <h3 class="font-bold text-xl pb-7 text-usea_secondary">
@@ -82,7 +82,7 @@
             <li class="nav-item pb-10 group relative">
               ACADEMICS
               <ul
-                class="mega-menu hidden absolute -left-[900px] top-full w-max bg-white shadow-lg px-12 py-12 grid grid-cols-3 gap-x-5 z-50 rounded-md"
+                class="mega-menu hidden absolute 2xl:-left-[600px] -left-[515px] top-full w-max bg-white shadow-lg px-12 py-12 grid grid-cols-2 gap-x-5 z-50 rounded-md"
               >
                 <div class="mega-menu-item">
                   <h3 class="font-bold text-xl pb-7 text-usea_secondary">Faculty</h3>
@@ -104,9 +104,9 @@
                     <router-link :to="{name: 'short-course'}"><li class="flex gap-2">Short Course</li></router-link>
                   </ul>
                 </div>
-                <div class="mega-menu-item px-12 w-full">
+                <!-- <div class="mega-menu-item px-12 w-full">
                   <img :src="Building" alt="Building" width="400px" />
-                </div>
+                </div> -->
               </ul>
             </li>
   

@@ -2,8 +2,8 @@
     <div>
         <Titlebg title="Location" breadcrumb="Location" />
     </div>
-    <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-5 mb-10">
-        <div class="grid grid-cols-[60%_40%]">
+    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
+        <div class="grid 2xl:grid-cols-[60%_40%] xl:grid-cols-[60%_40%] ">
             <div>
                 <p class="flex justify-center text-2xl font-bold">Contact US</p>
                 <div class="grid grid-cols-2 gap-5 mt-10 text-lg">
