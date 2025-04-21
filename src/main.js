@@ -4,7 +4,9 @@ import App from './App.vue';
 import { createPinia } from 'pinia';
 import './style.css';
 import './assets/tailwind.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const app = createApp(App);
 
 // Set up dynamic title based on route metadata

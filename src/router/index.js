@@ -19,6 +19,7 @@ import FacultyEconomic from '../views/Navbar/Academics/Faculty/FacultyEconomic/F
 import FacultyIT from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyScience.vue';
 import FacultyStaff from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyStaff.vue';
 import CivilEngineering from '../views/Navbar/Academics/Faculty/FacultyIT/Association/CivilEngineering.vue';
+import InformationTechnology from '../views/Navbar/Academics/Faculty/FacultyIT/Association/InformationTechnology.vue';
 
 
 import FacultyLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/FacultyArtLanguage.vue';
@@ -154,6 +155,13 @@ const routes = [
         component: CivilEngineering,
         meta: {title: 'Civil Engineering'},
       },
+   
+      {
+      path: 'association-information-technology',
+      name: 'association-information-technology',
+      component: InformationTechnology,
+      meta: {title: 'Information Technology'},
+    },
 
       {
         path: 'faculty-language',

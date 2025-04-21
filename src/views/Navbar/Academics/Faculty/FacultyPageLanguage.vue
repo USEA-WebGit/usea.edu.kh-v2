@@ -12,41 +12,61 @@
                 <div class="flex flex-col gap-5">
                     <img :src="faculty.image" alt="" class="h-[200px] object-cover">
                     <p class="text-justify">{{ faculty.description }}</p>
+                    <!-- MISSION, VISION, VALUES Section -->
+                    <div class="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-10 mt-10">
+                        <div class="grid grid-cols-2 items-center gap-5 text-white">
+                            
+                            <div class="bg-blue-500 flex flex-col items-center p-5 rounded-md" data-aos="fade-right">
+                                <div class="text-4xl mb-3">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-5">VISION</h3>
+                            </div>
+                            <p class="text-justify text-lg text-black" data-aos="fade-left">
+                                The Faculty of Arts, Humanities and Languages aims to become the leading faculty in Cambodia for training students in the arts, humanities, and languages, equipping them with knowledge, skills, and professional attitudes that meet national and international standards.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 items-center gap-5 text-white">
+                            <p class="text-justify text-lg text-black" data-aos="fade-right">
+                                Faculty of Arts, Humanities and Languages is committed to educating technical skills, soft skills, and professionalism, which allow graduates to well function in the global economy.
+                            </p>
+                            <div class="bg-red-500 flex flex-col items-center p-5 rounded-md" data-aos="fade-left">
+                                <div class="text-4xl mb-3">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-5">MISSION</h3>
+                            </div>
+                            
+                        </div>
+                        <div class="grid grid-cols-2 items-center gap-5 text-white">
+                            
+                            <div class="bg-usea_secondary flex flex-col items-center p-5 rounded-md" data-aos="fade-right">
+                                <div class="text-4xl mb-3">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-5">Educational Philosophy</h3>
+                            </div>
+                            <p class="text-justify text-lg text-black" data-aos="fade-left">
+                                We believe that students learn best through questioning, analyzing, and interpreting the world around them.
+                            </p>
+                        </div>
+                        
+                    </div>
+
+
                 </div>
             </section>
 
             <section class="mb-12">
                 <div class="bg-usea_secondary flex flex-col justify-center items-center mb-5">
-                    <span class="text-white text-[2rem] font-bold">MAJORS</span>
+                    <span class="text-white text-[2rem] font-bold">DEPARTMENT</span>
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
-                
-                <div class="flex 2xl:text-2xl xl:text-xl justify-center mb-8">
-                    <button
-                        v-for="(tab, index) in tabs"
-                        :key="index"
-                        @click="activeTab = tab"
-                        :class="['px-4 py-2 text-gray-600 border-b-4 border-transparent hover:text-red-600 transition-all duration-300 ease-in-out font-bold',
-                        activeTab === tab ? 'border-b-red-600 text-red-600' : '']"
-                    >
-                        {{ tab }}
-                    </button>
-                </div>
-
-                <div v-if="activeTab === `Associate's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in faculty.majors.associate" :key="major" class="card image-full sm:max-w-sm">
-                        <figure><img :src="major.image" alt="overlay image" /></figure>
+                <div class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5 overflow-hidden" >
+                    <div v-for="department in faculty.departments" :key="department" class="card image-full sm:max-w-sm cursor-pointer w-full object-cover transform transition-transform duration-300 hover:scale-105" >
+                        <figure><img :src="department.image" alt="overlay image" /></figure>
                         <div class="card-body">
-                            <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-if="activeTab === `Bachelor's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in faculty.majors.bachelor" :key="major" class="card image-full sm:max-w-sm">
-                        <figure><img :src="major.image" alt="overlay image" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
+                            <h2 class="card-title mb-2.5 text-white">{{ department.name }}</h2>
                         </div>
                     </div>
                 </div>

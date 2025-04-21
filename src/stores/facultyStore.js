@@ -1,45 +1,20 @@
-import { defineStore } from 'pinia';
+// stores/facultyStore.js
+import { defineStore } from 'pinia'
+import axios from 'axios'
 
 export const useFacultyStore = defineStore('facultyStore', {
     state: () => ({
-        faculties: [
-            {
-                slug: "business",
-                name: "Faculty of Business",
-                programs: [
-                    { 
-                        title: "Association's Degree", 
-                        courses: 
-                        [
-                            {   
-                                name: "Accounting", 
-                                slug: "accounting" 
-                            }
-                        ] 
-                
-                    },
-                    { 
-                        title: "Bachelor's Degree",
-                        courses: 
-                        [
-                            { 
-                                name: "Marketing",
-                                slug: "marketing" 
-                            }
-                        ] 
-                    }
-                ]
-            },
-            {
-                slug: "it",
-                name: "Faculty of IT",
-                programs: [
-                    { title: "Bachelor's Degree", courses: [{ name: "Software Engineering", slug: "software-engineering" }] }
-                ]
-            }
-        ]
+        faculties: []  // Keep as an object to match your API structure
     }),
-    getters: {
-        getFacultyBySlug: (state) => (slug) => state.faculties.find(faculty => faculty.slug === slug)
+
+    actions: {
+        async fetchFaculties() {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/faculty-data') // update with your actual endpoint
+                this.faculties = response.data
+            } catch (error) {
+                console.error('Failed to fetch faculties:', error)
+            }
+        }
     }
-});
+})

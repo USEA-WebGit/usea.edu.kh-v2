@@ -27,9 +27,9 @@
                 <span>Civil Engineering</span>
             </router-link>
             <router-link
-                :to="{ name: 'board-trustee' }"
+                :to="{ name: 'association-information-technology' }"
                 class="link"
-                :class="{ active: isActive('board-trustee') }"
+                :class="{ active: isActive('association-information-technology') }"
             >
                 <span>Information Technology</span>
             </router-link>
