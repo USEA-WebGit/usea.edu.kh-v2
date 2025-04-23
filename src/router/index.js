@@ -23,6 +23,12 @@ import InformationTechnology from '../views/Navbar/Academics/Faculty/FacultyIT/A
 
 
 import FacultyLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/FacultyArtLanguage.vue';
+import FacultyStaffLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/FacultyStaff.vue';
+import DepartmentChinese from '../views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentChinese.vue';
+import DepartmentEnglish from '../views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish.vue';
+import DepartmentKhmer from '../views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentKhmer.vue';
+
+
 import FacultyLaw from '../views/Navbar/Academics/Faculty/FacultyLaw/FacultySocialScience.vue';
 import LocalPartnership from '../views/Navbar/Partnership/Local.vue';
 import InternationalPartnership from '../views/Navbar/Partnership/International-Partner.vue';
@@ -149,6 +155,7 @@ const routes = [
         component: FacultyStaff,
         meta: {title: 'Faculty Staff'},
       },
+  
       {
         path: 'civil-engineering',
         name: 'civil-engineering',
@@ -169,6 +176,33 @@ const routes = [
         component: FacultyLanguage,
         meta: {title: 'Faculty Art, Humanities and Language'},
       },
+      {
+        path: 'faculty-staff-language',
+        name: 'faculty-staff-language',
+        component: FacultyStaffLanguage,
+        meta: {title: 'Faculty Staff'},
+      },
+
+      {
+        path: 'department-chinese',
+        name: 'department-chinese',
+        component: DepartmentChinese,
+        meta: {title: 'Department Chinese'},
+      },
+      {
+        path: 'department-english',
+        name: 'department-english',
+        component: DepartmentEnglish,
+        meta: {title: 'Department English'},
+      },
+      {
+        path: 'department-khmer',
+        name: 'department-khmer',
+        component: DepartmentKhmer,
+        meta: {title: 'Department Khmer'},
+      },
+
+
       {
         path: 'faculty-law',
         name: 'faculty-law',

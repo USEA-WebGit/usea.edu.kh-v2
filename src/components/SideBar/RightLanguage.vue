@@ -10,9 +10,9 @@
                 <span>About Faculty</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff' }"
+                :to="{ name: 'faculty-staff-language' }"
                 class="link"
-                :class="{ active: isActive('faculty-staff') }"
+                :class="{ active: isActive('faculty-staff-language') }"
             >
                 <span>Faculty's Staff</span>
             </router-link>
@@ -20,23 +20,23 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Department +</span>
             <router-link
-                :to="{ name: 'board-trustee' }"
+                :to="{ name: 'department-chinese' }"
                 class="link"
-                :class="{ active: isActive('board-trustee') }"
+                :class="{ active: isActive('department-chinese') }"
             >
                 <span>Department of Chinese</span>
             </router-link>
             <router-link
-                :to="{ name: 'board-trustee' }"
+                :to="{ name: 'department-english' }"
                 class="link"
-                :class="{ active: isActive('board-trustee') }"
+                :class="{ active: isActive('department-english') }"
             >
                 <span>Department of English</span>
             </router-link>
             <router-link
-                :to="{ name: 'civil-engineering' }"
+                :to="{ name: 'department-khmer' }"
                 class="link"
-                :class="{ active: isActive('civil-engineering') }"
+                :class="{ active: isActive('department-khmer') }"
             >
                 <span>Department of Khmer Literature</span>
             </router-link>

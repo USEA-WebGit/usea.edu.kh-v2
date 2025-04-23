@@ -63,12 +63,18 @@
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
                 <div class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5 overflow-hidden" >
-                    <div v-for="department in faculty.departments" :key="department" class="card image-full sm:max-w-sm cursor-pointer w-full object-cover transform transition-transform duration-300 hover:scale-105" >
+                    <div
+                        v-for="department in faculty.departments"
+                        :key="department.name"
+                        class="card image-full sm:max-w-sm cursor-pointer w-full object-cover transform transition-transform duration-300 hover:scale-105"
+                        @click="goToDepartment(department.route)"
+                    >
                         <figure><img :src="department.image" alt="overlay image" /></figure>
                         <div class="card-body">
                             <h2 class="card-title mb-2.5 text-white">{{ department.name }}</h2>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -116,11 +122,14 @@
 <script setup>
 import Titlebg from '@/components/Slide/TitleBg.vue';
 import { ref, defineProps } from 'vue';
-
+import { useRouter } from 'vue-router';
 const props = defineProps({
     faculty: Object
 });
-
+const router = useRouter();
+const goToDepartment = (routeName) => {
+    router.push({ name: routeName });
+};
 const tabs = ["Associate's Degree", "Bachelor's Degree"];
 const activeTab = ref(tabs[0]);
 </script>
