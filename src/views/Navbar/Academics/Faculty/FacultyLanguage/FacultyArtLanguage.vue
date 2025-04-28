@@ -1,9 +1,9 @@
 <template>
-    <FacultyPageLanguage :faculty="facultyData" />
+    <FacultyPage :faculty="facultyData" />
 </template>
 
 <script setup>
-import FacultyPageLanguage from '../FacultyPageLanguage.vue';
+import FacultyPage from '../FacultyPage.vue';
 import RightLanguage from '@/components/SideBar/RightLanguage.vue';
 import demo from '@/assets/images/demoCard.png';
 import ripeng from '@/assets/images/roem_ripeng.png';

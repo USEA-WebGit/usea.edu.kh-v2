@@ -20,25 +20,11 @@ const facultyData = {
     title: "Faculty of Economics Business & Tourism",
     description: "Faculty of Economics Business & Tourism aims to provide specialized education...",
     image: demo,
-    majors: {
-        associate: [
-            { name: "Accounting", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Finance & Banking", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Tourism", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-        ],
-        bachelor: [
-            { name: "Accounting & Auditing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Finance and Banking", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "International Economics", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "International Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "International Tourism Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Tourism and Hospitality Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-        ]
-    },
+    departments: [
+        {name: "Department of Business", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese'},
+        {name: "Department of Tourism", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-english'},
+        {name: "Department of Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-khmer'},
+    ],
     members: [
         { name: "Mr. Teal Youlong", position: "Dean of Faculty of Economics Business & Tourism", image: tealyoulong },
         { name: "Mr. Taing Keangse", position: "Head of Department of Business", image: nesokna },

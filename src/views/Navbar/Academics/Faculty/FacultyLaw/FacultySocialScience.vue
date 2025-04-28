@@ -12,17 +12,11 @@ const facultyData = {
     title: "Faculty of Social Science & Law",
     description: "Faculty of Social Science and Law aims to provide specialized education...",
     image: demo,
-    majors: {
-        associate: [
-            { name: "Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Public Administration", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" }
-        ],
-        bachelor: [
-            { name: "Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Political Sciences and International Relations", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "Public Administration", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" }
-        ]
-    },
+    departments: [
+        {name: "Department of Public Ralation", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese'},
+        {name: "Department of Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-english'},
+        
+    ],
     members: [
         { name: "Mr. Leang Taingsoth", position: "Dean of ", image: taingsoth }
     ],

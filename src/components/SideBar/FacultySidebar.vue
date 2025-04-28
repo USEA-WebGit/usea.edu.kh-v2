@@ -41,7 +41,7 @@ import { useRoute } from 'vue-router';
 
 // Props to receive faculty data
 const props = defineProps({
-    faculty: Object
+    sidebar: Object
 });
 
 // Get the current route
