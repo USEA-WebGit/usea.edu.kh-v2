@@ -6,7 +6,7 @@
 <script setup>
 import DepartmentPage from '../../DepartmentPage.vue';
 import FacultySideBar from '@/components/SideBar/FacultySidebar.vue'
-import RightNavScience from '@/components/SideBar/RightNavIT.vue';
+import DepartEnglish from '@/components/SideBar/Department/DepartEnglish.vue';
 import ripeng from '@/assets/images/roem_ripeng.png';
 import demo from '@/assets/images/demoCard.png';
 const departmentEnglish = {
@@ -15,11 +15,11 @@ const departmentEnglish = {
     image: demo,
     majors: {
         associate: [
-            { name: "Associate in English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
+            { name: "Associate in English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'associate-english' },
             
         ],
         bachelor: [
-            { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
+            { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
         ]
     },
     members: [
@@ -31,7 +31,7 @@ const departmentEnglish = {
         { image: demo },
         { image: demo }
     ],
-    sidebarComponent: RightNavScience
+    sidebarComponent: DepartEnglish
 };
 
 const departmentEnglishSideBar ={

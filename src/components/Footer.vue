@@ -17,10 +17,10 @@
         <div class="flex flex-col gap-5 w-[75%] h-full">
             <span class="font-bold 2xl:text-2xl text-white">Faculty & Information</span>
             <div class="text-white flex flex-col gap-3 links 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
-                <router-link :to="{name: 'faculty-economic'}"><li class="block">Faculty of Economics, Business & Tourism</li></router-link>
-                <router-link :to="{name: 'faculty-technology'}"><li class="block">Faculty of Sciences & Technology</li></router-link>
-                <router-link :to="{name: 'faculty-law'}"><li class="block">Faculty of Social Science & Law</li></router-link>
-                <router-link :to="{name: 'faculty-language'}"><li class="block">Faculty of Arts Humanities Language</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'economics-business-tourism'}}"><li class="block">Faculty of Economics, Business & Tourism</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'science-technology'}}"><li class="block">Faculty of Sciences & Technology</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}"><li class="block">Faculty of Social Science & Law</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-humanities-languages'}}"><li class="block">Faculty of Arts Humanities Language</li></router-link>
                 <router-link :to="{name: 'news-events'}"><li class="block">Events & News</li></router-link>
                 <router-link :to="{name: 'faq'}"><li class="block">FAQ</li></router-link>
             </div>

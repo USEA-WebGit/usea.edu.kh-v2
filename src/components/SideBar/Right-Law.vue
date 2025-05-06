@@ -3,14 +3,14 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
             <router-link
-                :to="{ name: 'faculty-technology' }"
+                :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}"
                 class="link"
-                :class="{ active: isActive('faculty-technology') }"
+                :class="{ active: isActive('faculty-page') }"
             >
                 <span>About Faculty</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff' }"
+                :to="{ name: 'faculty-staff', params: { facultyStaff: 'social-science-law'} }"
                 class="link"
                 :class="{ active: isActive('faculty-staff') }"
             >

@@ -1,215 +1,160 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import History from '../views/Navbar/About/Organization/History.vue';
-import Vision from '../views/Navbar/About/Organization/Vision-Mission.vue';
-import Location from '../views/Navbar/About/Organization/Location.vue';
-import Contact from '../views/Navbar/About/Information/Contact.vue';
-import Faq from '../views/Navbar/About/Information/Faq.vue';
-import NewsEvents from '../views/Navbar/About/Information/News-Events.vue';
-import BoardTrustee from '../views/Navbar/About/Governance/Board-Trustee.vue';
-import Message from '../views/Navbar/About/Governance/Message.vue';
-import Recognition from '../views/Navbar/About/Governance/Recognition.vue';
-import InternationalCollege from '../views/Navbar/Academics/Program/International-College.vue';
-import LanguageCenter from '../views/Navbar/Academics/Program/Language-Center.vue';
-import PostGraduate from '../views/Navbar/Academics/Program/Post-Graduate.vue';
-import ShortCourse from '../views/Navbar/Academics/Program/Short-Course.vue';
-import FacultyEconomic from '../views/Navbar/Academics/Faculty/FacultyEconomic/FacultyBusinessEconomicTourism.vue';
-
-//FacultyIT
-import FacultyIT from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyScience.vue';
-import FacultyStaff from '../views/Navbar/Academics/Faculty/FacultyIT/FacultyStaff.vue';
-import CivilEngineering from '../views/Navbar/Academics/Faculty/FacultyIT/Association/CivilEngineering.vue';
-import InformationTechnology from '../views/Navbar/Academics/Faculty/FacultyIT/Association/InformationTechnology.vue';
-
-
-import FacultyLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/FacultyArtLanguage.vue';
-import FacultyStaffLanguage from '../views/Navbar/Academics/Faculty/FacultyLanguage/FacultyStaff.vue';
-import DepartmentChinese from '../views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentChinese.vue';
-import DepartmentEnglish from '../views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish.vue';
-import DepartmentKhmer from '../views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentKhmer.vue';
-
-
-import FacultyLaw from '../views/Navbar/Academics/Faculty/FacultyLaw/FacultySocialScience.vue';
-import LocalPartnership from '../views/Navbar/Partnership/Local.vue';
-import InternationalPartnership from '../views/Navbar/Partnership/International-Partner.vue';
-import Research from '../views/Navbar/Research/Research.vue';
-import HealthServices from '../views/Navbar/Services/Health-Services.vue';
-import ITServices from '../views/Navbar/Services/IT-Services.vue';
-import LibraryServices from '../views/Navbar/Services/Library.vue';
-import CareerCenter from '../views/Navbar/Services/Career-Center.vue';
-
-
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
-    meta: { title: 'Home - USEA' },
+    component: () => import('@/views/Home.vue'),
+    meta: { title: 'Home - USEA', breadcrumb: 'Home' },
   },
-
-  // about navbar 
   {
     path: '/about',
     name: 'About',
+    meta: {title: 'About - USEA', breadcrumb: 'About'},
     children: [
       {
         path: 'history',
         name: 'history',
-        component: History,
-        meta: { title: 'History-Logo Meaning' },
+        component: () => import('@/views/Navbar/About/Organization/History.vue'),
+        meta: { title: 'History-Logo Meaning', breadcrumb: 'History and Logo Meaning' },
       },
       {
         path: 'vision-mission',
         name: 'vision',
-        component: Vision,
-        meta: {title: 'Vision-Mission'},
+        component: () => import('@/views/Navbar/About/Organization/Vision-Mission.vue'),
+        meta: {title: 'Vision-Mission', breadcrumb: 'Vision Mission'},
       },
       {
         path: 'location',
         name: 'location',
-        component: Location,
-        meta: {title: 'Location - USEA'},
+        component: () => import('@/views/Navbar/About/Organization/Location.vue'),
+        meta: {title: 'Location - USEA', breadcrumb: 'Location'},
       },
       {
         path: 'contact',
         name: 'contact',
-        component: Contact,
-        meta: {title: 'Contact - USEA'},
+        component: () => import('@/views/Navbar/About/Information/Contact.vue'),
+        meta: {title: 'Contact - USEA', breadcrumb: 'Contact'},
       },
       {
         path: 'news-events',
         name: 'news-events',
-        component: NewsEvents,
-        meta: {title: 'News-Events'},
+        component: () => import('@/views/Navbar/About/Information/News-Events.vue'),
+        meta: {title: 'News-Events', breadcrumb: 'News and Events'},
       },
       {
         path: 'faq',
         name: 'faq',
-        component: Faq,
-        meta: {title: 'FAQ'},
+        component: () => import('@/views/Navbar/About/Information/Faq.vue'),
+        meta: {title: 'FAQ', breadcrumb: 'FAQ'},
       },
       {
         path: 'board-trustee',
         name: 'board-trustee',
-        component: BoardTrustee,
-        meta: {title: 'Board Trustees'},
+        component: () => import('@/views/Navbar/About/Governance/Board-Trustee.vue'),
+        meta: {title: 'Board Trustees', breadcrumb: 'Board Trustees'},
       },
       {
         path: 'message',
         name: 'message',
-        component: Message,
-        meta: {title: "President's Message"},
+        component: () => import('@/views/Navbar/About/Governance/Message.vue'),
+        meta: {title: "President's Message", breadcrumb: "President's Message"},
       },
       {
         path: 'recognition',
         name: 'recognition',
-        component: Recognition,
-        meta: {title: 'Recognition & Accreditation'},
+        component: () => import('@/views/Navbar/About/Governance/Recognition.vue'),
+        meta: {title: 'Recognition & Accreditation', breadcrumb: "Recognition & Accreditation"},
       },
     ],
   },
+  
   {
     path: '/academic',
-    name: 'Academic',
     children: [
+      {
+        path: 'faculty/:facultyName',
+        name: 'faculty-page',
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyPage.vue')
+      },
       {
         path: 'international-college',
         name: 'internationa-college',
-        component: InternationalCollege,
-        meta: {title: 'International-College'},
+        component: () => import('@/views/Navbar/Academics/Program/International-College.vue'),
+        meta: {title: 'International-College', breadcrumb: "International College"},
       },
       {
         path: 'language-center',
         name: 'language-center',
-        component: LanguageCenter,
-        meta: {title: 'Language Center'},
+        component: () => import('@/views/Navbar/Academics/Program/Language-Center.vue'),
+        meta: {title: 'Language Center', breadcrumb: "Language Center"},
       },
       {
         path: 'post-graduate',
         name: 'post-graduate',
-        component: PostGraduate,
-        meta: {title: 'Post Graduate'},
+        component: () => import('@/views/Navbar/Academics/Program/Post-Graduate.vue'),
+        meta: {title: 'Post Graduate', breadcrumb: 'Post Greaduate'},
       },
       {
         path: 'short-course',
         name: 'short-course',
-        component: ShortCourse,
-        meta: {title: 'Short-Course'},
+        component: () => import('@/views/Navbar/Academics/Program/Short-Course.vue'),
+        meta: {title: 'Short-Course', breadcrumb: 'Short Course'},
       },
       {
-        path: 'faculty-economic',
-        name: 'faculty-economic',
-        component: FacultyEconomic,
-        meta: {title: 'Faculty Economics, Business and Tourism'},
-      },
-      //Faculty Sciences and Technology
-      {
-        path: 'faculty-technology',
-        name: 'faculty-technology',
-        component: FacultyIT,
-        meta: {title: 'Faculty Sciences and Technology'},
-      },
-      {
-        path: 'faculty-staff',
+        path: 'faculty-staff/:facultyStaff',
         name: 'faculty-staff',
-        component: FacultyStaff,
-        meta: {title: 'Faculty Staff'},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyStaff.vue'),
+        meta: {title: 'Faculty Staff', breadcrumb: "Faculty Staff"},
       },
-  
       {
         path: 'civil-engineering',
         name: 'civil-engineering',
-        component: CivilEngineering,
-        meta: {title: 'Civil Engineering'},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyIT/Association/CivilEngineering.vue'),
+        meta: {title: 'Civil Engineering', breadcrumb: "Civil Engineering"},
       },
-   
       {
-      path: 'association-information-technology',
-      name: 'association-information-technology',
-      component: InformationTechnology,
-      meta: {title: 'Information Technology'},
-    },
-
-      {
-        path: 'faculty-language',
-        name: 'faculty-language',
-        component: FacultyLanguage,
-        meta: {title: 'Faculty Art, Humanities and Language'},
+        path: 'association-information-technology',
+        name: 'association-information-technology',
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyIT/Association/InformationTechnology.vue'),
+        meta: {title: 'Information Technology', breadcrumb: "Information Technology"},
       },
       {
         path: 'faculty-staff-language',
         name: 'faculty-staff-language',
-        component: FacultyStaffLanguage,
-        meta: {title: 'Faculty Staff'},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/FacultyStaff.vue'),
+        meta: {title: 'Faculty Staff', breadcrumb: "Faculty Staff"},
       },
-
+      
       {
+        path: 'associate-english',
+        name: 'associate-english',
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish/Associate/AssociateEnglish.vue'),
+        meta: {title: 'Associate in English', breadcrumb:"Associate in English"},
+      },
+      {
+        path: 'bachelor-tefl',
+        name: 'bachelor-tefl',
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish/Bachelor/BachelorTefl.vue'),
+        meta: {title: 'Bachelor of Art in Teaching English as Foreign Language (TEFL)', breadcrumb: "Bachelor of Art in Teaching English as Foreign Language (TEFL)"},
+      },
+      { 
         path: 'department-chinese',
         name: 'department-chinese',
-        component: DepartmentChinese,
-        meta: {title: 'Department Chinese'},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentChinese.vue'),
+        meta: {title: 'Department Chinese', breadcrumb: "Department Chinese"},
       },
       {
         path: 'department-english',
         name: 'department-english',
-        component: DepartmentEnglish,
-        meta: {title: 'Department English'},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish.vue'),
+        meta: {title: 'Department English', breadcrumb:"Department English"},
       },
-      {
+        {
         path: 'department-khmer',
         name: 'department-khmer',
-        component: DepartmentKhmer,
-        meta: {title: 'Department Khmer'},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentKhmer.vue'),
+        meta: {title: 'Department Khmer', breadcrumb: "Department Khmer"},
       },
-
-
-      {
-        path: 'faculty-law',
-        name: 'faculty-law',
-        component: FacultyLaw,
-        meta: {title: 'Faculty Social Science and Law'},
-      },
-    
     ]
   },
   {
@@ -219,22 +164,22 @@ const routes = [
       {
         path: 'local-partnership',
         name: 'local-partnership',
-        component: LocalPartnership,
-        meta: {title: 'Local Partnership'},
+        component: () => import('@/views/Navbar/Partnership/Local.vue'),
+        meta: {title: 'Local Partnership', breadcrumb: "Local Partnership"},
       },
       {
         path: 'international-partnership',
         name: 'international-partnership',
-        component: InternationalPartnership,
-        meta: {title: 'International Partnership'},
+        component: () => import('@/views/Navbar/Partnership/International-Partner.vue'),
+        meta: {title: 'International Partnership', breadcrumb: "International Partnership"},
       },
     ]
   },
   {
     path: '/research',
     name: 'research',
-    component: Research,
-    meta: {title: 'Research'},
+    component: () => import('@/views/Navbar/Research/Research.vue'),
+    meta: {title: 'Research', breadcrumb: "Research"},
   },
   {
     path: '/services',
@@ -243,32 +188,29 @@ const routes = [
       {
         path: 'health-services',
         name: 'health-services',
-        component: HealthServices,
-        meta: {title: 'Health Services'},
+        component: () => import('@/views/Navbar/Services/Health-Services.vue'),
+        meta: {title: 'Health Services', breadcrumb: "Health Services"},
       },
       {
         path: 'it-services',
         name: 'it-services',
-        component: ITServices,
-        meta: {title: 'IT Services'},
+        component: () => import('@/views/Navbar/Services/IT-Services.vue'),
+        meta: {title: 'IT Services', breadcrumb: "IT Services"},
       },
       {
         path: 'library-services',
         name: 'library-services',
-        component: LibraryServices,
-        meta: {title: 'Library Services'},
+        component: () => import('@/views/Navbar/Services/Library.vue'),
+        meta: {title: 'Library Services', breadcrumb:"Library Services"},
       },
       {
         path: 'career-center',
         name: 'career-center',
-        component: CareerCenter,
-        meta: {title: 'Career Center'},
+        component: () => import('@/views/Navbar/Services/Career-Center.vue'),
+        meta: {title: 'Career Center', breadcrumb:"Career"},
       },
     ]
   },
-  
-
-
 ];
 
 const router = createRouter({

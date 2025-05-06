@@ -20,9 +20,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
             <router-link
-                :to="{ name: 'department-chinese' }"
+                :to="{ name: 'associate-english' }"
                 class="link"
-                :class="{ active: isActive('department-chinese') }"
+                :class="{ active: isActive('associate-english') }"
             >
                 <span>Associate in English</span>
             </router-link>
@@ -30,9 +30,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
-                :to="{ name: 'department-khmer' }"
+                :to="{ name: 'bachelor-tefl' }"
                 class="link"
-                :class="{ active: isActive('department-khmer') }"
+                :class="{ active: isActive('bachelor-tefl') }"
             >
                 <span>Teaching English as a Foreign Language (TEFL)</span>
             </router-link>

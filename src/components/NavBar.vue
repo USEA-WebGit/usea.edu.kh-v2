@@ -87,10 +87,10 @@
                 <div class="mega-menu-item">
                   <h3 class="font-bold text-xl pb-7 text-usea_secondary">Faculty</h3>
                   <ul class="text-lg text-gray-500">
-                    <router-link :to="{name: 'faculty-economic'}"><li class="flex gap-2">Faculty of Economics, Business & Tourism</li></router-link>
-                    <router-link :to="{name: 'faculty-technology'}"><li class="flex gap-2">Faculty of Sciences & Technology</li></router-link>
-                    <router-link :to="{name: 'faculty-law'}"><li class="flex gap-2">Faculty of Social Science & Law</li></router-link>
-                    <router-link :to="{name: 'faculty-language'}"><li class="flex gap-2">Faculty of Art, Humanities & Language</li></router-link>
+                    <router-link :to="{name: 'faculty-page', params: {facultyName: 'economics-business-tourism'}}"><li class="flex gap-2">Faculty of Economics, Business & Tourism</li></router-link>
+                    <router-link :to="{name: 'faculty-page', params: {facultyName: 'science-technology'}}"><li class="flex gap-2">Faculty of Sciences & Technology</li></router-link>
+                    <router-link :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}"><li class="flex gap-2">Faculty of Social Science & Law</li></router-link>
+                    <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-humanities-languages'}}"><li class="flex gap-2">Faculty of Art, Humanities & Language</li></router-link>
                   </ul>
                 </div>
                 <div class="mega-menu-item px-12 w-full">
@@ -170,15 +170,15 @@
                 v-if="subNavs.about"
                 class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
               >
-                <router-link :to="{name: 'history'}" @click.native="navigateAndClose('history')"><li>History & Logo Meaning</li></router-link>
-                <router-link :to="{name: 'vision'}" @click.native="navigateAndClose('vision')"><li>Vision & Mission</li></router-link>
-                <router-link :to="{name: 'location'}" @click.native="navigateAndClose('location')"><li>Location</li></router-link>
-                <router-link :to="{name: 'message'}" @click.native="navigateAndClose('message')"><li>Message from President</li></router-link>
-                <router-link :to="{name: 'board-trustee'}" @click.native="navigateAndClose('board-trustee')"><li>Board of Trustees</li></router-link>
-                <router-link :to="{name: 'recognition'}" @click.native="navigateAndClose('recognition')"><li>Recognition & Accreditation</li></router-link>
-                <router-link :to="{name: 'news-events'}" @click.native="navigateAndClose('news-events')"><li>News & Events</li></router-link>
-                <router-link :to="{name: 'faq'}" @click.native="navigateAndClose('faq')"><li>FAQ</li></router-link>
-                <router-link :to="{name: 'contact'}" @click.native="navigateAndClose('contact')"><li>Contact</li></router-link>
+                <router-link :to="{name: 'history'}" @click="navigateAndClose('history')"><li>History & Logo Meaning</li></router-link>
+                <router-link :to="{name: 'vision'}" @click="navigateAndClose('vision')"><li>Vision & Mission</li></router-link>
+                <router-link :to="{name: 'location'}" @click="navigateAndClose('location')"><li>Location</li></router-link>
+                <router-link :to="{name: 'message'}" @click="navigateAndClose('message')"><li>Message from President</li></router-link>
+                <router-link :to="{name: 'board-trustee'}" @click="navigateAndClose('board-trustee')"><li>Board of Trustees</li></router-link>
+                <router-link :to="{name: 'recognition'}" @click="navigateAndClose('recognition')"><li>Recognition & Accreditation</li></router-link>
+                <router-link :to="{name: 'news-events'}" @click="navigateAndClose('news-events')"><li>News & Events</li></router-link>
+                <router-link :to="{name: 'faq'}" @click="navigateAndClose('faq')"><li>FAQ</li></router-link>
+                <router-link :to="{name: 'contact'}" @click="navigateAndClose('contact')"><li>Contact</li></router-link>
               </ul>
             </transition>
           </li>
@@ -200,14 +200,14 @@
                 v-if="subNavs.academics"
                 class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
               >
-                <router-link :to="{name: 'faculty-economic'}" @click.native="navigateAndClose('faculty-economic')"><li>Faculty of Economics, Business & Tourism</li></router-link>
-                <router-link :to="{name: 'faculty-technology'}" @click.native="navigateAndClose('faculty-technology')"><li>Faculty of Sciences & Technology</li></router-link>
-                <router-link :to="{name: 'faculty-law'}" @click.native="navigateAndClose('faculty-law')"><li>Faculty of Social Science & Law</li></router-link>
-                <router-link :to="{name: 'faculty-language'}" @click.native="navigateAndClose('faculty-language')"><li>Faculty of Art, Humanities & Language</li></router-link>
-                <router-link :to="{name: 'internationa-college'}" @click.native="navigateAndClose('internationa-college')"><li>International College</li></router-link>
-                <router-link :to="{name: 'post-graduate'}" @click.native="navigateAndClose('post-graduate')"><li>Post Graduate</li></router-link>
-                <router-link :to="{name: 'language-center'}" @click.native="navigateAndClose('language-center')"><li>Foreign Language Center</li></router-link>
-                <router-link :to="{name: 'short-course'}" @click.native="navigateAndClose('short-course')"><li>Short Course</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'economics-business-tourism'}}" @click="navigateAndClose('economics-business-tourism')"><li>Faculty of Economics, Business & Tourism</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'science-technology'}}" @click="navigateAndClose('science-technology')"><li>Faculty of Sciences & Technology</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}" @click="navigateAndClose('social-science-law')"><li>Faculty of Social Science & Law</li></router-link>
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-huminaties-languages'}}" @click="navigateAndClose('arts-huminaties-languages')"><li>Faculty of Art, Humanities & Language</li></router-link>
+                <router-link :to="{name: 'internationa-college'}" @click="navigateAndClose('internationa-college')"><li>International College</li></router-link>
+                <router-link :to="{name: 'post-graduate'}" @click="navigateAndClose('post-graduate')"><li>Post Graduate</li></router-link>
+                <router-link :to="{name: 'language-center'}" @click="navigateAndClose('language-center')"><li>Foreign Language Center</li></router-link>
+                <router-link :to="{name: 'short-course'}" @click="navigateAndClose('short-course')"><li>Short Course</li></router-link>
               </ul>
             </transition>
           </li>
@@ -229,14 +229,14 @@
                 v-if="subNavs.partnership"
                 class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
               >
-                <router-link :to="{name: 'local-partnership'}" @click.native="navigateAndClose('local-partnership')"><li>Local Partner</li></router-link>
-                <router-link :to="{name: 'international-partnership'}" @click.native="navigateAndClose('international-partnership')"><li>International Partner</li></router-link>
+                <router-link :to="{name: 'local-partnership'}" @click="navigateAndClose('local-partnership')"><li>Local Partner</li></router-link>
+                <router-link :to="{name: 'international-partnership'}" @click="navigateAndClose('international-partnership')"><li>International Partner</li></router-link>
               </ul>
             </transition>
           </li>
 
           <!-- Research -->
-          <router-link :to="{name: 'research'}" @click.native="navigateAndClose('research')"><li>Research</li></router-link>
+          <router-link :to="{name: 'research'}" @click="navigateAndClose('research')"><li>Research</li></router-link>
 
           <!-- Services Menu -->
           <li>
@@ -255,10 +255,10 @@
                 v-if="subNavs.services"
                 class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
               >
-                <router-link :to="{name: 'health-services'}" @click.native="navigateAndClose('health-services')"><li>Health Services</li></router-link>
-                <router-link :to="{name: 'it-services'}" @click.native="navigateAndClose('it-services')"><li>IT Services</li></router-link>
-                <router-link :to="{name: 'library-services'}" @click.native="navigateAndClose('library-services')"><li>Library</li></router-link>
-                <router-link :to="{name: 'career-center'}" @click.native="navigateAndClose('career-center')"><li>Career Center</li></router-link>
+                <router-link :to="{name: 'health-services'}" @click="navigateAndClose('health-services')"><li>Health Services</li></router-link>
+                <router-link :to="{name: 'it-services'}" @click="navigateAndClose('it-services')"><li>IT Services</li></router-link>
+                <router-link :to="{name: 'library-services'}" @click="navigateAndClose('library-services')"><li>Library</li></router-link>
+                <router-link :to="{name: 'career-center'}" @click="navigateAndClose('career-center')"><li>Career Center</li></router-link>
               </ul>
             </transition>
           </li>

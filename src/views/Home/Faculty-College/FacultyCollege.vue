@@ -7,25 +7,25 @@
         
         <div class="grid 2xl:grid-rows-2 2xl:grid-flow-col xl:grid-rows-2 xl:grid-flow-col lg:grid-rows-3 lg:grid-flow-col md:grid-rows-3 md:grid-flow-col 2xl:justify-between xl:justify-between items-center gap-12 my-28 text-2xl mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px]">
             <div>
-                <router-link :to="{name:'faculty-economic'}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'economics-business-tourism'}}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
                     <img :src="FacultyBusiness" alt="business">
                     <span class="w-[65%] font-bold 2xl:text-2xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg">Faculty of Economics, Business & Tourism</span>
                 </router-link>
             </div>
             <div>
-                <router-link :to="{name: 'faculty-technology'}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'science-technology'}}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
                     <img :src="FacultyIT" alt="business">
                     <span class="w-[65%] font-bold 2xl:text-2xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg">Faculty of Sciences & Technology</span>
                 </router-link>
             </div>
             <div>
-                <router-link :to="{name: 'faculty-law'}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
                     <img :src="FacultyLaw" alt="business">
                     <span class="w-[65%] font-bold 2xl:text-2xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg">Faculty of Social Science & Law</span>
                 </router-link>
             </div>
             <div>
-                <router-link :to="{name: 'faculty-language'}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
+                <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-humanities-languages'}}" class="flex items-center 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-5 gap-5">
                     <img :src="FacultyKhmer" alt="business">
                     <span class="w-[65%] font-bold 2xl:text-2xl xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg">Faculty of Arts, Humanities and Languages</span>
                 </router-link>

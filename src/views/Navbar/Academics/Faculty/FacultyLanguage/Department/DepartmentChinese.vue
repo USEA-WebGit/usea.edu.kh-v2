@@ -13,12 +13,15 @@ const departmentChinese = {
     image: demo,
     majors: {
         courses: [
-            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
-            { name: "General Chinese Program (GCP)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
+            
+            { name: "General Chinese Program (GCP)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese' },
+        ],
+        associate: [
+            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese' },
         ],
 
         bachelor: [
-            { name: "Teaching Chinese as a Foreign Language (TCFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png" },
+            { name: "Teaching Chinese as a Foreign Language (TCFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese' },
         ]
     },
     members: [{ name: "Mr. Reom Ripeng", position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", image: ripeng }],

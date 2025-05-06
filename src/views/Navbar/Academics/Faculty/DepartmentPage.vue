@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Titlebg :title="department.title" :breadcrumb="department.title" />
+        <Titlebg :title="department.value?.title" :breadcrumb="department.value?.title" />
     </div>
     <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
@@ -10,8 +10,8 @@
                     <div class="h-1 w-[3%] bg-usea_secondary"></div>
                 </div>
                 <div class="flex flex-col gap-5">
-                    <img :src="department.image" alt="" class="h-[200px] object-cover">
-                    <p class="text-justify">{{ department.description }}</p>
+                    <img :src="department.value.image" alt="" class="h-[200px] object-cover" />
+                    <p class="text-justify">{{ department.value.description }}</p>
                 </div>
             </section>
 
@@ -32,7 +32,7 @@
                         {{ tab }}
                     </button>
                 </div>
-                <div v-if="activeTab === `Courses`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
+                <div v-if="activeTab === `General Chinese Programs`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
                     <div v-for="major in department.majors.courses" :key="major" class="card image-full sm:max-w-sm">
                         <figure><img :src="major.image" alt="overlay image" /></figure>
                         <div class="card-body">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div v-if="activeTab === `Associate's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.associate" :key="major" class="card image-full sm:max-w-sm">
+                    <div v-for="major in department.majors.associate" :key="major" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.route)">
                         <figure><img :src="major.image" alt="overlay image" /></figure>
                         <div class="card-body">
                             <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
@@ -50,7 +50,7 @@
                 </div>
 
                 <div v-if="activeTab === `Bachelor's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.bachelor" :key="major" class="card image-full sm:max-w-sm">
+                    <div v-for="major in department.majors.bachelor" :key="major" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.route)">
                         <figure><img :src="major.image" alt="overlay image" /></figure>
                         <div class="card-body">
                             <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
@@ -102,17 +102,19 @@
 
 <script setup>
 import Titlebg from '@/components/Slide/TitleBg.vue';
-import { ref, defineProps, computed } from 'vue';
+import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
+import { departments } from '@/data/department.js';
 
-const props = defineProps({
-    department: Object
-});
+const router = useRouter();
+const departmentId = router.currentRoute.value.params.id;
+const department = computed(() => departments[departmentId]);
 
 // Generate tabs dynamically based on available majors
 const availableTabs = computed(() => {
     const tabs = [];
     if (props.department.majors.courses?.length > 0) {
-        tabs.push("Courses");
+        tabs.push("General Chinese Programs");
     }
     if (props.department.majors.associate?.length > 0) {
         tabs.push("Associate's Degree");
@@ -123,10 +125,18 @@ const availableTabs = computed(() => {
     return tabs;
 });
 
-const activeTab = ref(); // No initial value until tabs are ready
 
-// Automatically set the default active tab when availableTabs is ready
+
+const goToMajor = (routeName) => {
+    router.push({ name: routeName });
+};
+
+const activeTab = ref();
+
 if (!activeTab.value && availableTabs.value.length > 0) {
     activeTab.value = availableTabs.value[0];
 }
+
+
+
 </script>
