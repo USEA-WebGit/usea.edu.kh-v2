@@ -16,7 +16,8 @@ import RightLanguage from '@/components/SideBar/RightLanguage.vue';
 import RightBusiness from '@/components/SideBar/RightBusiness.vue';
 import RightLaw from '@/components/SideBar/Right-Law.vue';
 export const faculties = {
-    'arts-humanities-languages': {
+    'arts-humanities-languages': 
+    {
       title: 'Faculty of Arts, Humanities & Languages',
       description: 'The Faculty of Arts, Humanities and Languages at the University of South-East Asia offers comprehensive language education programs spanning from beginner to advanced levels. The faculty is dedicated to providing students with the necessary knowledge, skills, and practical expertise in language education. The courses offered by the Faculty of Arts, Humanities and Languages encompass a range of programs, including General English and General Chinese programs, designed to enhance language proficiency. Additionally, specialized courses such as English for Specific Purposes and English for Academic Purposes cater to specific language needs. The faculty also offers Professional Development Courses for individuals seeking to further enhance their language skills. For those interested in pursuing a more structured program, the faculty provides diploma and associate degree programs in English and Chinese. Furthermore, students can opt for a Bachelor of Arts in Khmer Literature, a Bachelor of Arts in Teaching English as a Foreign Language (TEFL) or a Bachelor of Arts in Teaching Chinese as a Foreign Language (TCFL), which focus on equipping individuals with the necessary skills to become language educators.',
       image: demoCard,
@@ -45,7 +46,8 @@ export const faculties = {
       ],
       sidebarComponent: RightLanguage,
     },
-    'science-technology': {
+    'science-technology': 
+    {
       title: 'Faculty of Science and Technology',
       description: 'Faculty of Science and Technology will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
       image: demoCard,

@@ -138,23 +138,28 @@ const routes = [
         meta: {title: 'Bachelor of Art in Teaching English as Foreign Language (TEFL)', breadcrumb: "Bachelor of Art in Teaching English as Foreign Language (TEFL)"},
       },
       { 
-        path: 'department-chinese',
-        name: 'department-chinese',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentChinese.vue'),
-        meta: {title: 'Department Chinese', breadcrumb: "Department Chinese"},
+        path: ':departmentName',
+        name: 'department-name',
+        component: () => import('@/views/Navbar/Academics/Faculty/DepartmentPage.vue'),
       },
-      {
-        path: 'department-english',
-        name: 'department-english',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish.vue'),
-        meta: {title: 'Department English', breadcrumb:"Department English"},
-      },
-        {
-        path: 'department-khmer',
-        name: 'department-khmer',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentKhmer.vue'),
-        meta: {title: 'Department Khmer', breadcrumb: "Department Khmer"},
-      },
+      // { 
+      //   path: 'department-chinese',
+      //   name: 'department-chinese',
+      //   component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentChinese.vue'),
+      //   meta: {title: 'Department Chinese', breadcrumb: "Department Chinese"},
+      // },
+      // {
+      //   path: 'department-english',
+      //   name: 'department-english',
+      //   component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish.vue'),
+      //   meta: {title: 'Department English', breadcrumb:"Department English"},
+      // },
+      //   {
+      //   path: 'department-khmer',
+      //   name: 'department-khmer',
+      //   component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentKhmer.vue'),
+      //   meta: {title: 'Department Khmer', breadcrumb: "Department Khmer"},
+      // },
     ]
   },
   {

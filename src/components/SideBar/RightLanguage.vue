@@ -20,23 +20,23 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Department +</span>
             <router-link
-                :to="{ name: 'department-chinese' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-chinese'} }"
                 class="link"
-                :class="{ active: isActive('department-chinese') }"
+                :class="{ active: isActive('department-name') }"
             >
                 <span>Department of Chinese</span>
             </router-link>
             <router-link
-                :to="{ name: 'department-english' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-english'} }"
                 class="link"
-                :class="{ active: isActive('department-english') }"
+                :class="{ active: isActive('department-name') }"
             >
                 <span>Department of English</span>
             </router-link>
             <router-link
-                :to="{ name: 'department-khmer' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-khmer'} }"
                 class="link"
-                :class="{ active: isActive('department-khmer') }"
+                :class="{ active: isActive('department-name') }"
             >
                 <span>Department of Khmer Literature</span>
             </router-link>

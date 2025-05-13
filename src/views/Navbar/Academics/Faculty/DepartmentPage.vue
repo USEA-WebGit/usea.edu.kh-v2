@@ -1,6 +1,7 @@
 <template>
     <div>
-        <Titlebg :title="department.value?.title" :breadcrumb="department.value?.title" />
+        <Titlebg :title="department.title" :breadcrumb="department.title" />
+         <!-- <pre>{{ department }}</pre> -->
     </div>
     <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
@@ -10,8 +11,8 @@
                     <div class="h-1 w-[3%] bg-usea_secondary"></div>
                 </div>
                 <div class="flex flex-col gap-5">
-                    <img :src="department.value.image" alt="" class="h-[200px] object-cover" />
-                    <p class="text-justify">{{ department.value.description }}</p>
+                    <img :src="department.image" alt="" class="h-[200px] object-cover" />
+                    <p class="text-justify">{{ department.description }}</p>
                 </div>
             </section>
 
@@ -95,48 +96,61 @@
         </div>
         
         <div>
-            <component :is="department.sidebarComponent" />
+            <component :is="sidebarComponent" v-if="sidebarComponent" />
+
         </div>
     </div>
 </template>
 
 <script setup>
 import Titlebg from '@/components/Slide/TitleBg.vue';
-import { ref, computed } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, computed, watchEffect } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { departments } from '@/data/department.js';
+import { defineAsyncComponent } from 'vue';
 
+const route = useRoute();
 const router = useRouter();
-const departmentId = router.currentRoute.value.params.id;
-const department = computed(() => departments[departmentId]);
 
-// Generate tabs dynamically based on available majors
+const departmentNameParam = computed(() => decodeURIComponent(route.params.departmentName));
+const department = computed(() => departments[departmentNameParam.value]);
+
 const availableTabs = computed(() => {
     const tabs = [];
-    if (props.department.majors.courses?.length > 0) {
-        tabs.push("General Chinese Programs");
-    }
-    if (props.department.majors.associate?.length > 0) {
-        tabs.push("Associate's Degree");
-    }
-    if (props.department.majors.bachelor?.length > 0) {
-        tabs.push("Bachelor's Degree");
-    }
+    const majors = department.value?.majors;
+    if (majors?.courses?.length > 0) tabs.push("General Chinese Programs");
+    if (majors?.associate?.length > 0) tabs.push("Associate's Degree");
+    if (majors?.bachelor?.length > 0) tabs.push("Bachelor's Degree");
     return tabs;
 });
 
+const activeTab = ref();
 
+watchEffect(() => {
+    if (!activeTab.value && availableTabs.value.length > 0) {
+        activeTab.value = availableTabs.value[0];
+    }
+});
 
 const goToMajor = (routeName) => {
     router.push({ name: routeName });
 };
 
-const activeTab = ref();
+// ✅ Dynamically import sidebar component based on name
+const sidebarComponent = computed(() => {
+    const componentName = department.value?.sidebarComponent?.__name;
 
-if (!activeTab.value && availableTabs.value.length > 0) {
-    activeTab.value = availableTabs.value[0];
-}
+    if (!componentName) return null;
 
+    const componentMap = {
+        DepartEnglish: () => import('@/components/SideBar/Department/DepartEnglish.vue'),
+        DepartKhmer: () => import('@/components/SideBar/Department/DepartKhmer.vue'),
+        DepartChinese: () => import('@/components/SideBar/Department/DepartChinese.vue'),
+        // Add more mappings here as needed
+    };
 
-
+    const loader = componentMap[componentName];
+    return loader ? defineAsyncComponent(loader) : null;
+});
 </script>
+
