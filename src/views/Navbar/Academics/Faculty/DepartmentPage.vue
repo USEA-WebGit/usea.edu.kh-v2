@@ -2,6 +2,7 @@
     <div>
         <Titlebg :title="department.title" :breadcrumb="department.title" />
          <!-- <pre>{{ department }}</pre> -->
+         <pre>{{ sidebarComponent }}</pre>
     </div>
     <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
@@ -95,9 +96,8 @@
             </section>
         </div>
         
-        <div>
-            <component :is="sidebarComponent" v-if="sidebarComponent" />
-
+        <div v-if="sidebarComponent" >
+            <component :is="sidebarComponent"/>
         </div>
     </div>
 </template>
@@ -107,13 +107,24 @@ import Titlebg from '@/components/Slide/TitleBg.vue';
 import { ref, computed, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { departments } from '@/data/department.js';
-import { defineAsyncComponent } from 'vue';
-
+import DepartmentEnglishSidebar from '@/components/SideBar/Department/DepartEnglish.vue';
 const route = useRoute();
 const router = useRouter();
 
-const departmentNameParam = computed(() => decodeURIComponent(route.params.departmentName));
+// Component mapping for easy scaling
+const sidebarComponents = {
+  DepartmentEnglishSidebar,
+  // OtherDepartmentSidebar
+};
+
+const departmentNameParam = computed(() => route.params.departmentName);
 const department = computed(() => departments[departmentNameParam.value]);
+
+// Get the correct sidebar component
+const sidebarComponent = computed(() => {
+  return sidebarComponents[department.value?.sidebarComponent] || null;
+});
+
 
 const availableTabs = computed(() => {
     const tabs = [];
@@ -136,21 +147,5 @@ const goToMajor = (routeName) => {
     router.push({ name: routeName });
 };
 
-// ✅ Dynamically import sidebar component based on name
-const sidebarComponent = computed(() => {
-    const componentName = department.value?.sidebarComponent?.__name;
-
-    if (!componentName) return null;
-
-    const componentMap = {
-        DepartEnglish: () => import('@/components/SideBar/Department/DepartEnglish.vue'),
-        DepartKhmer: () => import('@/components/SideBar/Department/DepartKhmer.vue'),
-        DepartChinese: () => import('@/components/SideBar/Department/DepartChinese.vue'),
-        // Add more mappings here as needed
-    };
-
-    const loader = componentMap[componentName];
-    return loader ? defineAsyncComponent(loader) : null;
-});
 </script>
 

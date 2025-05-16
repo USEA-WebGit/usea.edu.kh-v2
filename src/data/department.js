@@ -1,6 +1,5 @@
 import demoCard from '@/assets/images/demoCard.png';
 import roemRipeng from '@/assets/images/roem_ripeng.png';
-import DepartmentEnglishSidebar from '@/components/SideBar/Department/DepartEnglish.vue';
 export const departments = {
     'department-english': {
       title: 'Department of English',
@@ -32,7 +31,7 @@ export const departments = {
             { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
         ]
       },
-      sidebarComponent: DepartmentEnglishSidebar,
+      sidebarComponent: "DepartmentEnglishSidebar",
     },
     'department-chinese': {
       title: 'Department of Chinese',
@@ -78,7 +77,7 @@ export const departments = {
             { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
         ]
       },
-      sidebarComponent: DepartmentEnglishSidebar,
+      sidebarComponent: "DepartmentEnglishSidebar",
     },
 
     'department-khmer': {
@@ -111,6 +110,6 @@ export const departments = {
             { name: "Bachelors of Arts in Khmer Lecturecture", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
         ]
       },
-      sidebarComponent: DepartmentEnglishSidebar,
+      sidebarComponent: "DepartmentEnglishSidebar",
     },
   }
