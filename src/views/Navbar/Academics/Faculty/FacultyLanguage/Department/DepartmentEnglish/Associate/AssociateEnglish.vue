@@ -1,6 +1,6 @@
 <template>
     <div>
-        this is Associate English Component
+        Test Component
     </div>
 </template>
 

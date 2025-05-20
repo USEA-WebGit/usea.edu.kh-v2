@@ -75,7 +75,7 @@
                             v-for="department in faculty.departments"
                             :key="department.name"
                             class="card image-full sm:max-w-sm cursor-pointer w-full object-cover transform transition-transform duration-300 hover:scale-105"
-                            @click="goToDepartment(department.route)"
+                            @click="goToDepartment(department.params.departmentName)"
                         >
                             <figure><img :src="department.image" alt="overlay image" /></figure>
                             <div class="card-body">
@@ -128,7 +128,8 @@ const router = useRouter();
 const facultyNameParam = computed(() => decodeURIComponent(route.params.facultyName));
 const faculty = computed(() => faculties[facultyNameParam.value]);
 
-const goToDepartment = (routeName) => {
-  router.push({ name: routeName });
+const goToDepartment = (departmentName) => {
+  router.push({ name: 'department-name', params: { departmentName } });
 };
+
 </script>

@@ -31,7 +31,7 @@ export const departments = {
             { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
         ]
       },
-      sidebarComponent: "DepartmentEnglishSidebar",
+      sidebarComponent: "DepartEnglish",
     },
     'department-chinese': {
       title: 'Department of Chinese',
@@ -74,10 +74,10 @@ export const departments = {
         ],
         bachelor: [
             { name: "Bachelors of Arts in Teaching Chinese as a Foreign Language (TCFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
-            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
+            
         ]
       },
-      sidebarComponent: "DepartmentEnglishSidebar",
+      sidebarComponent: "DepartChinese",
     },
 
     'department-khmer': {
@@ -103,13 +103,11 @@ export const departments = {
         },
       ],
       majors: {
-        associate: [
-            { name: "General Khmer Program for Undergraduate Students", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'associate-english' },
-        ],
+
         bachelor: [
-            { name: "Bachelors of Arts in Khmer Lecturecture", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
+            { name: "Bachelors Khmer Literature", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
         ]
       },
-      sidebarComponent: "DepartmentEnglishSidebar",
+      sidebarComponent: "DepartKhmer",
     },
   }

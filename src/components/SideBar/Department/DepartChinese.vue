@@ -3,9 +3,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
             <router-link
-                :to="{ name: 'department-english' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-chinese'} }"
                 class="link"
-                :class="{ active: isActive('department-english') }"
+                :class="{ active: isActive('department-name') }"
             >
                 <span>About Department</span>
             </router-link>
@@ -18,14 +18,28 @@
             </router-link>
         </div>
         <div class="flex flex-col">
+            <span class="text-[#002060] text-xl font-bold">General Programs +</span>
+            <router-link
+                :to="{ name: 'associate-english' }"
+                class="link"
+                :class="{ active: isActive('associate-english') }"
+            >
+                <span>General Chinese Program (GCP)</span>
+                
+            </router-link>
+            
+        </div>
+        <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
             <router-link
                 :to="{ name: 'associate-english' }"
                 class="link"
                 :class="{ active: isActive('associate-english') }"
             >
-                <span>Associate in English</span>
+                <span>General Chinese Program for Undergraduate Students (GCPUS)</span>
+                
             </router-link>
+            
         </div>
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
@@ -34,7 +48,7 @@
                 class="link"
                 :class="{ active: isActive('bachelor-tefl') }"
             >
-                <span>Teaching English as a Foreign Language (TEFL)</span>
+                <span>Teaching Chinese as a Foreign Language (TCFL)</span>
             </router-link>
         </div>
     </div>

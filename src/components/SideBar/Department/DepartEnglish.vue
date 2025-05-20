@@ -2,10 +2,10 @@
     <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
-            <router-link
-                :to="{ name: 'department-english' }"
+           <router-link
+                :to="{ name: 'department-name', params: {departmentName: 'department-english'} }"
                 class="link"
-                :class="{ active: isActive('department-english') }"
+                :class="{ active: isActive('department-name') }"
             >
                 <span>About Department</span>
             </router-link>
