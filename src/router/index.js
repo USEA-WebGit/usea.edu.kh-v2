@@ -101,7 +101,7 @@ const routes = [
         meta: {title: 'Short-Course', breadcrumb: 'Short Course'},
       },
       {
-        path: 'faculty-staff/:facultyStaff',
+        path: 'faculty/:facultyStaff/faculty-staff',
         name: 'faculty-staff',
         component: () => import('@/views/Navbar/Academics/Faculty/FacultyStaff.vue'),
         meta: {title: 'Faculty Staff', breadcrumb: "Faculty Staff"},
@@ -119,10 +119,10 @@ const routes = [
         meta: {title: 'Information Technology', breadcrumb: "Information Technology"},
       },
       {
-        path: 'faculty-staff-language',
+        path: 'department/:departmentStaff/department-staff',
         name: 'faculty-staff-language',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/FacultyStaff.vue'),
-        meta: {title: 'Faculty Staff', breadcrumb: "Faculty Staff"},
+        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentStaff.vue'),
+        meta: {title: 'Department Staff', breadcrumb: "Department Staff"},
       },
       
       {
@@ -138,7 +138,7 @@ const routes = [
         meta: {title: 'Bachelor of Art in Teaching English as Foreign Language (TEFL)', breadcrumb: "Bachelor of Art in Teaching English as Foreign Language (TEFL)"},
       },
       { 
-        path: ':departmentName',
+        path: 'department/:departmentName',
         name: 'department-name',
         component: () => import('@/views/Navbar/Academics/Faculty/DepartmentPage.vue'),
       },

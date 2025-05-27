@@ -1,5 +1,11 @@
 import demoCard from '@/assets/images/demoCard.png';
 import roemRipeng from '@/assets/images/roem_ripeng.png';
+import chhemsaman from '@/assets/images/chhem_saman.png';
+import thousrynich from '@/assets/images/thou_sreynich.png';
+import phaivanna from '@/assets/images/phai_vanna.png';
+import prosvichika from '@/assets/images/pros_vichika.png';
+import chhetchantho from '@/assets/images/chhet_chantho.png';
+import sethdavid from '@/assets/images/seth_david.png';
 import sokngim from '@/assets/images/sa_sokngim.png';
 import bunhors from '@/assets/images/son_bunhours.png';
 import tealyoulong from '@/assets/images/teal_youlong.png';
@@ -23,7 +29,7 @@ export const faculties = {
       image: demoCard,
       departments: [
         {name: "Department of Chinese", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-chinese'}},
-        {name: "Department of English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-enlgish'}},
+        {name: "Department of English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-english'}},
         {name: "Department of Khmer Literature", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-khmer'}},
     ],
       members: [
@@ -31,7 +37,38 @@ export const faculties = {
             name: "Mr. Reom Ripeng", 
             position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
             image: roemRipeng 
-        }
+        },
+        { 
+            name: "Mrs. Chhem Sam An", 
+            position: "Head of Deparment of Khmer Literature", 
+            image: chhemsaman 
+        },
+        { 
+            name: "Mrs. Thou Sreynich", 
+            position: "Head of Department of Chinese", 
+            image: thousrynich 
+        },
+        { 
+            name: "Mr. Phai Vanna", 
+            position: "Deputy Head of Student and Lecturer Affairs of Department of English", 
+            image: phaivanna 
+        },
+        { 
+            name: "Mrs. Pros Vichika", 
+            position: "Deputy Head of Academic Office", 
+            image: prosvichika 
+        },
+        { 
+            name: "Mrs. Chhet Chantho", 
+            position: "Head of Student and Lecturer Affairs of Department of Khmer", 
+            image: chhetchantho 
+        },
+        { 
+            name: "Mr. Seth David", 
+            position: "Staff of Student's Affair", 
+            image: sethdavid 
+        },
+
       ],
       activities: [
         {

@@ -95,6 +95,7 @@
                     <div class="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5">
                         <div v-for="member in faculty.members" :key="member.name">
                             <div class="overflow-hidden">
+                                
                                 <img :src="member.image" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
                             </div>
                             <div>
@@ -125,7 +126,7 @@ import { faculties } from '@/data/faculty.js';
 const route = useRoute();
 const router = useRouter();
 
-const facultyNameParam = computed(() => decodeURIComponent(route.params.facultyName));
+const facultyNameParam = computed(() => route.params.facultyName);
 const faculty = computed(() => faculties[facultyNameParam.value]);
 
 const goToDepartment = (departmentName) => {

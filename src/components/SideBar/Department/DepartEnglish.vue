@@ -10,7 +10,7 @@
                 <span>About Department</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff-language' }"
+                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-english'} }"
                 class="link"
                 :class="{ active: isActive('faculty-staff-language') }"
             >

@@ -1,5 +1,10 @@
 import demoCard from '@/assets/images/demoCard.png';
 import roemRipeng from '@/assets/images/roem_ripeng.png';
+import ngamkimsorn from '@/assets/images/ngam_kimsorn.png';
+import thousrynich from '@/assets/images/thou_sreynich.png';
+import chhemsaman from '@/assets/images/chhem_saman.png';
+import chhetchantho from '@/assets/images/chhet_chantho.png';
+import phaivanna from '@/assets/images/phai_vanna.png';
 export const departments = {
     'department-english': {
       title: 'Department of English',
@@ -10,7 +15,17 @@ export const departments = {
             name: "Mr. Reom Ripeng", 
             position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
             image: roemRipeng 
-        }
+        },
+        { 
+            name: "Mr. Ngam Kimsorn", 
+            position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
+            image: ngamkimsorn 
+        },
+        { 
+            name: "Mr. Phai Vanna", 
+            position: "Deputy Head of Student and Lecturer Affairs of Department of English", 
+            image: phaivanna 
+        },
       ],
       activities: [
         {
@@ -44,14 +59,9 @@ export const departments = {
             image: roemRipeng 
         },
         { 
-            name: "Mr. Ngam Kimsorn", 
-            position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
-            image: roemRipeng 
-        },
-        { 
-            name: "Mrs. Chhem Saman", 
-            position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
-            image: roemRipeng 
+            name: "Mrs. Thou Sreynich", 
+            position: "Head of Department of Chinese", 
+            image: thousrynich 
         },
       ],
       activities: [
@@ -89,7 +99,17 @@ export const departments = {
             name: "Mr. Reom Ripeng", 
             position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
             image: roemRipeng 
-        }
+        },
+        { 
+            name: "Mrs. Chhem Sam An", 
+            position: "Head of Deparment of Khmer Literature", 
+            image: chhemsaman 
+        },
+        { 
+            name: "Mrs. Chhet Chantho", 
+            position: "Head of Student and Lecturer Affairs of Department of Khmer", 
+            image: chhetchantho 
+        },
       ],
       activities: [
         {
