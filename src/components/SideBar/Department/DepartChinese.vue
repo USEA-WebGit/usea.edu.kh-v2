@@ -20,9 +20,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">General Programs +</span>
             <router-link
-                :to="{ name: 'associate-english' }"
+                :to="{ name: 'major-name', params: { majorName: 'general-gcp',  majorDegree: 'general', majorDepartment: 'department-chinese' }  }"
                 class="link"
-                :class="{ active: isActive('associate-english') }"
+                :class="{ active: isActive('major-name', 'general-gcp') }"
             >
                 <span>General Chinese Program (GCP)</span>
                 
@@ -32,9 +32,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
             <router-link
-                :to="{ name: 'associate-english' }"
+                :to="{ name: 'major-name', params: { majorName: 'associate-gcpus',  majorDegree: 'associate', majorDepartment: 'department-chinese' }  }"
                 class="link"
-                :class="{ active: isActive('associate-english') }"
+                :class="{ active: isActive('major-name', 'associate-gcpus') }"
             >
                 <span>General Chinese Program for Undergraduate Students (GCPUS)</span>
                 
@@ -44,9 +44,9 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
-                :to="{ name: 'bachelor-tefl' }"
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-tcfl',  majorDegree: 'bachelor', majorDepartment: 'department-chinese' }  }"
                 class="link"
-                :class="{ active: isActive('bachelor-tefl') }"
+                :class="{ active: isActive('major-name', 'bachelor-tcfl') }"
             >
                 <span>Teaching Chinese as a Foreign Language (TCFL)</span>
             </router-link>
@@ -61,7 +61,10 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 // Check if the current route matches the provided route name
-const isActive = (name) => route.name === name;
+const isActive = (name, majorName) => {
+  return route.name === name && route.params.majorName === majorName;
+};
+
 </script>
 
 <style scoped>

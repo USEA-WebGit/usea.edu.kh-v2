@@ -18,101 +18,30 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Association's Degree +</span>
+            <span class="text-[#002060] text-xl font-bold">Department +</span>
             <router-link
-                :to="{ name: 'civil-engineering' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-business'} }"
                 class="link"
-                :class="{ active: isActive('civil-engineering') }"
+                :class="{ active: isActive('department-name') }"
             >
-                <span>Accounting</span>
+                <span>Department of Business</span>
             </router-link>
             <router-link
-                :to="{ name: 'board-trustee' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-tourism'} }"
                 class="link"
-                :class="{ active: isActive('board-trustee') }"
+                :class="{ active: isActive('department-name') }"
             >
-                <span>Finance & Banking</span>
+                <span>Department of Tourism</span>
             </router-link>
             <router-link
-                :to="{ name: 'board-trustee' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-economic'} }"
                 class="link"
-                :class="{ active: isActive('board-trustee') }"
+                :class="{ active: isActive('department-name') }"
             >
-                <span>Management</span>
+                <span>Department of Economic</span>
             </router-link>
-            <router-link
-                :to="{ name: 'board-trustee' }"
-                class="link"
-                :class="{ active: isActive('board-trustee') }"
-            >
-                <span>Marketing</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'board-trustee' }"
-                class="link"
-                :class="{ active: isActive('board-trustee') }"
-            >
-                <span>Tourism</span>
-            </router-link>
-        </div>
-        <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
-            <router-link
-                :to="{ name: 'news-events' }"
-                class="link"
-                :class="{ active: isActive('news-events') }"
-            >
-                <span>Accounting & Auditing</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'faq' }"
-                class="link"
-                :class="{ active: isActive('faq') }"
-            >
-                <span>Finance and Banking</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>International Economics</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>International Marketing</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>International Tourism Management</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>Management</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>Marketing</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>Tourism and Hospitality Management</span>
-            </router-link>
+            
+            
         </div>
         
     </div>

@@ -18,59 +18,30 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Association's Degree +</span>
+            <span class="text-[#002060] text-xl font-bold">Department +</span>
             <router-link
-                :to="{ name: 'civil-engineering' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-architecture'} }"
                 class="link"
-                :class="{ active: isActive('civil-engineering') }"
+                :class="{ active: isActive('department-name') }"
             >
-                <span>Civil Engineering</span>
+                <span>Department of Architecture</span>
             </router-link>
             <router-link
-                :to="{ name: 'association-information-technology' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-technology'} }"
                 class="link"
-                :class="{ active: isActive('association-information-technology') }"
+                :class="{ active: isActive('department-name') }"
             >
-                <span>Information Technology</span>
+                <span>Department of Information and Communication Technology</span>
             </router-link>
             <router-link
-                :to="{ name: 'recognition' }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-mathematic'} }"
                 class="link"
-                :class="{ active: isActive('recognition') }"
+                :class="{ active: isActive('department-name') }"
             >
-                <span>Mathematics</span>
+                <span>Department of Mathematics and Science</span>
             </router-link>
-        </div>
-        <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
-            <router-link
-                :to="{ name: 'news-events' }"
-                class="link"
-                :class="{ active: isActive('news-events') }"
-            >
-                <span>Architecture</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'faq' }"
-                class="link"
-                :class="{ active: isActive('faq') }"
-            >
-                <span>Civil Engineering</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>Information Technology</span>
-            </router-link>
-            <router-link
-                :to="{ name: 'contact' }"
-                class="link"
-                :class="{ active: isActive('contact') }"
-            >
-                <span>Mathematics</span>
-            </router-link>
+            
+            
         </div>
     </div>
 </template>

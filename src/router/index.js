@@ -107,6 +107,12 @@ const routes = [
         meta: {title: 'Faculty Staff', breadcrumb: "Faculty Staff"},
       },
       {
+        path: ':majorDepartment/:majorDegree/:majorName',
+        name: 'major-name',
+        component: () => import('@/views/Navbar/Academics/Faculty/MajorPage.vue'),
+        meta: {title: 'Major Page', breadcrumb: "Major Page"},
+      },
+      {
         path: 'civil-engineering',
         name: 'civil-engineering',
         component: () => import('@/views/Navbar/Academics/Faculty/FacultyIT/Association/CivilEngineering.vue'),
@@ -121,21 +127,8 @@ const routes = [
       {
         path: 'department/:departmentStaff/department-staff',
         name: 'faculty-staff-language',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentStaff.vue'),
+        component: () => import('@/views/Navbar/Academics/Faculty/DepartmentStaff.vue'),
         meta: {title: 'Department Staff', breadcrumb: "Department Staff"},
-      },
-      
-      {
-        path: 'associate-english',
-        name: 'associate-english',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish/Associate/AssociateEnglish.vue'),
-        meta: {title: 'Associate in English', breadcrumb:"Associate in English"},
-      },
-      {
-        path: 'bachelor-tefl',
-        name: 'bachelor-tefl',
-        component: () => import('@/views/Navbar/Academics/Faculty/FacultyLanguage/Department/DepartmentEnglish/Bachelor/BachelorTefl.vue'),
-        meta: {title: 'Bachelor of Art in Teaching English as Foreign Language (TEFL)', breadcrumb: "Bachelor of Art in Teaching English as Foreign Language (TEFL)"},
       },
       { 
         path: 'department/:departmentName',

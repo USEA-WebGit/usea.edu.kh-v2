@@ -89,14 +89,15 @@ export const faculties = {
       description: 'Faculty of Science and Technology will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
       image: demoCard,
       departments: [
-        {name: "Department of Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese'},
-        {name: "Department of Engineer", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-english'},
+        {name: "Department of Architecture", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-architecture'}},
+        {name: "Department of Information and Communication Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-technology'}},
+        {name: "Department of Mathematics and Science", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-mathematic'}},
     ],
       members: [
         { 
             name: "Ms. Sa Sokngim", 
             position: "Dean of Faculty of Science and Technology", 
-            image: sokngim ,
+            image: sokngim , 
             
         },
         { 
@@ -125,15 +126,15 @@ export const faculties = {
       description: 'Faculty of Economics Business & Tourism aims to provide specialized education...',
       image: demoCard,
       departments: [
-        {name: "Department of Business", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese'},
-        {name: "Department of Tourism", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-english'},
-        {name: "Department of Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-khmer'},
+        {name: "Department of Business", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-business'}},
+        {name: "Department of Tourism", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-tourism'}},
+        {name: "Department of Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-economic'}},
     ],
       members: [
          
         { name: "Mr. Teal Youlong", position: "Dean of Faculty of Economics Business & Tourism", image: tealyoulong },
-        { name: "Mr. Taing Keangse", position: "Head of Department of Business", image: nesokna },
-        { name: "Mr. Ne Sokna", position: "Head of Department of Economics and Head of USEA Career Center", image: taingkeangse },
+        { name: "Mr. Taing Keangse", position: "Head of Department of Business", image: taingkeangse },
+        { name: "Mr. Ne Sokna", position: "Head of Department of Economics and Head of USEA Career Center", image: nesokna },
         { name: "Mr. Luch Reaksmey", position: "Head of Academic Office", image: luchreaksmey },
         { name: "Mr. Hoeurm Sopha", position: "Deputy Head of Academic Office in Charge of Examination Affairs", image: hoeurmsopha },
         { name: "Mrs. Kang Chhorvy", position: "Deputy Head of Academic Office in Charge of Lecturer Affairs", image: kangchhorvy },
@@ -159,9 +160,9 @@ export const faculties = {
       description: 'Faculty of Social Science & Law aims to provide specialized education...',
       image: demoCard,
       departments: [
-        {name: "Department of Business", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-chinese'},
-        {name: "Department of Tourism", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-english'},
-        {name: "Department of Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'department-khmer'},
+        {name: "Department of Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png",  params: {departmentName: 'department-laws'}},
+        {name: "Department of Social and Science", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-social-science'}},
+
     ],
       members: [
          

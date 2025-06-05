@@ -31,6 +31,11 @@ import { useRoute, useRouter } from 'vue-router';
 import DepartmentEnglishSidebar from '@/components/SideBar/Department/DepartEnglish.vue';
 import DepartmentChineseSidebar from '@/components/SideBar/Department/DepartChinese.vue';
 import DepartmentKhmerSidebar from '@/components/SideBar/Department/DepartKhmer.vue';
+import DepartmentITSidebar from '@/components/SideBar/Department/DepartIT.vue';
+import DepartmentArchitectureSidebar from '@/components/SideBar/Department/DepartArchitecture.vue';
+import DepartmentBusinessSidebar from '@/components/SideBar/Department/DepartBusiness.vue';
+import DepartmentTourismSidebar from '@/components/SideBar/Department/DepartTourism.vue';
+import DepartmentEconomicSidebar from '@/components/SideBar/Department/DepartEconomic.vue';
 const route = useRoute();
 const router = useRouter();
 
@@ -38,7 +43,12 @@ const router = useRouter();
 const sidebarComponents = {
   DepartEnglish: DepartmentEnglishSidebar,
   DepartChinese: DepartmentChineseSidebar,
-  DepartKhmer: DepartmentKhmerSidebar
+  DepartKhmer: DepartmentKhmerSidebar,
+  DepartIT:DepartmentITSidebar,
+  DepartArchitecture: DepartmentArchitectureSidebar,
+  DepartBusiness: DepartmentBusinessSidebar,
+  DepartTourism: DepartmentTourismSidebar,
+  DepartEconomic: DepartmentEconomicSidebar,
 };
 
 

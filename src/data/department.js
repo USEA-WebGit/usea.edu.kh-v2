@@ -5,6 +5,10 @@ import thousrynich from '@/assets/images/thou_sreynich.png';
 import chhemsaman from '@/assets/images/chhem_saman.png';
 import chhetchantho from '@/assets/images/chhet_chantho.png';
 import phaivanna from '@/assets/images/phai_vanna.png';
+import sokngim from '@/assets/images/sa_sokngim.png';
+import bunhors from '@/assets/images/son_bunhours.png';
+import tealyoulong from '@/assets/images/teal_youlong.png';
+import taingkeangse from '@/assets/images/taing_keangse.png';
 export const departments = {
     'department-english': {
       title: 'Department of English',
@@ -40,10 +44,10 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Associate in English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'associate-english' },
+            { name: "Associate in English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-english',majorDegree: 'associate', majorName: 'associate-english'}},
         ],
         bachelor: [
-            { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
+            { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-english',majorDegree: 'bachelor', majorName: 'bachelor-tefl'}},
         ]
       },
       sidebarComponent: "DepartEnglish",
@@ -76,14 +80,14 @@ export const departments = {
         },
       ],
       majors: {
-        courses: [
-            { name: "General Chinese Program (GCP)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'associate-english' },
+        general: [
+            { name: "General Chinese Program (GCP)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-chinese',majorDegree: 'general', majorName: 'general-gcp'}},
         ],
         associate: [
-            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'associate-english' },
+            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-chinese',majorDegree: 'associate', majorName: 'associate-gcpus'}},
         ],
         bachelor: [
-            { name: "Bachelors of Arts in Teaching Chinese as a Foreign Language (TCFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
+            { name: "Bachelors of Arts in Teaching Chinese as a Foreign Language (TCFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-chinese',majorDegree: 'bachelor', majorName: 'bachelor-tcfl'}},
             
         ]
       },
@@ -123,11 +127,240 @@ export const departments = {
         },
       ],
       majors: {
-
+        associate: [
+            { name: "Associate in khmer", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-khmer',majorDegree: 'associate', majorName: 'associate-khmer'}},
+        ],
         bachelor: [
-            { name: "Bachelors Khmer Literature", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", route: 'bachelor-tefl' },
+            { name: "Bachelors Khmer Literature", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-khmer',majorDegree: 'bachelor', majorName: 'bachelor-khmer'}},
         ]
       },
       sidebarComponent: "DepartKhmer",
+    },
+
+    'department-architecture': {
+      title: 'Department of Architecture',
+      description: 'Department of Khmer will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mrs. Sa Sokngim", 
+            position: "Dean of Faculty of Science and Technology", 
+            image: sokngim 
+        },
+        { 
+            name: "Mr. Son Bunhors", 
+            position: "Head of Deparment of Khmer Literature", 
+            image: bunhors 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+
+        bachelor: [
+            { name: "Architecture", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-architecture'}},
+            { name: "Civil Engineering", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-civil-engineering'}},
+        ]
+      },
+      sidebarComponent: "DepartArchitecture",
+    },
+    'department-technology': {
+      title: 'Department of Information and Communication Technology',
+      description: 'Department of Information and Communication Technology will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mrs. Sa Sokngim", 
+            position: "Dean of Faculty of Science and Technology", 
+            image: sokngim 
+        },
+        { 
+            name: "Mr. Son Bunhors", 
+            position: "Head of Deparment of Khmer Literature", 
+            image: bunhors 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "Develop Information Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'associate', majorName: 'associate-develop-information-technology'}},
+        ],
+        bachelor: [
+            { name: "Develop Information Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-develop-information-technology'}},
+            { name: "E-Business System", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-e-business-system'}},
+            { name: "Information Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-information-technology'}},
+        ]
+      },
+      sidebarComponent: "DepartIT",
+    },
+    'department-mathematic': {
+      title: 'Department of Mathematics and Science',
+      description: 'Department of Mathematics and Science will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mrs. Sa Sokngim", 
+            position: "Dean of Faculty of Science and Technology", 
+            image: sokngim 
+        },
+        { 
+            name: "Mr. Son Bunhors", 
+            position: "Head of Deparment of Khmer Literature", 
+            image: bunhors 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "Chemistry", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'associate', majorName: 'associate-mathematic'}},
+        ],
+        bachelor: [
+            { name: "Chemistry", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-chemistry'}},
+            { name: "Physics", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-physics'}},
+            { name: "Mathematic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-mathematic'}},
+        ]
+      },
+      sidebarComponent: "DepartMath",
+    },
+    'department-business': {
+      title: 'Department of Business',
+      description: 'Department of Business will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mr. Teal Youlong", 
+            position: "Dean of Faculty of Economics Business & Tourism", 
+            image: tealyoulong 
+        },
+        { 
+            name: "Mr. Taing Keangse", 
+            position: "Head of Department of Business", 
+            image: taingkeangse 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "Accounting", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-accounting'}},
+            { name: "Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-management'}},
+            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-marketing'}},
+        ],
+        bachelor: [
+            { name: "Accounting and Auditing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-accounting-auditing'}},
+            { name: "Finance and Banking", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-finance-banking'}},
+            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
+            { name: "Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-management'}},
+            { name: "International Economics", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
+        ]
+      },
+      sidebarComponent: "DepartBusiness",
+    },
+    'department-tourism': {
+      title: 'Department of Tourism',
+      description: 'Department of Tourism will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mr. Teal Youlong", 
+            position: "Dean of Faculty of Economics Business & Tourism", 
+            image: tealyoulong 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "International Tourism Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'associate', majorName: 'associate-international-tourism-management'}},
+            { name: "Tourism and Hospitality Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'associate', majorName: 'associate-tourism-hospitality-management'}},
+            
+        ],
+        bachelor: [
+            { name: "International Tourism Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-international-tourism-management'}},
+            { name: "Tourism and Hospitality Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-tourism-hospitality-management'}},
+        ]
+      },
+      sidebarComponent: "DepartTourism",
+    },
+    'department-economic': {
+      title: 'Department of Economic',
+      description: 'Department of Tourism will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mr. Teal Youlong", 
+            position: "Dean of Faculty of Economics Business & Tourism", 
+            image: tealyoulong 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'associate', majorName: 'associate-marketing'}},
+        ],
+        bachelor: [
+            { name: "International Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
+            { name: "International Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-international-marketing'}},
+            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
+        ]
+      },
+      sidebarComponent: "DepartEconomic",
     },
   }

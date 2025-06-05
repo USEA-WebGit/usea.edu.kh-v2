@@ -1,8 +1,6 @@
 <template>
     <div>
         <Titlebg :title="department.title" :breadcrumb="department.title" />
-         <!-- <pre>{{ department }}</pre> -->
-         <!-- <pre>{{ sidebarComponent }}</pre> -->
     </div>
     <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
@@ -35,7 +33,7 @@
                     </button>
                 </div>
                 <div v-if="activeTab === `General Chinese Programs`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.courses" :key="major" class="card image-full sm:max-w-sm">
+                    <div v-for="major in department.majors.general" :key="major.name" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)">
                         <figure><img :src="major.image" alt="overlay image" /></figure>
                         <div class="card-body">
                             <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
@@ -43,7 +41,7 @@
                     </div>
                 </div>
                 <div v-if="activeTab === `Associate's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.associate" :key="major" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.route)">
+                    <div v-for="major in department.majors.associate" :key="major.name" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)">
                         <figure><img :src="major.image" alt="overlay image" /></figure>
                         <div class="card-body">
                             <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
@@ -52,10 +50,11 @@
                 </div>
 
                 <div v-if="activeTab === `Bachelor's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.bachelor" :key="major" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.route)">
+                    <div v-for="major in department.majors.bachelor" :key="major" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)">
                         <figure><img :src="major.image" alt="overlay image" /></figure>
                         <div class="card-body">
                             <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -110,6 +109,13 @@ import { departments } from '@/data/department.js';
 import DepartmentEnglishSidebar from '@/components/SideBar/Department/DepartEnglish.vue';
 import DepartmentChineseSidebar from '@/components/SideBar/Department/DepartChinese.vue';
 import DepartmentKhmerSidebar from '@/components/SideBar/Department/DepartKhmer.vue';
+import DepartmentITSidebar from '@/components/SideBar/Department/DepartIT.vue';
+import DepartmentArchitectureSidebar from '@/components/SideBar/Department/DepartArchitecture.vue';
+import DepartmentMathSidebar from '@/components/SideBar/Department/DepartMath.vue';
+import DepartmentBusinessSidebar from '@/components/SideBar/Department/DepartBusiness.vue';
+import DepartmentTourismSidebar from '@/components/SideBar/Department/DepartTourism.vue';
+import DepartmentEconomicSidebar from '@/components/SideBar/Department/DepartEconomic.vue';
+
 const route = useRoute();
 const router = useRouter();
 
@@ -117,7 +123,14 @@ const router = useRouter();
 const sidebarComponents = {
   DepartEnglish: DepartmentEnglishSidebar,
   DepartChinese: DepartmentChineseSidebar,
-  DepartKhmer: DepartmentKhmerSidebar
+  DepartKhmer: DepartmentKhmerSidebar,
+  DepartIT: DepartmentITSidebar,
+  DepartArchitecture: DepartmentArchitectureSidebar,
+  DepartMath: DepartmentMathSidebar,
+  DepartBusiness: DepartmentBusinessSidebar,
+  DepartTourism: DepartmentTourismSidebar,
+  DepartEconomic: DepartmentEconomicSidebar,
+
 };
 
 
@@ -133,7 +146,7 @@ const sidebarComponent = computed(() => {
 const availableTabs = computed(() => {
     const tabs = [];
     const majors = department.value?.majors;
-    if (majors?.courses?.length > 0) tabs.push("General Chinese Programs");
+    if (majors?.general?.length > 0) tabs.push("General Chinese Programs");
     if (majors?.associate?.length > 0) tabs.push("Associate's Degree");
     if (majors?.bachelor?.length > 0) tabs.push("Bachelor's Degree");
     return tabs;
@@ -147,9 +160,8 @@ watchEffect(() => {
     }
 });
 
-const goToMajor = (routeName) => {
-    router.push({ name: routeName });
+const goToMajor = (majorDepartment, majorDegree, majorName) => {
+  router.push({ name: 'major-name', params: {majorDepartment,majorDegree, majorName } });
 };
-
 </script>
 

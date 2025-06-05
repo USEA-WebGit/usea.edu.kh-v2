@@ -3,14 +3,14 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
            <router-link
-                :to="{ name: 'department-name', params: {departmentName: 'department-english'} }"
+                :to="{ name: 'department-name',  params: {departmentName: 'department-architecture'} }"
                 class="link"
                 :class="{ active: isActive('department-name') }"
             >
                 <span>About Department</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-english'} }"
+                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-architecture'} }"
                 class="link"
                 :class="{ active: isActive('faculty-staff-language') }"
             >
@@ -18,23 +18,20 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
-            <router-link
-                :to="{ name: 'major-name', params: { majorName: 'associate-english',  majorDegree: 'associate', majorDepartment: 'department-english' } }"
-                class="link"
-                :class="{ active: isActive('major-name', 'associate-english') }"
-            >
-                <span>Associate in English</span>
-            </router-link>
-        </div>
-        <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
-                :to="{ name: 'major-name', params: { majorName: 'bachelor-tefl',  majorDegree: 'bachelor', majorDepartment: 'department-english' }  }"
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-architecture',  majorDegree: 'bachelor', majorDepartment: 'department-architecture' }  }"
                 class="link"
-                :class="{ active: isActive('major-name', 'bachelor-tefl') }"
+                :class="{ active: isActive('major-name', 'bachelor-architecture') }"
             >
-                <span>Teaching English as a Foreign Language (TEFL)</span>
+                <span>Architecture</span>
+            </router-link>
+            <router-link
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-civil-engineering',  majorDegree: 'bachelor', majorDepartment: 'department-architecture' }  }"
+                class="link"
+                :class="{ active: isActive('major-name', 'bachelor-civil-engineering') }"
+            >
+                <span>Civil Engineering</span>
             </router-link>
         </div>
     </div>

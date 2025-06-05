@@ -3,14 +3,14 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
            <router-link
-                :to="{ name: 'department-name', params: {departmentName: 'department-english'} }"
+                :to="{ name: 'department-name', params: {departmentName: 'department-technology'} }"
                 class="link"
                 :class="{ active: isActive('department-name') }"
             >
                 <span>About Department</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-english'} }"
+                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-technology'} }"
                 class="link"
                 :class="{ active: isActive('faculty-staff-language') }"
             >
@@ -20,21 +20,35 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
             <router-link
-                :to="{ name: 'major-name', params: { majorName: 'associate-english',  majorDegree: 'associate', majorDepartment: 'department-english' } }"
+                :to="{ name: 'major-name', params: { majorName: 'associate-develop-information-technology',  majorDegree: 'associate', majorDepartment: 'department-technology' } }"
                 class="link"
-                :class="{ active: isActive('major-name', 'associate-english') }"
+                :class="{ active: isActive('major-name', 'associate-develop-information-technology') }"
             >
-                <span>Associate in English</span>
+                <span>Develop Information Technology</span>
             </router-link>
         </div>
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
-                :to="{ name: 'major-name', params: { majorName: 'bachelor-tefl',  majorDegree: 'bachelor', majorDepartment: 'department-english' }  }"
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-develop-information-technology',  majorDegree: 'bachelor', majorDepartment: 'department-technology' }  }"
                 class="link"
-                :class="{ active: isActive('major-name', 'bachelor-tefl') }"
+                :class="{ active: isActive('major-name', 'bachelor-develop-information-technology') }"
             >
-                <span>Teaching English as a Foreign Language (TEFL)</span>
+                <span>Develop Information Technology</span>
+            </router-link>
+            <router-link
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-e-business-system',  majorDegree: 'bachelor', majorDepartment: 'department-technology' }  }"
+                class="link"
+                :class="{ active: isActive('major-name', 'bachelor-e-business-system') }"
+            >
+                <span>E-Business System</span>
+            </router-link>
+            <router-link
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-information-technology',  majorDegree: 'bachelor', majorDepartment: 'department-technology' }  }"
+                class="link"
+                :class="{ active: isActive('major-name', 'bachelor-information-technology') }"
+            >
+                <span>Information Technology</span>
             </router-link>
         </div>
     </div>

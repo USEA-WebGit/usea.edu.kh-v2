@@ -3,14 +3,14 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
            <router-link
-                :to="{ name: 'department-name', params: {departmentName: 'department-english'} }"
+                :to="{ name: 'department-name',  params: {departmentName: 'department-economic'} }"
                 class="link"
                 :class="{ active: isActive('department-name') }"
             >
                 <span>About Department</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-english'} }"
+                :to="{ name: 'faculty-staff-language', params: { departmentStaff: 'department-economic'} }"
                 class="link"
                 :class="{ active: isActive('faculty-staff-language') }"
             >
@@ -20,21 +20,35 @@
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
             <router-link
-                :to="{ name: 'major-name', params: { majorName: 'associate-english',  majorDegree: 'associate', majorDepartment: 'department-english' } }"
+                :to="{ name: 'major-name', params: { majorName: 'associate-marketing',  majorDegree: 'associate', majorDepartment: 'department-economic' }  }"
                 class="link"
-                :class="{ active: isActive('major-name', 'associate-english') }"
+                :class="{ active: isActive('major-name', 'associate-marketing') }"
             >
-                <span>Associate in English</span>
+                <span>Marketing</span>
             </router-link>
         </div>
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
-                :to="{ name: 'major-name', params: { majorName: 'bachelor-tefl',  majorDegree: 'bachelor', majorDepartment: 'department-english' }  }"
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-international-economic',  majorDegree: 'bachelor', majorDepartment: 'department-economic' }  }"
                 class="link"
-                :class="{ active: isActive('major-name', 'bachelor-tefl') }"
+                :class="{ active: isActive('major-name', 'bachelor-international-economic') }"
             >
-                <span>Teaching English as a Foreign Language (TEFL)</span>
+                <span>International Economic</span>
+            </router-link>
+            <router-link
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-international-marketing',  majorDegree: 'bachelor', majorDepartment: 'department-economic' }  }"
+                class="link"
+                :class="{ active: isActive('major-name', 'bachelor-international-marketing') }"
+            >
+                <span>International Marketing</span>
+            </router-link>
+            <router-link
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-marketing',  majorDegree: 'bachelor', majorDepartment: 'department-economic' }  }"
+                class="link"
+                :class="{ active: isActive('major-name', 'bachelor-marketing') }"
+            >
+                <span>Marketing</span>
             </router-link>
         </div>
     </div>

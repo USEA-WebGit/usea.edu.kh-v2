@@ -18,11 +18,21 @@
             </router-link>
         </div>
         <div class="flex flex-col">
+            <span class="text-[#002060] text-xl font-bold">Associate's Degree +</span>
+            <router-link
+                :to="{ name: 'major-name', params: { majorName: 'associate-khmer',  majorDegree: 'associate', majorDepartment: 'department-khmer' }  }"
+                class="link"
+                :class="{ active: isActive('major-name', 'associate-khmer') }"
+            >
+                <span>Associate in Khmer</span>
+            </router-link>
+        </div>
+        <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
             <router-link
-                :to="{ name: 'bachelor-tefl' }"
+                :to="{ name: 'major-name', params: { majorName: 'bachelor-khmer',  majorDegree: 'bachelor', majorDepartment: 'department-khmer' }  }"
                 class="link"
-                :class="{ active: isActive('bachelor-tefl') }"
+                :class="{ active: isActive('major-name', 'bachelor-khmer') }"
             >
                 <span>Bachelors Khmer Literature</span>
             </router-link>
@@ -37,7 +47,10 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 // Check if the current route matches the provided route name
-const isActive = (name) => route.name === name;
+const isActive = (name, majorName) => {
+  return route.name === name && route.params.majorName === majorName;
+};
+
 </script>
 
 <style scoped>
