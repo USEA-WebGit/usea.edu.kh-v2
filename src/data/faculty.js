@@ -17,6 +17,8 @@ import hoeurmsopha from '@/assets/images/hoeurm_sopha.png';
 import hormmakara from '@/assets/images/horm_makara.png';
 import phunsreypov from '@/assets/images/phun_sreypov.png';
 import sengchanleap from '@/assets/images/seng_chanleap.png';
+import leangtaingsoth from '@/assets/images/leang_taingsoth.png';
+import eomrathanak from '@/assets/images/eom_rathanak.png';
 import RightNavScience from '@/components/SideBar/RightNavIT.vue';
 import RightLanguage from '@/components/SideBar/RightLanguage.vue';
 import RightBusiness from '@/components/SideBar/RightBusiness.vue';
@@ -166,8 +168,8 @@ export const faculties = {
     ],
       members: [
          
-        { name: "Mr. Teal Youlong", position: "Dean of Faculty of Economics Business & Tourism", image: tealyoulong },
-        { name: "Mr. Taing Keangse", position: "Head of Department of Business", image: nesokna },
+        { name: "Mr. Leang Taingsoth", position: "Dean of Faculty of Social Science and Law", image: leangtaingsoth },
+        { name: "Mr. Eom Rathanak", position: "Head of Department of Laws", image: eomrathanak },
        
       ],
       activities: [

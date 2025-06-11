@@ -1229,5 +1229,255 @@ export const majors = {
         sidebarComponent: "DepartEconomic",
       },
     ],
+  },
+  "department-laws": {
+    'associate': [
+      {
+        id: "associate-laws",
+        title: "Associate of Laws",
+        major: "Associate of Laws",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartLaws",
+      },
+    ],
+    'bachelor': [
+      {
+        id: "bachelor-laws",
+        title: "laws",
+        major: "Laws",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartLaws",
+      },
+      {
+        id: "bachelor-private-laws",
+        title: "Private Laws",
+        major: "Private Laws",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartLaws",
+      },
+      {
+        id: "bachelor-international-laws",
+        title: "International Laws",
+        major: "International Laws",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartLaws",
+      },
+    ],
+  },
+  "department-social-science": {
+    'associate': [
+      {
+        id: "associate-public-administration",
+        title: "Public Administration",
+        major: "Public Administration",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartSocialScience",
+      },
+    ],
+    'bachelor': [
+      {
+        id: "bachelor-public-administration",
+        title: "Public Administration",
+        major: "Public Administrationaws",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartSocialScience",
+      },
+      {
+        id: "bachelor-international-relation",
+        title: "Political Science and International Relations",
+        major: "Political Science and International Relations",
+        image: demoCard,
+        sections: [
+          {
+            title: "Program Description",
+            content: "This program focuses on preparing students for teaching English effectively in various educational settings."
+          },
+          {
+            title: "Program Learning Outcomes",
+            content: [
+              "Understand pedagogical theory for teaching English as a second language.",
+              "Design and deliver engaging English lessons for diverse learner groups.",
+              "Assess student performance using standardized evaluation methods."
+            ]
+          },
+          {
+            title: "Program's Subject",
+            table: {
+              headers: ["Subject Description", "Credit"],
+              rows: [
+                ["Introduction to TEFL", "3"],
+                ["Applied Linguistics", "3"],
+                ["Curriculum Design", "3"],
+                ["Language Assessment", "2"],
+                ["English Grammar and Structure", "3"]
+              ]
+            }
+          }
+        ],
+        sidebarComponent: "DepartSocialScience",
+      },
+    ],
   }
 };

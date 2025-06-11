@@ -9,6 +9,8 @@ import sokngim from '@/assets/images/sa_sokngim.png';
 import bunhors from '@/assets/images/son_bunhours.png';
 import tealyoulong from '@/assets/images/teal_youlong.png';
 import taingkeangse from '@/assets/images/taing_keangse.png';
+import leangtaingsoth from '@/assets/images/leang_taingsoth.png';
+import eomrathanak from '@/assets/images/eom_rathanak.png';
 export const departments = {
     'department-english': {
       title: 'Department of English',
@@ -362,5 +364,83 @@ export const departments = {
         ]
       },
       sidebarComponent: "DepartEconomic",
+    },
+    'department-laws': {
+      title: 'Department of Laws',
+      description: 'Department of Laws will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mr. Leang Taingsoth", 
+            position: "Dean of Faculty of Social Science and Laws", 
+            image: leangtaingsoth 
+        },
+        { 
+            name: "Mr. Eom Rathanak", 
+            position: "Chief of Faculty of Laws", 
+            image: eomrathanak 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'associate', majorName: 'associate-laws'}},
+        ],
+        bachelor: [
+            { name: "Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-laws'}},
+            { name: "Private Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-private-laws'}},
+            { name: "International Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-international-laws'}},
+        ]
+      },
+      sidebarComponent: "DepartLaws",
+    },
+    'department-social-science': {
+      title: 'Department of Social Science',
+      description: 'Department of Social Science will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
+      image: demoCard,
+      members: [
+        { 
+            name: "Mr. Leang Taingsoth", 
+            position: "Dean of Faculty of Social Science and Laws", 
+            image: leangtaingsoth 
+        },
+        { 
+            name: "Mr. Eom Rathanak", 
+            position: "Chief of Faculty Social Science and Laws", 
+            image: eomrathanak 
+        },
+      ],
+      activities: [
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+        {
+            image: demoCard
+        },
+      ],
+      majors: {
+        associate: [
+            { name: "Public Administration", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-social-science',majorDegree: 'associate', majorName: 'associate-public-administration'}},
+        ],
+        bachelor: [
+            { name: "Public Adminstration", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-social-science',majorDegree: 'bachelor', majorName: 'bachelor-public-administration'}},
+            { name: "Political Science and International Relations", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-social-science',majorDegree: 'bachelor', majorName: 'bachelor-international-relation'}},
+            
+        ]
+      },
+      sidebarComponent: "DepartSocialScience",
     },
   }

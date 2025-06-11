@@ -36,6 +36,8 @@ import DepartmentArchitectureSidebar from '@/components/SideBar/Department/Depar
 import DepartmentBusinessSidebar from '@/components/SideBar/Department/DepartBusiness.vue';
 import DepartmentTourismSidebar from '@/components/SideBar/Department/DepartTourism.vue';
 import DepartmentEconomicSidebar from '@/components/SideBar/Department/DepartEconomic.vue';
+import DepartmentLawsSidebar from '@/components/SideBar/Department/DepartLaws.vue';
+import DepartmentSocialScienceSidebar from '@/components/SideBar/Department/DepartSocialScience.vue';
 const route = useRoute();
 const router = useRouter();
 
@@ -49,6 +51,8 @@ const sidebarComponents = {
   DepartBusiness: DepartmentBusinessSidebar,
   DepartTourism: DepartmentTourismSidebar,
   DepartEconomic: DepartmentEconomicSidebar,
+  DepartLaws: DepartmentLawsSidebar,
+  DepartSocialScience: DepartmentSocialScienceSidebar,
 };
 
 
