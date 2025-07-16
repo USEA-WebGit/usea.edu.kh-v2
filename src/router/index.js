@@ -149,8 +149,8 @@ const routes = [
       },
       {
         path: 'international-partnership',
-        name: 'international-partnership',
-        component: () => import('@/views/Navbar/Partnership/International-Partner.vue'),
+        name: 'partnership',
+        component: () => import('@/views/Navbar/Partnership/Partnership.vue'),
         meta: {title: 'International Partnership', breadcrumb: "International Partnership"},
       },
     ]

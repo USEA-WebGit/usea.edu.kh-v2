@@ -3,7 +3,7 @@
     <!-- <Accordion /> -->
     <Events/>
     <CareerCenter/>
-    <FacultyCollege/>
+    <!-- <FacultyCollege/> -->
     <partnerships/>
     
 </template>

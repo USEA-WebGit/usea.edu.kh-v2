@@ -84,6 +84,7 @@
                         </div>
 
                     </div>
+                    
                 </section>
 
                 <!-- Faculty's Memeber  -->

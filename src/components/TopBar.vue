@@ -9,9 +9,9 @@
                             <span>|</span>
                             <button class="btn-topbar">Admission</button>
                             <span>|</span>
-                            <button class="btn-topbar">Journal</button>
+                            <button class="btn-topbar"><a href="https://rj.usea.edu.kh/" target="_blank">Journal</a></button>
                             <span>|</span>
-                            <button class="btn-topbar"><a href="https://bit.ly/usea_lms" target="_blank" class="rounded-md ">LMS</a></button>
+                            <button class="btn-topbar"><a href="https://lms.usea.edu.kh/login/index.php" target="_blank" class="rounded-md ">LMS</a></button>
                             <span>|</span>
                             <button class="btn-topbar">Download</button>
                         </div>
