@@ -8,8 +8,8 @@
             <div>
                 <section class="mb-12">
                     <div class=" flex flex-col justify-center items-start mb-5">
-                        <span class="text-red-600 text-[2rem] font-bold">ABOUT FACULTY</span>
-                        <div class="h-1 w-[5%] bg-red-600"></div>
+                        <span class="text-usea_secondary text-[2rem] font-bold">ABOUT FACULTY</span>
+                        <div class="h-1 w-[5%] bg-usea_secondary"></div>
                     </div>
                     <div class="flex flex-col gap-5">
                         <div class="grid grid-cols-[50%_50%] gap-5">
@@ -67,8 +67,8 @@
                 <!-- Department  -->
                 <section class="mb-12 bg-gray-200 p-12 rounded-md">
                     <div class=" flex flex-col justify-center items-start mb-5">
-                        <span class="text-red-600 text-[2rem] font-bold">DEPARTMENT</span>
-                        <div class="h-1 w-[5%] bg-red-600"></div>
+                        <span class="text-usea_secondary text-[2rem] font-bold">DEPARTMENT</span>
+                        <div class="h-1 w-[5%] bg-usea_secondary"></div>
                     </div>
                     <div class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5 overflow-hidden" >
                         <div
@@ -90,8 +90,8 @@
                 <!-- Faculty's Memeber  -->
                 <section class="mb-12">
                     <div class="flex flex-col justify-center items-start mb-5">
-                        <span class="text-red-600 text-[2rem] font-bold">FACULTY'S MEMBERS</span>
-                        <div class="h-1 w-[5%] bg-red-600"></div>
+                        <span class="text-usea_secondary text-[2rem] font-bold">FACULTY'S MEMBERS</span>
+                        <div class="h-1 w-[5%] bg-usea_secondary"></div>
                     </div>
                     <div class="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5">
                         <div v-for="member in faculty.members" :key="member.name">

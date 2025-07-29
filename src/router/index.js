@@ -101,6 +101,12 @@ const routes = [
         meta: {title: 'Short-Course', breadcrumb: 'Short Course'},
       },
       {
+        path: 'short-course-detail',
+        name: 'short-course-detail',
+        component: () => import('@/views/Navbar/Academics/Program/ShourtCourseDetail.vue'),
+        meta: {title: 'Short-Course-Detail', breadcrumb: 'Short Course Detail'},
+      },
+      {
         path: 'faculty/:facultyStaff/faculty-staff',
         name: 'faculty-staff',
         component: () => import('@/views/Navbar/Academics/Faculty/FacultyStaff.vue'),

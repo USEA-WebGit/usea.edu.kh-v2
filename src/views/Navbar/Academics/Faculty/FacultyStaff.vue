@@ -29,7 +29,7 @@ import Titlebg from '@/components/Slide/TitleBg.vue';
 import { faculties } from '@/data/faculty.js';
 import { computed } from 'vue';
 const route = useRoute();
-
+ 
 const facultyStaffParam = computed(() => decodeURIComponent(route.params.facultyStaff));
 const facultyMembers = computed(() => faculties[facultyStaffParam.value]);
 

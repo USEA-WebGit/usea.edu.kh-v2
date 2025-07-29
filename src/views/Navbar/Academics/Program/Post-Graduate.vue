@@ -5,7 +5,11 @@
     <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
             <div class="flex justify-center items-center gap-5 flex-col">
-                <span class="text-2xl text-red-600 font-bold">About Graduate School</span>
+                
+                <div class=" flex flex-col justify-center items-center mb-5">
+                    <span class="text-2xl text-usea_secondary font-bold">ABOUT GRADUATE SCHOOL</span>
+                    <div class="h-1 w-[5%] bg-usea_secondary"></div>
+                </div>
                 <div class="flex gap-3">
                     <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     <img :src="demo" alt="image" class="w-[50%]">
@@ -14,7 +18,9 @@
             <div>
                 <div class="flex gap-3 mt-10">
                     <div class="flex flex-col gap-5">
-                        <span class="text-2xl text-red-600 font-bold">Vision</span>
+                        <div class=" flex flex-col justify-center items-start mb-5">
+                            <span class="text-2xl text-usea_secondary font-bold">VISION</span>
+                        </div>
                         <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     </div>
                     <img :src="demo" alt="image" class="w-[50%]">
@@ -25,7 +31,9 @@
                    
                     <img :src="demo" alt="image" class="w-[50%]">
                      <div class="flex flex-col gap-5">
-                        <span class="text-2xl text-red-600 font-bold">Mission</span>
+                        <div class=" flex flex-col justify-center items-start">
+                            <span class="text-2xl text-usea_secondary font-bold">MISSION</span>
+                        </div>
                         <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     </div>
                 </div>
@@ -33,16 +41,20 @@
             <div>
                 <div class="flex gap-3 mt-10">
                     <div class="flex flex-col gap-5">
-                        <span class="text-2xl text-red-600 font-bold">Education Philosophy</span>
+                        <div class=" flex flex-col justify-center items-start">
+                            <span class="text-2xl text-usea_secondary font-bold">EDUCATION PHILOSOPHY</span>
+                        </div>
                         <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     </div>
                     <img :src="demo" alt="image" class="w-[50%]">
                 </div>
             </div>
             <div class="mt-10">
-                <span class="text-2xl text-red-600 font-bold">Core Value</span>
+                <div class=" flex flex-col justify-center items-start">
+                    <span class="text-2xl text-usea_secondary font-bold">CORE VALUE</span>
+                </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-xl font-bold">Knowledge</span>
+                    <span class="text-lg font-bold text-red-600">Knowledge</span>
                     <div>
                         <ul>
                             <li>It is a long established fact that a reader will be distracted by the</li>
@@ -53,7 +65,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-xl font-bold">Skills</span>
+                    <span class="text-lg font-bold text-red-600">Skills</span>
                     <div>
                         <ul>
                             <li>It is a long established fact that a reader will be distracted by the</li>
@@ -64,7 +76,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-xl font-bold">Excellence</span>
+                    <span class="text-lg font-bold text-red-600">Excellence</span>
                     <div>
                         <ul>
                             <li>It is a long established fact that a reader will be distracted by the</li>
@@ -75,7 +87,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-xl font-bold ">Social</span>
+                    <span class="text-lg font-bold text-red-600">Social</span>
                     <ul>
                         <li>It is a long established fact that a reader will be distracted by the</li>
                         <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
@@ -85,9 +97,11 @@
                 </div>
             </div>
             <div class="mt-10">
-                <span class="text-2xl text-red-600 font-bold">Study Duration</span>
+                <div class=" flex flex-col justify-center items-start">
+                    <span class="text-2xl text-usea_secondary font-bold">STUDY DURATION</span>
+                </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <i class="fa-solid fa-clock text-2xl"></i>
+                    <i class="fa-solid fa-clock text-2xl text-red-600"></i>
                     <ul>
                         <li>It is a long established fact that a reader will be distracted by the</li>
                         <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
@@ -95,7 +109,9 @@
                 </div>
             </div>
             <div class="mt-10">
-                <span class="text-2xl text-red-600 font-bold">Requirement</span>
+                <div class=" flex flex-col justify-center items-start">
+                    <span class="text-2xl text-usea_secondary font-bold">REQUIREMENT</span>
+                </div>
                 <div class="flex flex-col items-center mt-10">
                     <span>It is a long established fact that a reader will be distracted by theThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in someIt is a long established fact that a reader will be distracted by the</span>
                     <ul class="mt-5">
@@ -105,9 +121,11 @@
                 </div>
             </div>
             <div class="mt-10 mb-10">
-                <span class="text-2xl text-red-600 font-bold">Education Structure</span>
+                <div class=" flex flex-col justify-center items-start mb-5">
+                    <span class="text-2xl text-usea_secondary font-bold">EDUCATION STRUCTURE</span>
+                </div>
                 <table>
-                    <tr>
+                    <tr class="text-xl font-bold">
                         <th>បរិយាយ</th>
                         <th>បញ្ចប់ដោយប្រឡង</th>
                         <th>បញ្ចប់ដោយនិក្ខេបបទ</th>
@@ -148,7 +166,7 @@
 
 <script setup>
 import Titlebg from '@/components/Slide/TitleBg.vue';
-import RightNav from '@/components/SideBar/Right-Nav.vue';
+import RightNav from '@/components/SideBar/RightPostGraduate.vue';
 import demo from '@/assets/images/demoCard.png';
 
 

@@ -1,4 +1,7 @@
 <template>
+
+
+
     <Carousel />
     <!-- <Accordion /> -->
     <Events/>
