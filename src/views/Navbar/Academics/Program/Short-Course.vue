@@ -2,63 +2,61 @@
     <div>
         <Titlebg title="Short Course" breadcrumb="Short Course" />
     </div>
-        <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
+        <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
             <div>
                 <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="row mx-0 justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center position-relative mb-5">
-                            <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Our Courses</h6>
-                            <!-- <h1 class="display-4">Checkout New Releases Of Our Courses</h1> -->
+                  <div class="container py-5">
+                    <div class="row mx-0 justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center position-relative mb-5">
+                                <span class="d-inline-block position-relative text-2xl font-bold text-uppercase pb-2">Our Courses</span>
+                                <!-- <h1 class="display-4">Checkout New Releases Of Our Courses</h1> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div v-for="(image,index) in images" :key="index" class="col-lg-4 col-md-6 pb-4">
-        
-                        <router-link class="courses-list-item position-relative d-block overflow-hidden mb-2" :to="{ name: 'short-course-detail' }">
-                            <img class="img-fluid" :src="image.image" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">{{ image.title }}</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>{{ image.author }}</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
+                    <div class="row">
+                        <div v-for="(image,index) in images" :key="index" class="col-lg-4 col-md-6 pb-4">
+            
+                            <router-link class="courses-list-item position-relative d-block overflow-hidden mb-2" :to="{ name: 'short-course-detail' }">
+                                <img class="img-fluid" :src="image.image" alt="">
+                                <div class="courses-text">
+                                    <h4 class="text-center text-white px-3">{{ image.title }}</h4>
+                                    <div class="border-top w-100 mt-3">
+                                        <div class="d-flex justify-content-between p-4">
+                                            <span class="text-white"><i class="fa fa-user mr-2"></i>{{ image.author }}</span>
+                                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
+                                                <small>(250)</small></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </router-link>
+                            </router-link>
+                        </div>
+                        <div class="col-12">
+                          <nav aria-label="Page navigation">
+                              <ul class="pagination pagination-lg justify-content-center mb-0">
+                                <li class="page-item disabled">
+                                  <a class="page-link rounded-0" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                  <a class="page-link rounded-0" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="col-12">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination pagination-lg justify-content-center mb-0">
-                          <li class="page-item disabled">
-                            <a class="page-link rounded-0" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                          </li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link rounded-0" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                </div>
-                </div>
+                  </div>
+              </div>
             </div>
-        </div>
-            </div>
-            <div>
-                <RightNav />
-            </div>
+            
         </div>
 </template>
 
