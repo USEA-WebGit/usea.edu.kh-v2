@@ -12,57 +12,61 @@
                 </div>
                 <div class="flex gap-3">
                     <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
-                    <img :src="demo" alt="image" class="w-[50%]">
+                    <img :src="demo" alt="image" class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg">
                 </div>
             </div>
-            <div class="mt-10">
-                <div class=" flex flex-col justify-center items-start">
-                    <span class="text-2xl text-usea_secondary font-bold">HEALTH SERVICES</span>
+            <section class="bg-gray-500 p-10 mt-10 rounded-sm">
+                
+                <div class=" flex flex-col justify-center items-start text-white">
+                    <span class="text-2xl  font-bold text-white">HEALTH SERVICES</span>
                     <!-- <div class="h-1 w-[5%] bg-usea_secondary"></div> -->
                 </div>
-                <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Knowledge</span>
+                <div class="flex gap-5 text-white bg-opacity-80 p-5 rounded-lg mt-5">
                     <div>
-                        <ul>
-                            <li>It is a long established fact that a reader will be distracted by the</li>
-                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                            <li>It is a long established fact that a reader will be distracted by the</li>
-                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                        </ul>
+                        <img
+                            :src="medicalRoom"
+                            alt="image"
+                            class="w-full transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
+                            />
+
                     </div>
-                </div>
-                <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Skills</span>
-                    <div>
-                        <ul>
-                            <li>It is a long established fact that a reader will be distracted by the</li>
-                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                            <li>It is a long established fact that a reader will be distracted by the</li>
-                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Excellence</span>
-                    <div>
-                        <ul>
-                            <li>It is a long established fact that a reader will be distracted by the</li>
-                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                            <li>It is a long established fact that a reader will be distracted by the</li>
-                            <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Social</span>
-                    <ul>
-                        <li>It is a long established fact that a reader will be distracted by the</li>
-                        <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
-                        <li>It is a long established fact that a reader will be distracted by the</li>
-                        <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            ផ្ដល់សេវាកម្មសុខភាពស្របតាមម៉ោងការងាររបស់សាកលវិទ្យាល័យ
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            ផ្ដល់សេវាពិនិត្យសុខភាព និងកាយសម្បទា
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            ផ្ដល់សេវាសង្គ្រោះបឋម
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            ផ្ដល់សេវាប្រឹក្សាសុខភាពផ្លូវកាយ និងផ្លូវចិត្ត
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            ផ្ដល់ថ្នាំបង្ការ ឬថ្នាំព្យាបាលនានាស្របតាមគោលនយោបាយជាតិ ឬ កម្មវិធីជាតិផ្ដល់ថ្នាំបង្ការរបស់ក្រសួរសុខាភិបាល
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            ផ្ដល់ព័ត៌មានបន្ទាន់ដល់អ្នកអាណាព្យាបាលពីស្ថានភាពជំងឺរបស់បុគ្គលិករដ្ឋបាលគ្រូបង្រៀន និងសិស្សានុសិស្ស ក្នុងលក្ខខណ្ឌតម្រូវមកទទួលទៅព្យាបាលបន្តនៅផ្ទះ ឬទទួលការឯកភាពមុននឹងបញ្ជូនអ្នកជំងឺទៅព្យាបាលនៅបន្ទីពេទ្យ
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            រៀបចំ និងចូលរួមអប់រំផ្សព្វផ្សាយស្ដីពីការលើកកម្ពស់សុខភាព សុវត្ថភាព និងបរិស្ថានស្អាត ដល់បុគ្គលិករដ្ឋបាល គ្រូបង្រៀន សិស្សានុសិស្ស និងអ្នកពាក់ព័ន្ធ
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                            រក្សាឯកជនភាព និងរក្សាការសម្ងាត់នូវរាល់ព័ត៌មានពាក់ព័ន្ធនឹងស្ថានភាពសុខភាពរបស់បុគ្គលិករដ្ឋបាល គ្រូបង្រៀន និងសិស្សានុសិស្សដែលមកទទួលសេវានៅបន្ទប់សុខភាព ព្រមទាំងគោរពក្រមសីលធម៌វិជ្ជាជីវៈ
+                        </li>
                     </ul>
+                    
                 </div>
-            </div>
+            </section>
 
             <div class="mt-10">
                 <div class=" flex flex-col justify-center items-start">
@@ -89,4 +93,6 @@
 import Titlebg from '@/components/Slide/TitleBg.vue';
 import RightServices from '@/components/SideBar/RightServices.vue';
 import demo from '@/assets/images/demoCard.png';
+import medicalRoom from '@/assets/images/medical_room.jpg';
+import catImg from '@/assets/images/bg_medical_room.jpg';
 </script>

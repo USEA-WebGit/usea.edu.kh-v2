@@ -78,7 +78,7 @@ const routes = [
       },
       {
         path: 'international-college',
-        name: 'internationa-college',
+        name: 'international-college',
         component: () => import('@/views/Navbar/Academics/Program/International-College.vue'),
         meta: {title: 'International-College', breadcrumb: "International College"},
       },
