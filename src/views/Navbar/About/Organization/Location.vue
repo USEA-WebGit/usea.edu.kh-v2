@@ -5,14 +5,14 @@
     <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div class="grid 2xl:grid-cols-[60%_40%] xl:grid-cols-[60%_40%] ">
             <div>
-                <p class="flex justify-center text-2xl font-bold">Contact US</p>
+                <p class="flex justify-center text-2xl font-bold">CONTACT US</p>
                 <div class="grid grid-cols-2 gap-5 mt-10 text-lg">
                     <div>
-                        <p class="text-xl font-bold">Address</p>
+                        <p class="text-xl font-bold">ADDRESS</p>
                         <span>Wat Bo Village, SangKat Salakamroek Siemreap Municipality, Cambodia(Opposite Angkor High School)</span>
                     </div>
                     <div>
-                        <p class="text-xl font-bold">Social Media</p>
+                        <p class="text-xl font-bold">SOCIAL MEDIA</p>
                         <div class="flex gap-5 text-2xl mt-3">
                             <a href="#"><i class="fa-brands fa-facebook"></i></a>
                             <a href="#"><i class="fa-brands fa-telegram"></i></a>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="text-xl font-bold">Phone</p>
+                        <p class="text-xl font-bold">PHONE</p>
                         <ul>
                             <li>(+855) 63 900 090</li>
                             <li>(+855) 92 429 966</li>

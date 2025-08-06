@@ -33,7 +33,7 @@ import Moeys from '@/assets/recognition/m1-1.png';
 const boards = [
   {
     img: ACCRecognit,
-    title: "ACC Recognition",
+    title: "ACC RECOGNITION",
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem hic quidem debitis aut aliquid repudiandae pariatur, sapiente recusandae. Laboriosam, veniam?"
   },
   {
@@ -43,12 +43,12 @@ const boards = [
   },
   {
     img: Government,
-    title: "Government Recognition",
+    title: "GOVERNMENT RECOGNITION",
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem hic quidem debitis aut aliquid repudiandae pariatur, sapiente recusandae. Laboriosam, veniam?"
   },
   {
     img: Moeys,
-    title: "MOEYS Recognition",
+    title: "MOEYS RECOGNITION",
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem hic quidem debitis aut aliquid repudiandae pariatur, sapiente recusandae. Laboriosam, veniam?"
   },
 ];

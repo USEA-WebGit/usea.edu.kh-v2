@@ -8,14 +8,14 @@
             <img :src="major.image" alt="" class="h-[200px] object-cover">
             <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-5">
-                    <span class="font-bold text-2xl text-red-600">Program Description</span>
+                    <span class="font-bold text-2xl text-usea_secondary">PROGRAM DESCRIPTION</span>
                     <span>The Associate in English aims to develop students' competency in reading, writing, listening, and speaking the English language. It also aims to build a foundation of general and theoretical knowledge and skills in language education that are necessary for employment and further university studies. The program also focuses on improving students' communication skills, critical thinking skills, and problem-solving skills, which are required in today's classrooms and the global economy. The English language is used as the medium of instruction for this program.</span>
                 </div>
                 <div class="flex flex-col gap-5">
-                    <span class="font-bold text-2xl text-red-600">Program Learning Outcomes</span>
+                    <span class="font-bold text-2xl text-usea_secondary">PROGRAM LEARNING OUTCOMES</span>
                     After successful completion of the Associate in English program, students will be able to:
                     <div>
-                        <span class="text-xl font-bold">Knowledge</span>
+                        <span class="text-lg font-bold text-usea_secondary">Knowledge</span>
                         <ul class="ml-9 mt-5">
                             <li class="list-disc">Acquire general knowledge about Cambodian microeconomics, culture and civilization;</li>
                             <li class="list-disc">Demonstrate understanding of important theories, concepts, principles, and procedures in language education;</li>
@@ -23,21 +23,21 @@
                         </ul>
                     </div>
                     <div>
-                        <span class="text-xl font-bold">Cognitive Skills</span>
+                        <span class="text-lg font-bold text-usea_secondary">Cognitive Skills</span>
                         <ul class="ml-9 mt-2">
                             <li class="list-disc">Demonstrate ability to apply important theories, concepts, principles, and procedures in language education in actual contexts;</li>
                             <li class="list-disc">Analyze information, concepts and evidences from a range of sources in order to make conclusions to issues and problems;</li>
                         </ul>
                     </div>
                     <div>
-                        <span class="text-xl font-bold">Psychomotor Skills</span>
+                        <span class="text-lg font-bold text-usea_secondary">Psychomotor Skills</span>
                         <ul class="ml-9 mt-2">
                             <li class="list-disc">Demonstrate confidence in teaching English to students in authentic classroom environment;</li>
                             <li class="list-disc">Appropriately adjust teaching and assessment methods and techniques for students of various backgrounds;</li>
                         </ul>
                     </div>
                     <div>
-                        <span class="text-xl font-bold">Interpersonal Skills and Responsibility</span>
+                        <span class="text-lg font-bold text-usea_secondary">Interpersonal Skills and Responsibility</span>
                         <ul class="ml-9 mt-2">
                             <li class="list-disc">Demonstrate confidence, critical thinking, and problem-solving skills;</li>
                             <li class="list-disc">Exercise leadership in a small group in an area of language education;</li>
@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                     <div>
-                        <span class="text-xl font-bold">Communication, Information Technology and Numerical Skills</span>
+                        <span class="text-lg font-bold text-usea_secondary">Communication, Information Technology and Numerical Skills</span>
                         <ul class="ml-9 mt-2">
                             <li class="list-disc">Effectively communicate in English and Khmer both in oral and written form;</li>
                             <li class="list-disc">Use information and communications technology in analyzing issues and in making presentations.</li>
@@ -53,16 +53,16 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-5">
-                    <span class="font-bold text-2xl text-red-600">Credit Accumulation</span>
+                    <span class="font-bold text-2xl text-usea_secondary">CREDIT ACCUMULATION</span>
                     <span>Students are required to undertake two academic years of full-time study, which is equivalent to four semesters. Each academic year consists of two semesters, with each semester lasting fifteen weeks, excluding the examination period. In order to be awarded the Associate in English degree, a student must successfully acquire 60 credit points and maintain a minimum grade point average (GPA) of 2.00. Additionally, the student must pass the comprehensive examination.</span>
                 </div>
                 <div class="flex flex-col gap-5">
-                    <span class="font-bold text-2xl text-red-600">Job Opportunity</span>
+                    <span class="font-bold text-2xl text-usea_secondary">JOB OPPORTUNITY</span>
                     <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                 </div>
             </div>
             
-             <nav class="tabs tabs-bordered mt-10" role="tablist" aria-orientation="horizontal">
+            <nav class="tabs tabs-bordered mt-10 gap-1 flex" role="tablist" aria-orientation="horizontal">
                 <button
                 v-for="(tab, index) in tabs"
                 :key="index"
@@ -76,31 +76,31 @@
                 </button>
             </nav>
             <div class="mt-3">
-          <div v-for="(tab, index) in tabs" :key="index" v-show="activeTab === index">
-            <table class="w-full border-collapse border border-gray-300">
-              <thead>
-                <tr class="bg-gray-200">
-                  <th class="border border-gray-300 px-4 py-2">No</th>
-                  <th class="border border-gray-300 px-4 py-2">Subject Description</th>
-                  <th class="border border-gray-300 px-4 py-2">Credit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(subject, i) in tab.subjects" :key="i">
-                  <td class="border border-gray-300 px-4 py-2">{{ i + 1 }}</td>
-                  <td class="border border-gray-300 px-4 py-2">{{ subject.name }}</td>
-                  <td class="border border-gray-300 px-4 py-2">{{ subject.credit }}</td>
-                </tr>
-                <tr class="font-bold">
-                  <td class="border border-gray-300 px-4 py-2" colspan="2">Total</td>
-                  <td class="border border-gray-300 px-4 py-2">
-                    {{ tab.subjects.reduce((sum, s) => sum + s.credit, 0) }}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+              <div v-for="(tab, index) in tabs" :key="index" v-show="activeTab === index">
+                <table class="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr class="bg-gray-200">
+                      <th class="border border-gray-300 px-4 py-2">No</th>
+                      <th class="border border-gray-300 px-4 py-2">Subject Description</th>
+                      <th class="border border-gray-300 px-4 py-2">Credit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(subject, i) in tab.subjects" :key="i">
+                      <td class="border border-gray-300 px-4 py-2">{{ i + 1 }}</td>
+                      <td class="border border-gray-300 px-4 py-2">{{ subject.name }}</td>
+                      <td class="border border-gray-300 px-4 py-2">{{ subject.credit }}</td>
+                    </tr>
+                    <tr class="font-bold">
+                      <td class="border border-gray-300 px-4 py-2" colspan="2">Total</td>
+                      <td class="border border-gray-300 px-4 py-2">
+                        {{ tab.subjects.reduce((sum, s) => sum + s.credit, 0) }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
         </div>
         

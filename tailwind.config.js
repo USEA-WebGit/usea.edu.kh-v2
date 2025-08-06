@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import flyonui from "flyonui";
 import flyonuiPlugin from "flyonui/plugin";
 import tailwindcssMotion from "tailwindcss-motion";
 
@@ -7,7 +6,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,jsx,tsx}",
-    "./node_modules/flyonui/dist/js/*.js"
+    "./node_modules/flyonui/**/*.{js,vue,html,ts,jsx,tsx}",
   ],
 
   theme: {
@@ -43,7 +42,6 @@ export default {
   },
 
   plugins: [
-    flyonui,
     flyonuiPlugin,
     tailwindcssMotion
   ]

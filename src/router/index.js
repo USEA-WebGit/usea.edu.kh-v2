@@ -78,7 +78,7 @@ const routes = [
       },
       {
         path: 'international-college',
-        name: 'internationa-college',
+        name: 'international-college',
         component: () => import('@/views/Navbar/Academics/Program/International-College.vue'),
         meta: {title: 'International-College', breadcrumb: "International College"},
       },
@@ -99,6 +99,12 @@ const routes = [
         name: 'short-course',
         component: () => import('@/views/Navbar/Academics/Program/Short-Course.vue'),
         meta: {title: 'Short-Course', breadcrumb: 'Short Course'},
+      },
+      {
+        path: 'short-course-detail',
+        name: 'short-course-detail',
+        component: () => import('@/views/Navbar/Academics/Program/ShourtCourseDetail.vue'),
+        meta: {title: 'Short-Course-Detail', breadcrumb: 'Short Course Detail'},
       },
       {
         path: 'faculty/:facultyStaff/faculty-staff',
@@ -149,8 +155,8 @@ const routes = [
       },
       {
         path: 'international-partnership',
-        name: 'international-partnership',
-        component: () => import('@/views/Navbar/Partnership/International-Partner.vue'),
+        name: 'partnership',
+        component: () => import('@/views/Navbar/Partnership/Partnership.vue'),
         meta: {title: 'International Partnership', breadcrumb: "International Partnership"},
       },
     ]

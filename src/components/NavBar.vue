@@ -98,9 +98,9 @@
                     Programs & Courses
                   </h3>
                   <ul class="text-lg text-gray-500">
-                    <router-link :to="{name: 'internationa-college'}"><li class="flex gap-2">International College</li></router-link>
+                    <router-link :to="{name: 'international-college'}"><li class="flex gap-2">International College</li></router-link>
                     <router-link :to="{name: 'post-graduate'}"><li class="flex gap-2">Post Graduate</li></router-link>
-                    <router-link :to="{name: 'language-center'}"><li class="flex gap-2">Foreign Language Center</li></router-link>
+                    <!-- <router-link :to="{name: 'language-center'}"><li class="flex gap-2">Foreign Language Center</li></router-link> -->
                     <router-link :to="{name: 'short-course'}"><li class="flex gap-2">Short Course</li></router-link>
                   </ul>
                 </div>
@@ -111,7 +111,7 @@
             </li>
   
             <!-- Submenu: Partnership -->
-            <li class="nav-item group relative pb-10">
+            <!-- <li class="nav-item group relative pb-10">
               PARTNERSHIP
               <div class="mega-menu hidden absolute top-full left-0 w-max bg-white p-7 z-50 rounded-md">
                 <ul class="text-lg text-gray-500">
@@ -119,10 +119,21 @@
                   <router-link :to="{name: 'international-partnership'}"><li class="flex gap-2">International Partner</li></router-link>
                 </ul>
               </div>
-            </li>
+            </li> -->
   
+            <router-link :to="{name: 'partnership'}"><li class="nav-item pb-10">PARTNERSHIP</li></router-link>
+
             <!-- Additional Navbar Items -->
-            <router-link :to="{name: 'research'}"><li class="nav-item pb-10">RESEARCH</li></router-link>
+             <li class="nav-item group relative pb-10">
+              RESEARCH
+              <div class="mega-menu hidden absolute top-full left-0 w-max bg-white p-7 z-50 rounded-md">
+                <ul class="text-lg text-gray-500">
+                  <router-link :to="{name: 'research'}"><li class="flex gap-2">Research Project</li></router-link>
+                  <!-- <router-link :to="{name: 'research'}"><li class="flex gap-2">Research Activities</li></router-link> -->
+                </ul>
+              </div>
+            </li>
+            <!-- <router-link :to="{name: 'research'}"><li class="nav-item pb-10">RESEARCH</li></router-link> -->
             <li class="nav-item group relative pb-10">
               SERVICES
               <div class="mega-menu hidden absolute top-full left-0 w-max bg-white shadow-lg p-7 grid grid-cols-1 z-50 rounded-md">
@@ -206,7 +217,7 @@
                 <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-huminaties-languages'}}" @click="navigateAndClose('arts-huminaties-languages')"><li>Faculty of Art, Humanities & Language</li></router-link>
                 <router-link :to="{name: 'internationa-college'}" @click="navigateAndClose('internationa-college')"><li>International College</li></router-link>
                 <router-link :to="{name: 'post-graduate'}" @click="navigateAndClose('post-graduate')"><li>Post Graduate</li></router-link>
-                <router-link :to="{name: 'language-center'}" @click="navigateAndClose('language-center')"><li>Foreign Language Center</li></router-link>
+                <!-- <router-link :to="{name: 'language-center'}" @click="navigateAndClose('language-center')"><li>Foreign Language Center</li></router-link> -->
                 <router-link :to="{name: 'short-course'}" @click="navigateAndClose('short-course')"><li>Short Course</li></router-link>
               </ul>
             </transition>
@@ -229,8 +240,8 @@
                 v-if="subNavs.partnership"
                 class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
               >
-                <router-link :to="{name: 'local-partnership'}" @click="navigateAndClose('local-partnership')"><li>Local Partner</li></router-link>
-                <router-link :to="{name: 'international-partnership'}" @click="navigateAndClose('international-partnership')"><li>International Partner</li></router-link>
+                <router-link :to="{name: 'partnership'}" @click="navigateAndClose('local-partnership')"><li>Partnership</li></router-link>
+                <!-- <router-link :to="{name: 'international-partnership'}" @click="navigateAndClose('international-partnership')"><li>International Partner</li></router-link> -->
               </ul>
             </transition>
           </li>

@@ -1,62 +1,157 @@
 <template>
     <div>
-        <Titlebg title="Short Course" breadcrumb="Short Course" />
+        <Titlebg title="Short Course Detail" breadcrumb="Short Course Detail" />
     </div>
         <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
             <div>
                 <div class="container-fluid py-5">
-                  <div class="container py-5">
-                    <div class="row mx-0 justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="section-title text-center position-relative mb-5">
-                                <span class="d-inline-block position-relative text-2xl font-bold text-uppercase pb-2">Our Courses</span>
-                                <!-- <h1 class="display-4">Checkout New Releases Of Our Courses</h1> -->
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="mb-5">
+                                    <div class="section-title position-relative mb-5">
+                                        <h6 class="d-inline-block position-relative text-usea_primary text-uppercase pb-2">Course Detail</h6>
+                                        <h1 class="display-4">Web design & development courses for beginners</h1>
+                                    </div>
+                                    <img class="img-fluid rounded w-100 mb-4" :src="demo" alt="Image">
+                                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                    
+                                    <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut magna lorem.
+                                        Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet amet magna accusam
+                                        consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at sanctus et. Ipsum sit
+                                        gubergren dolores et, consetetur justo invidunt at et aliquyam ut et vero clita. Diam sea
+                                        sea no sed dolores diam nonumy, gubergren sit stet no diam kasd vero.</p>
+                                </div>
+
+                                <h2 class="mb-3">Related Courses</h2>
+                                <div class="owl-carousel related-carousel position-relative" style="padding: 0 30px;">
+                                    <a v-for="(image,index) in images" :key="index"  class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
+                                        <img class="img-fluid" :src="image.image" alt="">
+                                        <div class="courses-text">
+                                            <h4 class="text-center text-white px-3">Web design & development courses for
+                                                beginners</h4>
+                                            <div class="border-top w-100 mt-3">
+                                                <div class="d-flex justify-content-between p-4">
+                                                    <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
+                                                    <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
+                                                        <small>(250)</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                        </div>
+
+                            <div class="col-lg-4 mt-5 mt-lg-0">
+                                <div class="bg-primary mb-5 py-3">
+                                    <h3 class="text-white py-3 px-4 m-0">Course Features</h3>
+                                    <div class="d-flex justify-content-between border-bottom px-4">
+                                        <h6 class="text-white my-3">Instructor</h6>
+                                        <h6 class="text-white my-3">John Doe</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom px-4">
+                                        <h6 class="text-white my-3">Rating</h6>
+                                        <h6 class="text-white my-3">4.5 <small>(250)</small></h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom px-4">
+                                        <h6 class="text-white my-3">Lectures</h6>
+                                        <h6 class="text-white my-3">15</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom px-4">
+                                        <h6 class="text-white my-3">Duration</h6>
+                                        <h6 class="text-white my-3">10.00 Hrs</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom px-4">
+                                        <h6 class="text-white my-3">Skill level</h6>
+                                        <h6 class="text-white my-3">All Level</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between px-4">
+                                        <h6 class="text-white my-3">Language</h6>
+                                        <h6 class="text-white my-3">English</h6>
+                                    </div>
+                                    <h5 class="text-white py-3 px-4 m-0">Course Price: Free</h5>
+                                    <div class="py-3 px-4">
+                                        <a class="btn btn-block btn-secondary py-3 px-5" href="">Enroll Now</a>
+                                    </div>
+                                </div>
+
+                                <div class="mb-5">
+                                    <h2 class="mb-3">Categories</h2>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <a href="" class="text-decoration-none h6 m-0">Web Design</a>
+                                            <span class="badge badge-primary badge-pill">150</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <a href="" class="text-decoration-none h6 m-0">Web Development</a>
+                                            <span class="badge badge-primary badge-pill">131</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <a href="" class="text-decoration-none h6 m-0">Online Marketing</a>
+                                            <span class="badge badge-primary badge-pill">78</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <a href="" class="text-decoration-none h6 m-0">Keyword Research</a>
+                                            <span class="badge badge-primary badge-pill">56</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <a href="" class="text-decoration-none h6 m-0">Email Marketing</a>
+                                            <span class="badge badge-primary badge-pill">98</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="mb-5">
+                                    <h2 class="mb-4">Recent Courses</h2>
+                                    <a class="d-flex align-items-center text-decoration-none mb-4" href="">
+                                        <img class="img-fluid rounded" src="#" alt="">
+                                        <div class="pl-3">
+                                            <h6>Web design & development courses for beginners</h6>
+                                            <div class="d-flex">
+                                                <small class="text-body mr-3"><i class="fa fa-user text-primary mr-2"></i>Jhon Doe</small>
+                                                <small class="text-body"><i class="fa fa-star text-primary mr-2"></i>4.5 (250)</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="d-flex align-items-center text-decoration-none mb-4" href="">
+                                        <img class="img-fluid rounded" src="#" alt="">
+                                        <div class="pl-3">
+                                            <h6>Web design & development courses for beginners</h6>
+                                            <div class="d-flex">
+                                                <small class="text-body mr-3"><i class="fa fa-user text-primary mr-2"></i>Jhon Doe</small>
+                                                <small class="text-body"><i class="fa fa-star text-primary mr-2"></i>4.5 (250)</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="d-flex align-items-center text-decoration-none mb-4" href="">
+                                        <img class="img-fluid rounded" src="#" alt="">
+                                        <div class="pl-3">
+                                            <h6>Web design & development courses for beginners</h6>
+                                            <div class="d-flex">
+                                                <small class="text-body mr-3"><i class="fa fa-user text-primary mr-2"></i>Jhon Doe</small>
+                                                <small class="text-body"><i class="fa fa-star text-primary mr-2"></i>4.5 (250)</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="d-flex align-items-center text-decoration-none" href="">
+                                        <img class="img-fluid rounded" src="#" alt="">
+                                        <div class="pl-3">
+                                            <h6>Web design & development courses for beginners</h6>
+                                            <div class="d-flex">
+                                                <small class="text-body mr-3"><i class="fa fa-user text-primary mr-2"></i>Jhon Doe</small>
+                                                <small class="text-body"><i class="fa fa-star text-primary mr-2"></i>4.5 (250)</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div v-for="(image,index) in images" :key="index" class="col-lg-4 col-md-6 pb-4">
-            
-                            <router-link class="courses-list-item position-relative d-block overflow-hidden mb-2" :to="{ name: 'short-course-detail' }">
-                                <img class="img-fluid" :src="image.image" alt="">
-                                <div class="courses-text">
-                                    <h4 class="text-center text-white px-3">{{ image.title }}</h4>
-                                    <div class="border-top w-100 mt-3">
-                                        <div class="d-flex justify-content-between p-4">
-                                            <span class="text-white"><i class="fa fa-user mr-2"></i>{{ image.author }}</span>
-                                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                                <small>(250)</small></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </router-link>
-                        </div>
-                        <div class="col-12">
-                          <nav aria-label="Page navigation">
-                              <ul class="pagination pagination-lg justify-content-center mb-0">
-                                <li class="page-item disabled">
-                                  <a class="page-link rounded-0" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                  </a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                  <a class="page-link rounded-0" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Next</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </nav>
-                        </div>
-                    </div>
-                  </div>
-              </div>
+                </div>
             </div>
-            
+            <!-- <div>
+                <RightNav />
+            </div> -->
         </div>
 </template>
 

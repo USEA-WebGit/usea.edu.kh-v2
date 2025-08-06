@@ -1,9 +1,12 @@
 <template>
+
+
+
     <Carousel />
     <!-- <Accordion /> -->
     <Events/>
     <CareerCenter/>
-    <FacultyCollege/>
+    <!-- <FacultyCollege/> -->
     <partnerships/>
     
 </template>
