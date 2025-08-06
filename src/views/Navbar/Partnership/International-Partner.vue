@@ -4,8 +4,11 @@
     </div>
     <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
         <div>
-            <div class="font-bold text-center mb-5">
-                <span class="text-[40px]">Our Local Partnership</span>
+            <div class="text-2xl font-bold text-center mb-5">
+                <span class="relative inline-block">
+                    Our Local Partnership
+                    <span class="absolute left-1/2 top-10 bottom-0 transform -translate-x-1/2 w-1/2 h-[5px] bg-red-500"></span>
+                </span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-5">
                 <div class="text-center">
@@ -92,7 +95,10 @@
         </div>
         <div>
             <div class="text-2xl font-bold text-center mb-5">
-                <span class="text-[40px]">Our International Partnership</span>
+                <span class="relative inline-block">
+                    Our International Partnership
+                    <span class="absolute left-1/2 top-10 bottom-0 transform -translate-x-1/2 w-1/2 h-[5px] bg-red-500"></span>
+                </span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-5">
                 <div class="text-center">
