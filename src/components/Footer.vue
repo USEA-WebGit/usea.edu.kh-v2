@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#002060]">
+    <div class="bg-[#002060] mt-5">
     <div class="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 gap-8 justify-items-center items-stretch p-10">
         <!-- Quick Links -->
         <div class="flex flex-col gap-5 w-[75%] h-full">

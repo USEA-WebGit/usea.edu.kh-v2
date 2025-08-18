@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
+    <div class="bg-gray-200 p-5 flex flex-col gap-5 text-sm 2xl:text-xl xl:text-xl lg:text-sm  rounded-md">
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Contact +</span>
+            <span class="text-[#002060] font-bold mb-5">Contact +</span>
             <router-link
                 :to="{name: 'faculty-page', params: {facultyName: 'economics-business-tourism'}}"
                 class="link"
@@ -18,7 +18,7 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Department +</span>
+            <span class="text-[#002060] font-bold mb-5">Department +</span>
             <router-link
                 :to="{ name: 'department-name', params: {departmentName: 'department-business'} }"
                 class="link"

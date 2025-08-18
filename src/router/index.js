@@ -42,6 +42,12 @@ const routes = [
         meta: {title: 'News-Events', breadcrumb: 'News and Events'},
       },
       {
+        path: 'events-detail',
+        name: 'events-detail',
+        component: () => import('@/components/Events/Events-Detail.vue'),
+        meta: {title: 'Event Detail', breadcrumb: 'Event Detail'},
+      },
+      {
         path: 'faq',
         name: 'faq',
         component: () => import('@/views/Navbar/About/Information/Faq.vue'),
@@ -83,6 +89,18 @@ const routes = [
         meta: {title: 'International-College', breadcrumb: "International College"},
       },
       {
+        path: 'international-college-staff',
+        name: 'international-college-staff',
+        component: () => import('@/views/Navbar/Academics/Program/International-College-Staff.vue'),
+        meta: {title: 'International College Staff', breadcrumb: "International College Staff"},
+      },
+      {
+        path: 'acca-program',
+        name: 'acca-program',
+        component: () => import('@/views/Navbar/Academics/Program/Acca.vue'),
+        meta: {title: 'ACCA', breadcrumb: "ACCA"},
+      },
+      {
         path: 'language-center',
         name: 'language-center',
         component: () => import('@/views/Navbar/Academics/Program/Language-Center.vue'),
@@ -93,6 +111,12 @@ const routes = [
         name: 'post-graduate',
         component: () => import('@/views/Navbar/Academics/Program/Post-Graduate.vue'),
         meta: {title: 'Post Graduate', breadcrumb: 'Post Greaduate'},
+      },
+      {
+        path: 'post-graduate-staff',
+        name: 'post-graduate-staff',
+        component: () => import('@/views/Navbar/Academics/Program/Post-Graduate-Staff.vue'),
+        meta: {title: 'Post Graduate Staff', breadcrumb: 'Post Greaduate Staff'},
       },
       {
         path: 'short-course',

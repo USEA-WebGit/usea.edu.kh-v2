@@ -11,6 +11,7 @@ import tealyoulong from '@/assets/images/teal_youlong.png';
 import taingkeangse from '@/assets/images/taing_keangse.png';
 import leangtaingsoth from '@/assets/images/leang_taingsoth.png';
 import eomrathanak from '@/assets/images/eom_rathanak.png';
+import majorimg from '@/assets/building/major.jpg';
 export const departments = {
     'department-english': {
       title: 'Department of English',
@@ -46,10 +47,10 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Associate in English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-english',majorDegree: 'associate', majorName: 'associate-english'}},
+            { name: "Associate in English", image: majorimg, params: {majorDepartment: 'department-english',majorDegree: 'associate', majorName: 'associate-english'}},
         ],
         bachelor: [
-            { name: "Teaching English as a Foreign Language (TEFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-english',majorDegree: 'bachelor', majorName: 'bachelor-tefl'}},
+            { name: "Teaching English as a Foreign Language (TEFL)", image: majorimg, params: {majorDepartment: 'department-english',majorDegree: 'bachelor', majorName: 'bachelor-tefl'}},
         ]
       },
       sidebarComponent: "DepartEnglish",
@@ -83,13 +84,13 @@ export const departments = {
       ],
       majors: {
         general: [
-            { name: "General Chinese Program (GCP)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-chinese',majorDegree: 'general', majorName: 'general-gcp'}},
+            { name: "General Chinese Program (GCP)", image: majorimg, params: {majorDepartment: 'department-chinese',majorDegree: 'general', majorName: 'general-gcp'}},
         ],
         associate: [
-            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-chinese',majorDegree: 'associate', majorName: 'associate-gcpus'}},
+            { name: "General Chinese Program for Undergraduate Students (GCPUS)", image: majorimg, params: {majorDepartment: 'department-chinese',majorDegree: 'associate', majorName: 'associate-gcpus'}},
         ],
         bachelor: [
-            { name: "Bachelors of Arts in Teaching Chinese as a Foreign Language (TCFL)", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-chinese',majorDegree: 'bachelor', majorName: 'bachelor-tcfl'}},
+            { name: "Bachelors of Arts in Teaching Chinese as a Foreign Language (TCFL)", image: majorimg, params: {majorDepartment: 'department-chinese',majorDegree: 'bachelor', majorName: 'bachelor-tcfl'}},
             
         ]
       },
@@ -130,10 +131,10 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Associate in khmer", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-khmer',majorDegree: 'associate', majorName: 'associate-khmer'}},
+            { name: "Associate in khmer", image: majorimg, params: {majorDepartment: 'department-khmer',majorDegree: 'associate', majorName: 'associate-khmer'}},
         ],
         bachelor: [
-            { name: "Bachelors Khmer Literature", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-khmer',majorDegree: 'bachelor', majorName: 'bachelor-khmer'}},
+            { name: "Bachelors Khmer Literature", image: majorimg, params: {majorDepartment: 'department-khmer',majorDegree: 'bachelor', majorName: 'bachelor-khmer'}},
         ]
       },
       sidebarComponent: "DepartKhmer",
@@ -169,8 +170,8 @@ export const departments = {
       majors: {
 
         bachelor: [
-            { name: "Architecture", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-architecture'}},
-            { name: "Civil Engineering", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-civil-engineering'}},
+            { name: "Architecture", image: majorimg, params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-architecture'}},
+            { name: "Civil Engineering", image: majorimg, params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-civil-engineering'}},
         ]
       },
       sidebarComponent: "DepartArchitecture",
@@ -204,12 +205,12 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Develop Information Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'associate', majorName: 'associate-develop-information-technology'}},
+            { name: "Develop Information Technology", image: majorimg, params: {majorDepartment: 'department-technology',majorDegree: 'associate', majorName: 'associate-develop-information-technology'}},
         ],
         bachelor: [
-            { name: "Develop Information Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-develop-information-technology'}},
-            { name: "E-Business System", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-e-business-system'}},
-            { name: "Information Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-information-technology'}},
+            { name: "Develop Information Technology", image: majorimg, params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-develop-information-technology'}},
+            { name: "E-Business System", image: majorimg, params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-e-business-system'}},
+            { name: "Information Technology", image: majorimg, params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-information-technology'}},
         ]
       },
       sidebarComponent: "DepartIT",
@@ -243,12 +244,12 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Chemistry", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'associate', majorName: 'associate-mathematic'}},
+            { name: "Chemistry", image: majorimg, params: {majorDepartment: 'department-mathematic',majorDegree: 'associate', majorName: 'associate-mathematic'}},
         ],
         bachelor: [
-            { name: "Chemistry", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-chemistry'}},
-            { name: "Physics", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-physics'}},
-            { name: "Mathematic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-mathematic'}},
+            { name: "Chemistry", image: majorimg, params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-chemistry'}},
+            { name: "Physics", image: majorimg, params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-physics'}},
+            { name: "Mathematic", image: majorimg, params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-mathematic'}},
         ]
       },
       sidebarComponent: "DepartMath",
@@ -282,16 +283,16 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Accounting", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-accounting'}},
-            { name: "Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-management'}},
-            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-marketing'}},
+            { name: "Accounting", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-accounting'}},
+            { name: "Management", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-management'}},
+            { name: "Marketing", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'associate', majorName: 'associate-marketing'}},
         ],
         bachelor: [
-            { name: "Accounting and Auditing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-accounting-auditing'}},
-            { name: "Finance and Banking", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-finance-banking'}},
-            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
-            { name: "Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-management'}},
-            { name: "International Economics", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
+            { name: "Accounting and Auditing", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-accounting-auditing'}},
+            { name: "Finance and Banking", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-finance-banking'}},
+            { name: "Marketing", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
+            { name: "Management", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-management'}},
+            { name: "International Economics", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
         ]
       },
       sidebarComponent: "DepartBusiness",
@@ -320,13 +321,13 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "International Tourism Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'associate', majorName: 'associate-international-tourism-management'}},
-            { name: "Tourism and Hospitality Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'associate', majorName: 'associate-tourism-hospitality-management'}},
+            { name: "International Tourism Management", image: majorimg, params: {majorDepartment: 'department-tourism',majorDegree: 'associate', majorName: 'associate-international-tourism-management'}},
+            { name: "Tourism and Hospitality Management", image: majorimg, params: {majorDepartment: 'department-tourism',majorDegree: 'associate', majorName: 'associate-tourism-hospitality-management'}},
             
         ],
         bachelor: [
-            { name: "International Tourism Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-international-tourism-management'}},
-            { name: "Tourism and Hospitality Management", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-tourism-hospitality-management'}},
+            { name: "International Tourism Management", image: majorimg, params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-international-tourism-management'}},
+            { name: "Tourism and Hospitality Management", image: majorimg, params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-tourism-hospitality-management'}},
         ]
       },
       sidebarComponent: "DepartTourism",
@@ -355,12 +356,12 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'associate', majorName: 'associate-marketing'}},
+            { name: "Marketing", image: majorimg, params: {majorDepartment: 'department-economic',majorDegree: 'associate', majorName: 'associate-marketing'}},
         ],
         bachelor: [
-            { name: "International Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
-            { name: "International Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-international-marketing'}},
-            { name: "Marketing", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
+            { name: "International Economic", image: majorimg, params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
+            { name: "International Marketing", image: majorimg, params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-international-marketing'}},
+            { name: "Marketing", image: majorimg, params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
         ]
       },
       sidebarComponent: "DepartEconomic",
@@ -394,12 +395,12 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'associate', majorName: 'associate-laws'}},
+            { name: "Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'associate', majorName: 'associate-laws'}},
         ],
         bachelor: [
-            { name: "Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-laws'}},
-            { name: "Private Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-private-laws'}},
-            { name: "International Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-international-laws'}},
+            { name: "Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-laws'}},
+            { name: "Private Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-private-laws'}},
+            { name: "International Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-international-laws'}},
         ]
       },
       sidebarComponent: "DepartLaws",
@@ -433,11 +434,11 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Public Administration", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-social-science',majorDegree: 'associate', majorName: 'associate-public-administration'}},
+            { name: "Public Administration", image: majorimg, params: {majorDepartment: 'department-social-science',majorDegree: 'associate', majorName: 'associate-public-administration'}},
         ],
         bachelor: [
-            { name: "Public Adminstration", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-social-science',majorDegree: 'bachelor', majorName: 'bachelor-public-administration'}},
-            { name: "Political Science and International Relations", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {majorDepartment: 'department-social-science',majorDegree: 'bachelor', majorName: 'bachelor-international-relation'}},
+            { name: "Public Adminstration", image: majorimg, params: {majorDepartment: 'department-social-science',majorDegree: 'bachelor', majorName: 'bachelor-public-administration'}},
+            { name: "Political Science and International Relations", image: majorimg, params: {majorDepartment: 'department-social-science',majorDegree: 'bachelor', majorName: 'bachelor-international-relation'}},
             
         ]
       },

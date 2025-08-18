@@ -15,3 +15,9 @@ npm install flyonui
 
 //install FlyonUI third party animation plugin
 npm i -d tailwindcss-motion
+
+//install tailwind line-clamp for use css limit line of text
+npm install @tailwindcss/line-clamp
+
+//install epic spinner for loader animation
+npm install --save epic-spinners

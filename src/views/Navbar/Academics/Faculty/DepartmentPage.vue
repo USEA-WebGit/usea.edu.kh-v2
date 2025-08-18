@@ -11,7 +11,7 @@
                 </div>
                 <div class="flex flex-col gap-5">
                     <img :src="department.image" alt="" class="h-[200px] object-cover" />
-                    <p class="text-justify">{{ department.description }}</p>
+                    <p class="text-justify text-xl">{{ department.description }}</p>
                 </div>
             </section>
 
@@ -33,28 +33,65 @@
                     </button>
                 </div>
                 <div v-if="activeTab === `General Chinese Programs`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.general" :key="major.name" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)">
-                        <figure><img :src="major.image" alt="overlay image" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
+                    <div
+                        class="group relative max-w-xl text-center mx-auto cursor-pointer overflow-hidden rounded-md"
+                       @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)"
+                        v-for="major in department.majors.general" :key="major.name"
+                    >
+                        <img
+                        :src="major.image"
+                        alt="Random image"
+                        class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
+                        />
+
+                        <!-- Let hover/click pass through or animate this too -->
+                        <div class="absolute inset-0 bg-gray-700 opacity-60 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <h2 class="text-white text-2xl p-3 font-bold">{{ major.name }}</h2>
                         </div>
                     </div>
                 </div>
                 <div v-if="activeTab === `Associate's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.associate" :key="major.name" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)">
-                        <figure><img :src="major.image" alt="overlay image" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
+                    <div
+                        class="group relative max-w-xl text-center mx-auto cursor-pointer overflow-hidden rounded-md"
+                       @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)"
+                        v-for="major in department.majors.associate" :key="major.name"
+                    >
+                        <img
+                        :src="major.image"
+                        alt="Random image"
+                        class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
+                        />
+
+                        <!-- Let hover/click pass through or animate this too -->
+                        <div class="absolute inset-0 bg-gray-700 opacity-60 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <h2 class="text-white text-2xl p-3 font-bold">{{ major.name }}</h2>
                         </div>
                     </div>
                 </div>
 
                 <div v-if="activeTab === `Bachelor's Degree`" class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5">
-                    <div v-for="major in department.majors.bachelor" :key="major" class="card image-full cursor-pointer sm:max-w-sm" @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)">
-                        <figure><img :src="major.image" alt="overlay image" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title mb-2.5 text-white">{{ major.name }}</h2>
-                            
+                    
+
+                    <div
+                        class="group relative max-w-xl text-center mx-auto cursor-pointer overflow-hidden rounded-md"
+                       @click="goToMajor(major.params.majorDepartment, major.params.majorDegree, major.params.majorName)"
+                        v-for="major in department.majors.bachelor" :key="major.name"
+                    >
+                        <img
+                        :src="major.image"
+                        alt="Random image"
+                        class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
+                        />
+
+                        <!-- Let hover/click pass through or animate this too -->
+                        <div class="absolute inset-0 bg-gray-700 opacity-60 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <h2 class="text-white text-2xl p-3 font-bold">{{ major.name }}</h2>
                         </div>
                     </div>
                 </div>
@@ -65,19 +102,29 @@
                     <span class="text-white text-[2rem] font-bold">DEPARTMENT'S MEMBERS</span>
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
-                <div class="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5">
-                    <div v-for="member in department.members" :key="member.name">
-                        <div class="overflow-hidden">
-                            <img :src="member.image" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
-                        </div>
-                        <div>
-                            <div class="flex flex-col gap-5 p-3">
-                                <span class="text-usea_secondary font-bold text-xl">{{ member.name }}</span>
-                                <span class="font-bold">{{ member.position }}</span>
-                            </div>
-                        </div>
-                    </div>
+                <div
+            class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5"
+          >
+            <div v-for="member in department.members" :key="member.name">
+              <div class="overflow-hidden rounded-md relative">
+                <img
+                  :src="member.image"
+                  alt="member"
+                  class="w-full h-[350px] object-cover transform transition-transform duration-300 hover:scale-105 rounded-md"
+                />
+                <div class="absolute h-[60px] w-full top-[85%] bg-usea_secondary opacity-50 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div class="absolute w-full top-[88%] text-center">
+                    <span class="text-white font-bold text-xl">{{
+                        member.name
+                    }}</span>
                 </div>
+              </div>
+              
+              <div class="mt-3">
+                <span class="font-bold">{{ member.position }}</span>
+              </div>
+            </div>
+          </div>
             </section>
 
             <section>

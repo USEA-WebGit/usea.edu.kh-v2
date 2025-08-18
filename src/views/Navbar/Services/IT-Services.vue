@@ -2,13 +2,13 @@
     <div>
         <Titlebg title="IT Services" breadcrumb="IT Services" />
     </div>
-    <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
+    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
         <div>
             <section class="flex justify-center items-center gap-5 flex-col">
                 <div class="flex gap-10 overflow-hidden mt-10">
                     <div class="flex flex-col gap-5">
                         <h3 class="text-2xl text-usea_secondary font-bold">ABOUT IT CENTER</h3>
-                        <span class="text-justify">មជ្ឈមណ្ឌល ព័ត៌មានវិទ្យា (IT Center) ជាអង្គភាពចំណុះសាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ ដែលផ្ដល់នូវសេវាកម្មដូចជា គាំទ្រទៅលើការប្រើប្រាស់ Internet របស់ បុគ្គលិក សាស្ដ្រាចារ្យ និងនិស្សិត សេវាកម្មដោះស្រាយទៅលើបញ្ហាកុំព្យូទ័រ (Software) តម្លើងកម្មវិធីសម្រាប់កុំព្យូទ័រ ការរចនា និងបោះពុម្ភ គ្រប់គ្រងទៅលើគេហទំព័រ និងបណ្ដាញសង្គមរបស់សាកលវិទ្យាល័យ និង គ្រប់គ្រងទៅលើ Database USEA App និង USEA LMS ផងដែរ។</span>
+                        <span class="text-justify text-xl">មជ្ឈមណ្ឌល ព័ត៌មានវិទ្យា (IT Center) ជាអង្គភាពចំណុះសាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ ដែលផ្ដល់នូវសេវាកម្មដូចជា គាំទ្រទៅលើការប្រើប្រាស់ Internet របស់ បុគ្គលិក សាស្ដ្រាចារ្យ និងនិស្សិត សេវាកម្មដោះស្រាយទៅលើបញ្ហាកុំព្យូទ័រ (Software) តម្លើងកម្មវិធីសម្រាប់កុំព្យូទ័រ ការរចនា និងបោះពុម្ភ គ្រប់គ្រងទៅលើគេហទំព័រ និងបណ្ដាញសង្គមរបស់សាកលវិទ្យាល័យ និង គ្រប់គ្រងទៅលើ Database USEA App និង USEA LMS ផងដែរ។</span>
                     </div>
                     <img :src="ItCenter" alt="image" class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg">
                 </div>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="flex flex-col gap-5">
                         <h3 class="text-2xl  font-bold text-white">IT SERVICES</h3>
-                        <ul class="space-y-3">
+                        <ul class="space-y-3 text-xl">
                             <li class="flex items-start gap-2">
                                 <i class="fa-solid fa-check text-green-400 mt-1"></i>
                                 ផ្ដល់សេវាកម្មសុខភាពស្របតាមម៉ោងការងាររបស់សាកលវិទ្យាល័យ

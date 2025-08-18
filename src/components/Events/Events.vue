@@ -23,88 +23,58 @@
                     <div class="flex gap-5 mb-5">
                         <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 16</div>
                         <div>
-                            <a href="#">
+                            <router-link :to="{name : 'events-detail'}">
                                 <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.</div>
                                     <div class="h-1 w-[15%] bg-red-600"></div>
                                     <div class="flex flex-col mt-3">
                                         <span><i class="fa-solid fa-clock"></i> 8:00 am</span>
                                         <span><i class="fa-solid fa-location-dot"></i> Meeting Hall, USEA</span>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     <div class="flex gap-5 mb-5">
                         <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 10</div>
                         <div>
-                            <a href="#">
+                            <router-link :to="{name : 'events-detail'}">
                                 <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.</div>
                                     <div class="h-1 w-[15%] bg-red-600"></div>
                                     <div class="flex flex-col mt-3">
                                         <span><i class="fa-solid fa-clock"></i> 8:00 am</span>
                                         <span><i class="fa-solid fa-location-dot"></i> Meeting Hall, USEA</span>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     <div class="flex gap-5 mb-5">
                         <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 25</div>
                         <div>
-                            <a href="#">
+                            <router-link :to="{name : 'events-detail'}">
                                 <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.</div>
                                     <div class="h-1 w-[15%] bg-red-600"></div>
                                     <div class="flex flex-col mt-3">
                                         <span><i class="fa-solid fa-clock"></i> 8:00 am</span>
                                         <span><i class="fa-solid fa-location-dot"></i> Meeting Hall, USEA</span>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     <div class="flex gap-5 mb-5">
                         <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 21</div>
                         <div>
-                            <a href="#">
+                            <router-link :to="{name : 'events-detail'}">
                                 <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.</div>
                                     <div class="h-1 w-[15%] bg-red-600"></div>
                                     <div class="flex flex-col mt-3">
                                         <span><i class="fa-solid fa-clock"></i> 8:00 am</span>
                                         <span><i class="fa-solid fa-location-dot"></i> Meeting Hall, USEA</span>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div v-else-if="activeTab === 'Current'">
-                    <div class="flex gap-5 mb-5">
-                        <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 13</div>
-                        <div>
-                            <a href="#">
-                                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.</div>
-                                    <div class="h-1 w-[15%] bg-red-600"></div>
-                                    <div class="flex flex-col mt-3">
-                                        <span><i class="fa-solid fa-clock"></i> 8:00 am</span>
-                                        <span><i class="fa-solid fa-location-dot"></i> Meeting Hall, USEA</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex gap-5 mb-5">
-                        <div class="border-r-2 border-gray-600 pr-5 text-2xl flex items-center font-bold w-[6.25rem]">Oct 10</div>
-                        <div>
-                            <a href="#">
-                                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.</div>
-                                    <div class="h-1 w-[15%] bg-red-600"></div>
-                                    <div class="flex flex-col mt-3">
-                                        <span><i class="fa-solid fa-clock"></i> 8:00 am</span>
-                                        <span><i class="fa-solid fa-location-dot"></i> Meeting Hall, USEA</span>
-                                </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="bg-usea_secondary p-2 rounded-md text-white  hover:bg-white hover:text-usea_secondary hover:border-usea_secondary hover:border">More Events</button>
+            <router-link :to="{name: 'news-events'}"><button class="text-center bg-usea_secondary p-2 rounded-md text-white hover:bg-white hover:text-usea_secondary hover:border-usea_secondary hover:border">More Events</button></router-link>
         </div>
         
 </div>
@@ -113,7 +83,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const tabs = ['Upcoming', 'Current'];
+const tabs = ['Upcoming'];
 const activeTab = ref(tabs[0]);
 </script>
 

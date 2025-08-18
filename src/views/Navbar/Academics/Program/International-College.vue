@@ -14,7 +14,7 @@
                     <div class="flex flex-col gap-5">
                         <div class="grid grid-cols-[50%_50%] gap-5">
                             
-                            <p class="text-justify">University of South-East Asia (USEA), based in Siem Reap Province, has formally been awarded ACCA Computer Based Examination Centre License on 23 August 2021 and become ACCA become a place for every ACCA student from around the world to take ACCA courses and CBE exams in Siem Reap city. ACCA (The Association of Chartered Certified Accountant) is a global body for profesional accountants, which operates its offices in more than 183 countries around the World.</p>
+                            <p class="text-justify text-xl">University of South-East Asia (USEA), based in Siem Reap Province, has formally been awarded ACCA Computer Based Examination Centre License on 23 August 2021 and become ACCA become a place for every ACCA student from around the world to take ACCA courses and CBE exams in Siem Reap city. ACCA (The Association of Chartered Certified Accountant) is a global body for profesional accountants, which operates its offices in more than 183 countries around the World.</p>
                             <img :src="demoCard" alt="" class="h-[200px] w-full object-cover">
                         </div>
 
@@ -29,12 +29,12 @@
                                     </div>
                                     <h3 class="text-xl font-bold mb-5">VISION</h3>
                                 </div>
-                                <p class="text-justify text-lg text-black" data-aos="fade-left">
+                                <p class="text-justify text-xl text-black" data-aos="fade-left">
                                     The Faculty of Arts, Humanities and Languages aims to become the leading faculty in Cambodia for training students in the arts, humanities, and languages, equipping them with knowledge, skills, and professional attitudes that meet national and international standards.
                                 </p>
                             </div>
                             <div class="grid grid-cols-2 items-center gap-5 text-white">
-                                <p class="text-justify text-lg text-black" data-aos="fade-right">
+                                <p class="text-justify text-xl text-black" data-aos="fade-right">
                                     Faculty of Arts, Humanities and Languages is committed to educating technical skills, soft skills, and professionalism, which allow graduates to well function in the global economy.
                                 </p>
                                 <div class="bg-red-500 flex flex-col items-center p-5 rounded-md" data-aos="fade-left">
@@ -53,7 +53,7 @@
                                     </div>
                                     <h3 class="text-xl font-bold mb-5">Educational Philosophy</h3>
                                 </div>
-                                <p class="text-justify text-lg text-black" data-aos="fade-left">
+                                <p class="text-justify text-xl text-black" data-aos="fade-left">
                                     We believe that students learn best through questioning, analyzing, and interpreting the world around them.
                                 </p>
                             </div>
@@ -70,16 +70,27 @@
                         <span class="text-usea_secondary text-[2rem] font-bold">PROGRAM</span>
                         <div class="h-1 w-[5%] bg-usea_secondary"></div>
                     </div>
-                    <div class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5 overflow-hidden" >
-                        <div
-                            class="card image-full sm:max-w-sm cursor-pointer w-full object-cover transform transition-transform duration-300 hover:scale-105"
-                        >
-                            <figure><img :src="demoCard" alt="overlay image" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title mb-2.5 text-white">ACCA</h2>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-3">
+                            <div
+                            class="group relative max-w-xl text-center mx-auto cursor-pointer overflow-hidden rounded-md"
+                            >
+                               <router-link :to="{name : 'acca-program'}" class="link">
+                                    <img
+                                    :src="departmentbg"
+                                    alt="Random image"
+                                    class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
+                                    />
 
+                                    <!-- Let hover/click pass through or animate this too -->
+                                    <div class="absolute inset-0 bg-gray-700 opacity-60 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+
+                                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <h2 class="text-white text-2xl p-3 font-bold">ACCA</h2>
+                                    </div>
+                               </router-link>
+                            </div>
+                        
+                        
                     </div>
                     
                 </section>
@@ -93,7 +104,7 @@
                     <div class="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5">
                         <div>
                             <div class="overflow-hidden">
-                                <img :src="demoCard" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
+                                <img :src="sivvuthy" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
                             </div>
                             <div>
                                 <div class="flex flex-col gap-5 p-3">
@@ -104,7 +115,7 @@
                         </div>
                         <div>
                             <div class="overflow-hidden">
-                                <img :src="demoCard" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
+                                <img :src="toursreyleak" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
                             </div>
                             <div>
                                 <div class="flex flex-col gap-5 p-3">
@@ -127,6 +138,9 @@
 
 <script setup>
 import demoCard from '@/assets/images/demoCard.png';
+import departmentbg from '@/assets/building/department.png';
+import sivvuthy from '@/assets/images/dr_siv_vuthy.png';
+import toursreyleak from '@/assets/images/tour_sreyleak.png';
 import RightIC from '@/components/SideBar/RightIC.vue';
 import { useRouter, useRoute } from 'vue-router';
 import { computed } from 'vue';

@@ -6,14 +6,14 @@
                             <span><i class="fa-regular fa-envelope"></i> info@usea.edu.kh</span>
                         </div>
                         <div class="2xl:flex xl:flex lg:flex md:flex sm:flex hidden gap-3 text-white justify-center">
-                            <span>|</span>
-                            <button class="btn-topbar">Admission</button>
+                            <!-- <span>|</span>
+                            <button class="btn-topbar">Admission</button> -->
                             <span>|</span>
                             <button class="btn-topbar"><a href="https://rj.usea.edu.kh/" target="_blank">Journal</a></button>
                             <span>|</span>
                             <button class="btn-topbar"><a href="https://lms.usea.edu.kh/login/index.php" target="_blank" class="rounded-md ">LMS</a></button>
-                            <span>|</span>
-                            <button class="btn-topbar">Download</button>
+                            <!-- <span>|</span>
+                            <button class="btn-topbar">Download</button> -->
                         </div>
                         <div class="2xl:items-center xl:items-center lg:items-center md:items-center sm:items-center flex gap-3 text-white ">
                             <span class="2xl:flex xl:flex lg:flex md:flex sm:flex hidden">|</span>

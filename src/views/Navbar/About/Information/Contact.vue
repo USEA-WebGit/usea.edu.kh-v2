@@ -5,13 +5,19 @@
     <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 mb-10">
         <div class="flex flex-col gap-10">
             <div v-for="(staff, index) in staffs" :key="index" class="flex 2xl:flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-col flex-col gap-10 overflow-hidden">
-                <img :src="staff.img" alt="img" class="2xl:w-1/4 xl:[50%] objxect-cover transform transition-transform duration-300 hover:scale-105 rounded-md">
+                <img :src="staff.img" alt="img" class="2xl:w-1/3 xl:[50%] 2xl:h-[350px] object-cover transform transition-transform duration-300 hover:scale-105 rounded-md">
                 <div class="flex flex-col">
                     <span class="text-2xl font-bold">{{ staff.name }}</span>
                     <div class="h-[1px] w-[50%] bg-gray-500 my-3"></div>
-                    <span>{{ staff.position }}</span>
-                    <span>{{ staff.number }}</span>
-                    <span>{{ staff.email }}</span>
+                    <span class="text-xl">{{ staff.position }}</span>
+                     <div v-if="staff.number || staff.email" class="flex-col 2xl:flex xl:flex lg:flex md:flex sm:flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row 2xl:gap-5 2xl:mt-5 xl:gap-5 xl:mt-5 lg:gap-5 lg:mt-5 md:gap-5 md:mt-5 sm:gap-5 sm:mt-5">
+                        <span v-if="staff.number">
+                            <i class="fa-solid fa-phone text-blue-500"></i> {{ staff.number }}
+                        </span>
+                        <span v-if="staff.email">
+                            <i class="fa-solid fa-envelope text-red-500"></i> {{ staff.email }}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

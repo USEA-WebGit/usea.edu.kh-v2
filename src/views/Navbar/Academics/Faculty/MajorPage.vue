@@ -9,60 +9,60 @@
             <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-5">
                     <span class="font-bold text-2xl text-usea_secondary">PROGRAM DESCRIPTION</span>
-                    <span>The Associate in English aims to develop students' competency in reading, writing, listening, and speaking the English language. It also aims to build a foundation of general and theoretical knowledge and skills in language education that are necessary for employment and further university studies. The program also focuses on improving students' communication skills, critical thinking skills, and problem-solving skills, which are required in today's classrooms and the global economy. The English language is used as the medium of instruction for this program.</span>
+                    <span class="text-xl text-justify">The Associate in English aims to develop students' competency in reading, writing, listening, and speaking the English language. It also aims to build a foundation of general and theoretical knowledge and skills in language education that are necessary for employment and further university studies. The program also focuses on improving students' communication skills, critical thinking skills, and problem-solving skills, which are required in today's classrooms and the global economy. The English language is used as the medium of instruction for this program.</span>
                 </div>
                 <div class="flex flex-col gap-5">
                     <span class="font-bold text-2xl text-usea_secondary">PROGRAM LEARNING OUTCOMES</span>
-                    After successful completion of the Associate in English program, students will be able to:
-                    <div>
-                        <span class="text-lg font-bold text-usea_secondary">Knowledge</span>
+                    <span class="text-xl">After successful completion of the Associate in English program, students will be able to:</span>
+                    <div class="text-xl">
+                        <span class="font-bold text-usea_secondary ml-5">Knowledge</span>
                         <ul class="ml-9 mt-5">
-                            <li class="list-disc">Acquire general knowledge about Cambodian microeconomics, culture and civilization;</li>
-                            <li class="list-disc">Demonstrate understanding of important theories, concepts, principles, and procedures in language education;</li>
-                            <li class="list-disc">Acquire English language competency in areas of reading, writing, listening, speaking, grammar, and vocabulary;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Acquire general knowledge about Cambodian microeconomics, culture and civilization;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Demonstrate understanding of important theories, concepts, principles, and procedures in language education;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Acquire English language competency in areas of reading, writing, listening, speaking, grammar, and vocabulary;</li>
                         </ul>
                     </div>
-                    <div>
-                        <span class="text-lg font-bold text-usea_secondary">Cognitive Skills</span>
+                    <div class="text-xl">
+                        <span class="text-xl font-bold text-usea_secondary ml-5">Cognitive Skills</span>
                         <ul class="ml-9 mt-2">
-                            <li class="list-disc">Demonstrate ability to apply important theories, concepts, principles, and procedures in language education in actual contexts;</li>
-                            <li class="list-disc">Analyze information, concepts and evidences from a range of sources in order to make conclusions to issues and problems;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Demonstrate ability to apply important theories, concepts, principles, and procedures in language education in actual contexts;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Analyze information, concepts and evidences from a range of sources in order to make conclusions to issues and problems;</li>
                         </ul>
                     </div>
-                    <div>
-                        <span class="text-lg font-bold text-usea_secondary">Psychomotor Skills</span>
+                    <div class="text-xl">
+                        <span class="text-xl font-bold text-usea_secondary ml-5">Psychomotor Skills</span>
                         <ul class="ml-9 mt-2">
-                            <li class="list-disc">Demonstrate confidence in teaching English to students in authentic classroom environment;</li>
-                            <li class="list-disc">Appropriately adjust teaching and assessment methods and techniques for students of various backgrounds;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Demonstrate confidence in teaching English to students in authentic classroom environment;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Appropriately adjust teaching and assessment methods and techniques for students of various backgrounds;</li>
                         </ul>
                     </div>
-                    <div>
-                        <span class="text-lg font-bold text-usea_secondary">Interpersonal Skills and Responsibility</span>
+                    <div class="text-xl">
+                        <span class="text-xl font-bold text-usea_secondary ml-5">Interpersonal Skills and Responsibility</span>
                         <ul class="ml-9 mt-2">
-                            <li class="list-disc">Demonstrate confidence, critical thinking, and problem-solving skills;</li>
-                            <li class="list-disc">Exercise leadership in a small group in an area of language education;</li>
-                            <li class="list-disc">Demonstrate ability to reflect on their own practices and experiences;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Demonstrate confidence, critical thinking, and problem-solving skills;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Exercise leadership in a small group in an area of language education;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Demonstrate ability to reflect on their own practices and experiences;</li>
                         </ul>
                     </div>
-                    <div>
-                        <span class="text-lg font-bold text-usea_secondary">Communication, Information Technology and Numerical Skills</span>
+                    <div class="text-xl">
+                        <span class="text-xl font-bold text-usea_secondary ml-5">Communication, Information Technology and Numerical Skills</span>
                         <ul class="ml-9 mt-2">
-                            <li class="list-disc">Effectively communicate in English and Khmer both in oral and written form;</li>
-                            <li class="list-disc">Use information and communications technology in analyzing issues and in making presentations.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Effectively communicate in English and Khmer both in oral and written form;</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-400 mt-1"></i> Use information and communications technology in analyzing issues and in making presentations.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="flex flex-col gap-5">
                     <span class="font-bold text-2xl text-usea_secondary">CREDIT ACCUMULATION</span>
-                    <span>Students are required to undertake two academic years of full-time study, which is equivalent to four semesters. Each academic year consists of two semesters, with each semester lasting fifteen weeks, excluding the examination period. In order to be awarded the Associate in English degree, a student must successfully acquire 60 credit points and maintain a minimum grade point average (GPA) of 2.00. Additionally, the student must pass the comprehensive examination.</span>
+                    <span class="text-xl">Students are required to undertake two academic years of full-time study, which is equivalent to four semesters. Each academic year consists of two semesters, with each semester lasting fifteen weeks, excluding the examination period. In order to be awarded the Associate in English degree, a student must successfully acquire 60 credit points and maintain a minimum grade point average (GPA) of 2.00. Additionally, the student must pass the comprehensive examination.</span>
                 </div>
                 <div class="flex flex-col gap-5">
                     <span class="font-bold text-2xl text-usea_secondary">JOB OPPORTUNITY</span>
-                    <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
+                    <span class="text-xl">The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                 </div>
             </div>
             
-            <nav class="tabs tabs-bordered mt-10 gap-1 flex" role="tablist" aria-orientation="horizontal">
+            <nav class="tabs tabs-bordered mt-10 gap-1 flex text-xl" role="tablist" aria-orientation="horizontal">
                 <button
                 v-for="(tab, index) in tabs"
                 :key="index"
@@ -75,7 +75,7 @@
                 {{ tab.label }}
                 </button>
             </nav>
-            <div class="mt-3">
+            <div class="mt-3 text-xl">
               <div v-for="(tab, index) in tabs" :key="index" v-show="activeTab === index">
                 <table class="w-full border-collapse border border-gray-300">
                   <thead>
@@ -103,8 +103,6 @@
             </div>
 
         </div>
-        
-        
         <div>
             <component :is="sidebarComponent"/>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-auto bg-gray-300 relative">
+    <div class="h-auto bg-gray-100 relative">
         <img :src="CareerCenterBg" alt="career center bg" class="absolute bottom-0 opacity-5">
         <div class="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 justify-items-center items-center 2xl:gap-0 xl:gap-10 lg:gap-10 md:gap-10 sm:gap-10 gap-10 2xl:py-28 py-6 mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px]">
             <!-- Text Content -->
@@ -10,7 +10,7 @@
                     <p class="text-base md:text-xl mt-4 md:mt-5 text-justify">
                         <span class="font-bold block">About University of South East Asia Career Center</span> 
                         <br>
-                        The South East Asia University Career Center, in partnership with USAID DWD Digital Workforce Development, was established to engage higher education institutions (HEIs) and the local private sector for the development of internship programs and / or job opportunities for students. And young professionals. The center will help address the mismatch between youth skills and the needs of employers through soft skills training and workshops. Through the University of South East Asia Student Job Center, students will have access to the right career information, career networks and career development opportunities that will empower them to make their own decisions about their future careers.  
+                        The South East Asia University Career Center, in partnership with USAID DWD Digital Workforce Development, was established to engage higher education institutions (HEIs) and the local private sector for the development of internship programs and / or job opportunities for students. And young professionals. The center will help address the mismatch between youth skills and the needs of employers through soft skills training and workshops. Through the University of South East Asia Student Job Center, students will have access to the right career information, career networks and career development opportunities that will empower them to make their own decisions about their future careers.
                         USEA Career Centers are designed with the central purpose of providing the University with an independent and sustainable center for students across all disciplines to seek employment advice, soft skills development, and to access internships and job opportunities. The Career Center will directly support students by connecting them to resources, events, seminars, mentoring and acting as a link to them to potential employers.
                     </p>
                 </div>

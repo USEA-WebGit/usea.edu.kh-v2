@@ -11,7 +11,7 @@
                     <div class="h-1 w-[5%] bg-usea_secondary"></div>
                 </div>
                 <div class="flex gap-3">
-                    <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
+                    <span class="text-xl">The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     <img :src="demo" alt="image" class="w-[50%]">
                 </div>
             </div>
@@ -21,7 +21,7 @@
                         <div class=" flex flex-col justify-center items-start mb-5">
                             <span class="text-2xl text-usea_secondary font-bold">VISION</span>
                         </div>
-                        <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
+                        <span class="text-xl">The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     </div>
                     <img :src="demo" alt="image" class="w-[50%]">
                 </div>
@@ -34,7 +34,7 @@
                         <div class=" flex flex-col justify-center items-start">
                             <span class="text-2xl text-usea_secondary font-bold">MISSION</span>
                         </div>
-                        <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
+                        <span class="text-xl">The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <div class=" flex flex-col justify-center items-start">
                             <span class="text-2xl text-usea_secondary font-bold">EDUCATION PHILOSOPHY</span>
                         </div>
-                        <span>The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
+                        <span class="text-xl">The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.The curriculum is designed to provide training to students who are proficient in software and good at public administration, public administration, private administration and local NGOs.</span>
                     </div>
                     <img :src="demo" alt="image" class="w-[50%]">
                 </div>
@@ -54,8 +54,8 @@
                     <span class="text-2xl text-usea_secondary font-bold">CORE VALUE</span>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Knowledge</span>
-                    <div>
+                    <span class="text-xl font-bold text-red-600">Knowledge</span>
+                    <div class="text-xl">
                         <ul>
                             <li>It is a long established fact that a reader will be distracted by the</li>
                             <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
@@ -65,8 +65,8 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Skills</span>
-                    <div>
+                    <span class="text-xl font-bold text-red-600">Skills</span>
+                    <div class="text-xl">
                         <ul>
                             <li>It is a long established fact that a reader will be distracted by the</li>
                             <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
@@ -76,8 +76,8 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Excellence</span>
-                    <div>
+                    <span class="text-xl font-bold text-red-600">Excellence</span>
+                    <div class="text-xl">
                         <ul>
                             <li>It is a long established fact that a reader will be distracted by the</li>
                             <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
@@ -87,8 +87,8 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-[20%_80%] items-center mt-10">
-                    <span class="text-lg font-bold text-red-600">Social</span>
-                    <ul>
+                    <span class="text-xl font-bold text-red-600">Social</span>
+                    <ul class="text-xl">
                         <li>It is a long established fact that a reader will be distracted by the</li>
                         <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
                         <li>It is a long established fact that a reader will be distracted by the</li>
@@ -100,7 +100,7 @@
                 <div class=" flex flex-col justify-center items-start">
                     <span class="text-2xl text-usea_secondary font-bold">STUDY DURATION</span>
                 </div>
-                <div class="grid grid-cols-[20%_80%] items-center mt-10">
+                <div class="grid grid-cols-[20%_80%] items-center mt-10 text-xl">
                     <i class="fa-solid fa-clock text-2xl text-red-600"></i>
                     <ul>
                         <li>It is a long established fact that a reader will be distracted by the</li>
@@ -113,8 +113,8 @@
                     <span class="text-2xl text-usea_secondary font-bold">REQUIREMENT</span>
                 </div>
                 <div class="flex flex-col items-center mt-10">
-                    <span>It is a long established fact that a reader will be distracted by theThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in someIt is a long established fact that a reader will be distracted by the</span>
-                    <ul class="mt-5">
+                    <span class="text-xl">It is a long established fact that a reader will be distracted by theThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in someIt is a long established fact that a reader will be distracted by the</span>
+                    <ul class="mt-5 text-xl">
                         <li>It is a long established fact that a reader will be distracted by the</li>
                         <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some </li>
                     </ul>

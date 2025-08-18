@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
+    <div class="bg-gray-200 p-5 flex flex-col gap-5 2xl:text-xl xl:text-xl lg:text-sm rounded-md">
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Contact +</span>
+            <span class="text-[#002060] text-xl font-bold mb-5">Contact +</span>
             <router-link
                 :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}"
                 class="link"
@@ -18,7 +18,7 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Association's Degree +</span>
+            <span class="text-[#002060] text-xl font-bold mb-5">Association's Degree +</span>
             <router-link
                 :to="{ name: 'civil-engineering' }"
                 class="link"
@@ -35,7 +35,7 @@
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Bachelor's Degree +</span>
+            <span class="text-[#002060] text-xl font-bold mb-5">Bachelor's Degree +</span>
             <router-link
                 :to="{ name: 'news-events' }"
                 class="link"

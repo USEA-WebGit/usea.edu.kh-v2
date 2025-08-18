@@ -2,7 +2,7 @@
     <div>
         <Titlebg title="Board of Trustees" breadcrumb="Board of Trustees" />
     </div>
-    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
+    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
         <div class="flex flex-col mb-10">
             <!-- Selected Board Member Details -->
             <div class="grid grid-cols-2">

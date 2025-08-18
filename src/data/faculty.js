@@ -23,6 +23,7 @@ import RightNavScience from '@/components/SideBar/RightNavIT.vue';
 import RightLanguage from '@/components/SideBar/RightLanguage.vue';
 import RightBusiness from '@/components/SideBar/RightBusiness.vue';
 import RightLaw from '@/components/SideBar/Right-Law.vue';
+import departmentbg from '@/assets/building/department.png';
 export const faculties = {
     'arts-humanities-languages': 
     {
@@ -30,30 +31,37 @@ export const faculties = {
       description: 'The Faculty of Arts, Humanities and Languages at the University of South-East Asia offers comprehensive language education programs spanning from beginner to advanced levels. The faculty is dedicated to providing students with the necessary knowledge, skills, and practical expertise in language education. The courses offered by the Faculty of Arts, Humanities and Languages encompass a range of programs, including General English and General Chinese programs, designed to enhance language proficiency. Additionally, specialized courses such as English for Specific Purposes and English for Academic Purposes cater to specific language needs. The faculty also offers Professional Development Courses for individuals seeking to further enhance their language skills. For those interested in pursuing a more structured program, the faculty provides diploma and associate degree programs in English and Chinese. Furthermore, students can opt for a Bachelor of Arts in Khmer Literature, a Bachelor of Arts in Teaching English as a Foreign Language (TEFL) or a Bachelor of Arts in Teaching Chinese as a Foreign Language (TCFL), which focus on equipping individuals with the necessary skills to become language educators.',
       image: demoCard,
       departments: [
-        {name: "Department of Chinese", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-chinese'}},
-        {name: "Department of English", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-english'}},
-        {name: "Department of Khmer Literature", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-khmer'}},
+        {name: "Department of Chinese", image: departmentbg, params: {departmentName: 'department-chinese'}},
+        {name: "Department of English", image: departmentbg, params: {departmentName: 'department-english'}},
+        {name: "Department of Khmer Literature", image: departmentbg, params: {departmentName: 'department-khmer'}},
     ],
       members: [
         { 
             name: "Mr. Reom Ripeng", 
-            position: "Director of Foreign Language Institute and Deputy Head of Department of Quality Assurance", 
-            image: roemRipeng 
+            position: "Director of Foreign Language Institute", 
+            image: roemRipeng ,
+            number: '012 345 678',
+            email: 'reom.ripeng@usea.edu.kh'
         },
         { 
             name: "Mrs. Chhem Sam An", 
             position: "Head of Deparment of Khmer Literature", 
-            image: chhemsaman 
+            image: chhemsaman ,
+            number: '012 345 678',
+            email: 'chhemsaman@usea.edu.kh'
         },
         { 
             name: "Mrs. Thou Sreynich", 
             position: "Head of Department of Chinese", 
-            image: thousrynich 
+            image: thousrynich,
+            number: '012 234 567'
         },
         { 
             name: "Mr. Phai Vanna", 
-            position: "Deputy Head of Student and Lecturer Affairs of Department of English", 
-            image: phaivanna 
+            position: "Deputy Head of Student and Lecturer Affairs", 
+            image: phaivanna,
+            email: 'phaivanna@usea.edu.kh',
+            number: '012 345 678'
         },
         { 
             name: "Mrs. Pros Vichika", 
@@ -91,9 +99,9 @@ export const faculties = {
       description: 'Faculty of Science and Technology will become a leading university to provide innovative science and technology education with high quality in the purpose of building good capacity and attitude for responding to ASEAN labor market and in a region as well as being recognized nationally and internationally. Faculty of Science and Technology aims to offer a specialized education in information technology, architecture, civil engineering and mathematics with quality in order to provide knowledge, know-how, hard skills, soft skills, good attitude including loving national culture to all level of learners with full capacity in line with the ASEAN and region labor market needs.',
       image: demoCard,
       departments: [
-        {name: "Department of Architecture", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-architecture'}},
-        {name: "Department of Information and Communication Technology", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-technology'}},
-        {name: "Department of Mathematics and Science", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-mathematic'}},
+        {name: "Department of Architecture", image: departmentbg, params: {departmentName: 'department-architecture'}},
+        {name: "Department of Information and Communication Technology", image: departmentbg, params: {departmentName: 'department-technology'}},
+        {name: "Department of Mathematics and Science", image: departmentbg, params: {departmentName: 'department-mathematic'}},
     ],
       members: [
         { 
@@ -128,9 +136,9 @@ export const faculties = {
       description: 'Faculty of Economics Business & Tourism aims to provide specialized education...',
       image: demoCard,
       departments: [
-        {name: "Department of Business", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-business'}},
-        {name: "Department of Tourism", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-tourism'}},
-        {name: "Department of Economic", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-economic'}},
+        {name: "Department of Business", image: departmentbg, params: {departmentName: 'department-business'}},
+        {name: "Department of Tourism", image: departmentbg, params: {departmentName: 'department-tourism'}},
+        {name: "Department of Economic", image: departmentbg, params: {departmentName: 'department-economic'}},
     ],
       members: [
          
@@ -162,8 +170,8 @@ export const faculties = {
       description: 'Faculty of Social Science & Law aims to provide specialized education...',
       image: demoCard,
       departments: [
-        {name: "Department of Laws", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png",  params: {departmentName: 'department-laws'}},
-        {name: "Department of Social and Science", image: "https://cdn.flyonui.com/fy-assets/components/card/image-5.png", params: {departmentName: 'department-social-science'}},
+        {name: "Department of Laws", image: departmentbg,  params: {departmentName: 'department-laws'}},
+        {name: "Department of Social and Science", image: departmentbg, params: {departmentName: 'department-social-science'}},
 
     ],
       members: [

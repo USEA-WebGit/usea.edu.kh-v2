@@ -16,14 +16,15 @@
             <div class="h-1 w-[5%] bg-usea_secondary"></div>
           </div>
           <div class="flex flex-col gap-5">
-            <div class="grid grid-cols-[50%_50%] gap-5">
-              <p class="text-justify">{{ faculty.description }}</p>
+            <!-- <div class="grid grid-cols-[50%_50%] gap-5">
+              <p class="text-justify text-xl">{{ faculty.description }}</p>
               <img
                 :src="faculty.image"
                 alt=""
                 class="h-[200px] w-full object-cover"
               />
-            </div>
+            </div> -->
+            <p class="text-justify text-xl 2xl:text-xl xl:text-xl ">{{ faculty.description }}</p>
 
             <!-- MISSION, VISION, VALUES Section -->
             <div
@@ -39,7 +40,7 @@
                   </div>
                   <h3 class="text-xl font-bold mb-5">VISION</h3>
                 </div>
-                <p class="text-justify text-lg text-black" data-aos="fade-left">
+                <p class="text-justify text-xl text-black" data-aos="fade-left">
                   The Faculty of Arts, Humanities and Languages aims to become
                   the leading faculty in Cambodia for training students in the
                   arts, humanities, and languages, equipping them with
@@ -49,7 +50,7 @@
               </div>
               <div class="grid grid-cols-2 items-center gap-5 text-white">
                 <p
-                  class="text-justify text-lg text-black"
+                  class="text-justify text-xl text-black"
                   data-aos="fade-right"
                 >
                   Faculty of Arts, Humanities and Languages is committed to
@@ -76,7 +77,7 @@
                   </div>
                   <h3 class="text-xl font-bold mb-5">Educational Philosophy</h3>
                 </div>
-                <p class="text-justify text-lg text-black" data-aos="fade-left">
+                <p class="text-justify text-xl text-black" data-aos="fade-left">
                   We believe that students learn best through questioning,
                   analyzing, and interpreting the world around them.
                 </p>
@@ -86,7 +87,7 @@
         </section>
 
         <!-- Department  -->
-        <section class="mb-12 bg-gray-200 p-12 rounded-md">
+        <section class="mb-12 bg-gray-100 shadow-inner p-12 rounded-md">
           <div class="flex flex-col justify-center items-start mb-5">
             <span class="text-usea_secondary text-[2rem] font-bold"
               >DEPARTMENT</span
@@ -96,22 +97,28 @@
           <div
             class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 mb-5 overflow-hidden"
           >
-            <div
-              v-for="department in faculty.departments"
-              :key="department.name"
-              class="card image-full sm:max-w-sm cursor-pointer w-full object-cover transform transition-transform duration-300 hover:scale-105"
-              @click="goToDepartment(department.params.departmentName)"
-            >
-              <figure>
-                <img :src="department.image" alt="overlay image" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title mb-2.5 text-white">
-                  {{ department.name }}
-                </h2>
+             <div
+                class="group relative max-w-xl text-center mx-auto cursor-pointer overflow-hidden rounded-md"
+                @click="goToDepartment(department.params.departmentName)"
+                v-for="department in faculty.departments"
+                :key="department.name"
+              >
+                <img
+                  :src="department.image"
+                  alt="Random image"
+                  class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105 will-change-transform"
+                />
+
+                <!-- Let hover/click pass through or animate this too -->
+                <div class="absolute inset-0 bg-gray-700 opacity-60 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <h2 class="text-white text-2xl p-3 font-bold">{{ department.name }}</h2>
+                </div>
               </div>
-            </div>
+
           </div>
+          
         </section>
 
         <!-- Faculty's Memeber  -->
@@ -123,23 +130,25 @@
             <div class="h-1 w-[5%] bg-usea_secondary"></div>
           </div>
           <div
-            class="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5"
+            class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5"
           >
             <div v-for="member in faculty.members" :key="member.name">
-              <div class="overflow-hidden">
+              <div class="overflow-hidden rounded-md relative">
                 <img
                   :src="member.image"
                   alt="member"
-                  class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105"
+                  class="w-full h-[350px] object-cover transform transition-transform duration-300 hover:scale-105 rounded-md"
                 />
-              </div>
-              <div>
-                <div class="flex flex-col gap-5 p-3">
-                  <span class="text-usea_secondary font-bold text-xl">{{
-                    member.name
-                  }}</span>
-                  <span class="font-bold">{{ member.position }}</span>
+                <div class="absolute h-[60px] top-[85%] w-full bg-usea_secondary opacity-50 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div class="absolute top-[88%] w-full text-center">
+                  <span class="text-white font-bold text-xl">
+                    {{ member.name }}
+                  </span>
                 </div>
+              </div>
+              
+              <div class="mt-3">
+                <span class="font-bold text-lg">{{ member.position }}</span>
               </div>
             </div>
           </div>

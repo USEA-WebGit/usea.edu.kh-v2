@@ -2,17 +2,20 @@
   <div>
     <Titlebg title="Career Center" breadcrumb="Career Center" />
   </div>
-  <div
-    class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10"
-  >
+  <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
     <div>
       <section class="flex justify-center items-center gap-5 flex-col">
-        <div class="flex gap-10 overflow-hidden mt-10">
+        <div class="flex flex-col justify-center items-center gap-10 overflow-hidden mt-10">
+          <img
+            :src="careerCenter"
+            alt="image"
+            class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg"
+          />
           <div class="flex flex-col gap-5">
             <h3 class="text-2xl text-usea_secondary font-bold">
               CAREER CENTER
             </h3>
-            <span class="text-justify font-noto_sans">
+            <span class="text-justify font-noto_sans text-xl">
               The South East Asia University Career Center, in partnership with
               USAID DWD Digital Workforce Development, was established to engage
               higher education institutions (HEIs) and the local private sector
@@ -23,7 +26,7 @@
               the University of South East Asia Student Job Center, students
               will have access to the right career information, career networks
               and career development opportunities that will empower them to
-              make their own decisions about their future careers.   USEA Career
+              make their own decisions about their future careers. USEA Career
               Centers are designed with the central purpose of providing the
               University with an independent and sustainable center for students
               across all disciplines to seek employment advice, soft skills
@@ -33,11 +36,7 @@
               them to potential employers.
             </span>
           </div>
-          <img
-            :src="ItCenter"
-            alt="image"
-            class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg"
-          />
+          
         </div>
       </section>
       <section class="bg-gray-500 p-10 mt-10 rounded-xl">
@@ -48,12 +47,12 @@
         <div class="flex gap-10 text-white bg-opacity-80 rounded-lg mt-5">
           <div>
             <img
-              :src="ItCenter"
+              :src="careerCenter1"
               alt="image"
               class="w-full transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
             />
           </div>
-          <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-5 text-xl">
             <div class="flex flex-col gap-5">
               <div class="flex flex-col gap-5">
                 <p class="font-noto_sans">
@@ -140,5 +139,7 @@
 import Titlebg from "@/components/Slide/TitleBg.vue";
 import RightServices from "@/components/SideBar/RightServices.vue";
 import demo from "@/assets/images/demoCard.png";
+import careerCenter from "@/assets/images/career-center.png";
+import careerCenter1 from "@/assets/images/career-center1.jpg";
 import ItCenter from "@/assets/images/it-center.jpg";
 </script>

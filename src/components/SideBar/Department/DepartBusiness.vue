@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
+    <div class="bg-gray-200 p-5 flex flex-col gap-5 2xl:text-xl xl:text-xl lg:text-sm rounded-md">
         <div class="flex flex-col">
             <span class="text-[#002060] text-xl font-bold">Contact +</span>
            <router-link

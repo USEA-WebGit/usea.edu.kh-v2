@@ -2,15 +2,15 @@
     <div>
         <Titlebg title="Library" breadcrumb="Library" />
     </div>
-    <div class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
+    <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
         <div>
             <section class="flex justify-center items-center gap-5 flex-col">
                 <div class="flex gap-10 overflow-hidden mt-10">
                     <div class="flex flex-col gap-5">
                         <h3 class="text-2xl text-usea_secondary font-bold">JOINT PUBLIC INFORMATION CENTER</h3>
-                        <span class="text-justify">សាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ ជាគ្រឹះស្ថានឧត្ដមសក្សាដែលផ្ដល់ការអប់រំ និងស្រាវជ្រាវប្រកបដោយគុណភាព មានកម្មវិធីសិក្សាសម្ភាររូបវ័ន្ដ និងសម្ភារសិក្សាស្តង់ដាស្របតាមនិយាមគរុកោសល្យត្រូវបានធនាគារពិភពលោក និងធនាគារអភិវឌ្ឍន៍អាស៊ីជ្រើសរើសជាដៃគូរបង្កើតមណ្ឌលព័ត៌មានសាធារណៈ ដើម្បីផ្ដល់ឱកាសឲ្យនិស្សិត បុគ្គលិ សាស្ដ្រាចារ្យ និងសាធារណជនគ្រប់មជ្ឈដ្ឋានសិក្សាស្រាវជ្រាវ ពង្រីកនូវចំណេះដឹងឲ្យបានទូលំទូលាយ ។ </span>
+                        <span class="text-justify text-xl">សាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ ជាគ្រឹះស្ថានឧត្ដមសក្សាដែលផ្ដល់ការអប់រំ និងស្រាវជ្រាវប្រកបដោយគុណភាព មានកម្មវិធីសិក្សាសម្ភាររូបវ័ន្ដ និងសម្ភារសិក្សាស្តង់ដាស្របតាមនិយាមគរុកោសល្យត្រូវបានធនាគារពិភពលោក និងធនាគារអភិវឌ្ឍន៍អាស៊ីជ្រើសរើសជាដៃគូរបង្កើតមណ្ឌលព័ត៌មានសាធារណៈ ដើម្បីផ្ដល់ឱកាសឲ្យនិស្សិត បុគ្គលិ សាស្ដ្រាចារ្យ និងសាធារណជនគ្រប់មជ្ឈដ្ឋានសិក្សាស្រាវជ្រាវ ពង្រីកនូវចំណេះដឹងឲ្យបានទូលំទូលាយ ។ </span>
                     </div>
-                    <img :src="ItCenter" alt="image" class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg">
+                    <img :src="pic" alt="image" class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg">
                 </div>
             </section>
             <section class="bg-gray-500 p-10 mt-10 rounded-xl">
@@ -21,7 +21,7 @@
                 <div class="flex gap-10 text-white bg-opacity-80 rounded-lg mt-5">
                     <div>
                         <img
-                            :src="ItCenter"
+                            :src="pic1"
                             alt="image"
                             class="w-full transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
                             />
@@ -29,7 +29,7 @@
                     <div class="flex flex-col gap-5">
                         <div class="flex flex-col gap-5">
                             <div class="flex flex-col gap-5">
-                                <ul class="space-y-2">
+                                <ul class="space-y-2 text-xl">
                                     <li class="flex items-start gap-2">
                                         <i class="fa-solid fa-check text-green-400 mt-1"></i>
                                         ផ្ដល់ឯកសារថ្មីៗសម្បូរបែបលើគ្រប់វិស័យដូចជាសៀវភនិងឯកសារអេឡិចត្រូនិចដែលទាក់ទងនឹងការវិវឌ្ឍរបស់ពិភពលោករួមមានសហគមន៍អឺរ៉ុបអាស៊ានជាពិសេសគាំទ្រឱ្យការបង្រៀនការសិក្សានិងការស្រាវជ្រាវស្របតាមកម្មវិធីបណ្ដុះបណ្ដាលគ្រប់កម្រិត
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                                 
-                                <P>សាធារណជន សិស្សានុសិស្ស និស្សិត គ្រូបង្រៀន សាស្ដ្រាចារ្យ មន្ដ្រីរាជការ និងអង្គការ អាចស្រាវជ្រាវ នៅមណ្ឌលព័ត៌មានសាធារណៈ បានក្នុងម៉ោងធ្វើការងារដោយឥតគិតថ្លៃ</P>
+                                <P class="text-xl">សាធារណជន សិស្សានុសិស្ស និស្សិត គ្រូបង្រៀន សាស្ដ្រាចារ្យ មន្ដ្រីរាជការ និងអង្គការ អាចស្រាវជ្រាវ នៅមណ្ឌលព័ត៌មានសាធារណៈ បានក្នុងម៉ោងធ្វើការងារដោយឥតគិតថ្លៃ</P>
                             </div>
                             
                         </div>
@@ -64,9 +64,9 @@
                 <div class="flex gap-10 overflow-hidden mt-10">
                     <div class="flex flex-col gap-5">
                         <h3 class="text-2xl text-usea_secondary font-bold">AMERICAN CORNER</h3>
-                        <span class="text-justify">បណ្ណាល័យអាមេរិក ត្រូវបានបង្កើតឡើងរួមគ្នាដោយស្ថានទូតអាមេរិកប្រចាំប្រទេសកម្ពុជា និងសាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ នៅឆ្នាំ ២០១២</span>
+                        <span class="text-justify text-xl">បណ្ណាល័យអាមេរិក ត្រូវបានបង្កើតឡើងរួមគ្នាដោយស្ថានទូតអាមេរិកប្រចាំប្រទេសកម្ពុជា និងសាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ នៅឆ្នាំ ២០១២</span>
                     </div>
-                    <img :src="ItCenter" alt="image" class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg">
+                    <img :src="ac1" alt="image" class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg">
                 </div>
             </section>
             <section class="bg-gray-500 p-10 mt-10 rounded-xl">
@@ -77,7 +77,7 @@
                 <div class="flex gap-10 text-white bg-opacity-80 rounded-lg mt-5">
                     <div>
                         <img
-                            :src="ItCenter"
+                            :src="ac"
                             alt="image"
                             class="w-full transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
                             />
@@ -85,7 +85,7 @@
                     <div class="flex flex-col gap-5">
                         <div class="flex flex-col gap-5">
                             <div class="flex flex-col gap-5">
-                                <ul class="space-y-2">
+                                <ul class="space-y-2 text-xl">
                                     <li class="flex items-start gap-2">
                                         <i class="fa-solid fa-check text-green-400 mt-1"></i>
                                         ផ្ដល់សៀវភៅ និងឯកសារភាសាអង់គ្លេសសម្បូរបែបជាច្រើនដែលផ្ដោតលើសហរដ្ឋអាមេរិក
@@ -120,7 +120,7 @@
                                     </div>
                                 </div>
                                 
-                                <P>សាធារណជន សិស្សានុសិស្ស និស្សិត គ្រូបង្រៀន សាស្ដ្រាចារ្យ មន្ដ្រីរាជការ និងអង្គការ អាចស្រាវជ្រាវ នៅបណ្ណាល័យអាមេរិក បានក្នុងម៉ោងធ្វើការងារដោយឥតគិតថ្លៃ</P>
+                                <P class="text-xl">សាធារណជន សិស្សានុសិស្ស និស្សិត គ្រូបង្រៀន សាស្ដ្រាចារ្យ មន្ដ្រីរាជការ និងអង្គការ អាចស្រាវជ្រាវ នៅបណ្ណាល័យអាមេរិក បានក្នុងម៉ោងធ្វើការងារដោយឥតគិតថ្លៃ</P>
                             </div>
                         </div>
                     </div>
@@ -153,6 +153,10 @@
 import Titlebg from '@/components/Slide/TitleBg.vue';
 import RightServices from '@/components/SideBar/RightServices.vue';
 import demo from '@/assets/images/demoCard.png';
+import pic from '@/assets/images/pic.jpg';
+import pic1 from '@/assets/images/pic_2.jpg';
+import ac1 from '@/assets/images/ac_1.jpg';
+import ac from '@/assets/images/ac.jpg';
 import ItCenter from '@/assets/images/it-center.jpg'
 
 const library = [

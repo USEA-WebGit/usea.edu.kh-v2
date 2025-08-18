@@ -2,9 +2,7 @@
   <div>
     <Titlebg title="Health Services" breadcrumb="Health Services" />
   </div>
-  <div
-    class="grid grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10"
-  >
+  <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
     <div>
       <section class="flex justify-center items-center gap-5 flex-col">
         <div class="flex gap-10 overflow-hidden mt-10">
@@ -12,7 +10,7 @@
             <h3 class="text-2xl text-usea_secondary font-bold">
               ABOUT MEDICAL ROOM
             </h3>
-            <span class="text-justify"
+            <span class="text-justify text-xl"
               >The curriculum is designed to provide training to students who
               are proficient in software and good at public administration,
               public administration, private administration and local NGOs.The
@@ -22,7 +20,7 @@
             >
           </div>
           <img
-            :src="demo"
+            :src="medicalRoom1"
             alt="image"
             class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg"
           />
@@ -42,7 +40,7 @@
           </div>
           <div class="flex flex-col gap-5">
             <h3 class="text-2xl font-bold text-white">HEALTH SERVICES</h3>
-            <ul class="space-y-3 font-noto_sans">
+            <ul class="space-y-3 font-noto_sans text-xl">
               <li class="flex items-start gap-2">
                 <i class="fa-solid fa-check text-green-400 mt-1"></i>
                 ផ្ដល់សេវាកម្មសុខភាពស្របតាមម៉ោងការងាររបស់សាកលវិទ្យាល័យ
@@ -138,5 +136,6 @@ import Titlebg from "@/components/Slide/TitleBg.vue";
 import RightServices from "@/components/SideBar/RightServices.vue";
 import demo from "@/assets/images/demoCard.png";
 import medicalRoom from "@/assets/images/medical_room.jpg";
+import medicalRoom1 from "@/assets/images/medical_room1.jpg";
 import catImg from "@/assets/images/bg_medical_room.jpg";
 </script>

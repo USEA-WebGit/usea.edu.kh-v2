@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gray-200 p-5 flex flex-col gap-5 text-lg rounded-md">
+    <div class="bg-gray-200 p-5 flex flex-col gap-5 2xl:text-xl xl:text-xl lg:text-sm rounded-md">
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Contact +</span>
+            <span class="text-[#002060] text-xl font-bold mb-5">Contact +</span>
             <router-link
                 :to="{name: 'post-graduate'}"
                 class="link"
@@ -10,15 +10,15 @@
                 <span>About Graduate School</span>
             </router-link>
             <router-link
-                :to="{ name: 'faculty-staff', params: {facultyStaff: 'economics-business-tourism'} }"
+                :to="{ name: 'post-graduate-staff'}"
                 class="link"
-                :class="{ active: isActive('faculty-staff') }"
+                :class="{ active: isActive('post-graduate-staff') }"
             >
                 <span>Staff</span>
             </router-link>
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Master's Degree +</span>
+            <span class="text-[#002060] text-xl font-bold mb-5">Master's Degree +</span>
             <router-link
                 :to="{ name: 'department-name', params: {departmentName: 'department-business'} }"
                 class="link"
@@ -44,7 +44,7 @@
             
         </div>
         <div class="flex flex-col">
-            <span class="text-[#002060] text-xl font-bold">Doctoral's Degree +</span>
+            <span class="text-[#002060] text-xl font-bold mb-5">Doctoral's Degree +</span>
             <router-link
                 :to="{ name: 'department-name', params: {departmentName: 'department-business'} }"
                 class="link"

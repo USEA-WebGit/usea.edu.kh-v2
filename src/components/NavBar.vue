@@ -146,9 +146,6 @@
               </div>
             </li>
           </ul>
-          <!-- <div class="absolute right-[17rem] top-[2rem] ml-8">
-            <button class="bg-usea_secondary px-5 py-3 rounded-md text-white">Journal</button>
-          </div> -->
         </nav>
         
       </div>
@@ -215,7 +212,7 @@
                 <router-link :to="{name: 'faculty-page', params: {facultyName: 'science-technology'}}" @click="navigateAndClose('science-technology')"><li>Faculty of Sciences & Technology</li></router-link>
                 <router-link :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}" @click="navigateAndClose('social-science-law')"><li>Faculty of Social Science & Law</li></router-link>
                 <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-huminaties-languages'}}" @click="navigateAndClose('arts-huminaties-languages')"><li>Faculty of Art, Humanities & Language</li></router-link>
-                <router-link :to="{name: 'internationa-college'}" @click="navigateAndClose('internationa-college')"><li>International College</li></router-link>
+                <router-link :to="{name: 'international-college'}" @click="navigateAndClose('internationa-college')"><li>International College</li></router-link>
                 <router-link :to="{name: 'post-graduate'}" @click="navigateAndClose('post-graduate')"><li>Post Graduate</li></router-link>
                 <!-- <router-link :to="{name: 'language-center'}" @click="navigateAndClose('language-center')"><li>Foreign Language Center</li></router-link> -->
                 <router-link :to="{name: 'short-course'}" @click="navigateAndClose('short-course')"><li>Short Course</li></router-link>
