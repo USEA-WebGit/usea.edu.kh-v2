@@ -10,6 +10,14 @@
                     <span class="text-2xl font-bold">{{ member.name }}</span>
                     <div class="h-[1px] w-[50%] bg-gray-500 my-3"></div>
                     <span class="font-bold">{{ member.position }}</span>
+                    <div v-if="member.number || member.email" class="flex-col 2xl:flex xl:flex lg:flex md:flex sm:flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row 2xl:gap-5 2xl:mt-5 xl:gap-5 xl:mt-5 lg:gap-5 lg:mt-5 md:gap-5 md:mt-5 sm:gap-5 sm:mt-5">
+                        <span v-if="member.number">
+                            <i class="fa-solid fa-phone text-blue-500"></i> {{ member.number }}
+                        </span>
+                        <span v-if="member.email">
+                            <i class="fa-solid fa-envelope text-red-500"></i> {{ member.email }}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,12 +39,16 @@ const collegeStaffs = [
     {
         image: drSothan,
         name: 'Dr. Yoeung Sothan',
-        position: 'Head of Post Graduate '
+        position: 'Head of Post Graduate ',
+        number: '012 234 567',
+        email: 'sothan_yoeung@usea.edu.kh'
     },
     {
         image: sorBunthoeun,
         name: 'Mr. Sor Bunthoeun',
-        position: 'Deputy Chief of Post Graduate'
+        position: 'Deputy Chief of Post Graduate',
+        number: '012 345 678',
+        email: 'sor_bunthoeun@usea.edu.kh'
     },
 
 ]

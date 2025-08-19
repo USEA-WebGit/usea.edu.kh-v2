@@ -102,7 +102,7 @@ export const faculties = {
         {name: "Department of Architecture", image: departmentbg, params: {departmentName: 'department-architecture'}},
         {name: "Department of Information and Communication Technology", image: departmentbg, params: {departmentName: 'department-technology'}},
         {name: "Department of Mathematics and Science", image: departmentbg, params: {departmentName: 'department-mathematic'}},
-    ],
+    ], 
       members: [
         { 
             name: "Ms. Sa Sokngim", 

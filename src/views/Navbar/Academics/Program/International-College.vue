@@ -95,34 +95,33 @@
                     
                 </section>
 
-                <!-- Faculty's Memeber  -->
+                <!-- College's Memeber  -->
                 <section class="mb-12">
                     <div class="flex flex-col justify-center items-start mb-5">
                         <span class="text-usea_secondary text-[2rem] font-bold">FACULTY'S MEMBERS</span>
                         <div class="h-1 w-[5%] bg-usea_secondary"></div>
                     </div>
-                    <div class="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5">
-                        <div>
-                            <div class="overflow-hidden">
-                                <img :src="sivvuthy" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
-                            </div>
-                            <div>
-                                <div class="flex flex-col gap-5 p-3">
-                                    <span class="text-usea_secondary font-bold text-xl">Dr. Siv Vuthy</span>
-                                    <span class="font-bold">Head of International College</span>
-                                </div>
+                    <div
+                        class="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-5"
+                    >
+                        <div v-for="(member,index) in CollegeMembers" :key="index">
+                        <div class="overflow-hidden rounded-md relative">
+                            <img
+                            :src="member.img"
+                            alt="member"
+                            class="w-full h-[350px] object-cover transform transition-transform duration-300 hover:scale-105 rounded-md"
+                            />
+                            <div class="absolute h-[60px] top-[85%] w-full bg-usea_secondary opacity-50 pointer-events-none group-hover:opacity-40 transition-opacity duration-300"></div>
+                            <div class="absolute top-[88%] w-full text-center">
+                            <span class="text-white font-bold text-xl">
+                                {{ member.name }}
+                            </span>
                             </div>
                         </div>
-                        <div>
-                            <div class="overflow-hidden">
-                                <img :src="toursreyleak" alt="member" class="w-full h-[250px] object-cover transform transition-transform duration-300 hover:scale-105">
-                            </div>
-                            <div>
-                                <div class="flex flex-col gap-5 p-3">
-                                    <span class="text-usea_secondary font-bold text-xl">Ms. Tour Sreyleak</span>
-                                    <span class="font-bold">Deputy Chief of International College</span>
-                                </div>
-                            </div>
+                        
+                        <div class="mt-3">
+                            <span class="font-bold text-lg">{{ member.position }}</span>
+                        </div>
                         </div>
                     </div>
                 </section>
@@ -146,6 +145,19 @@ import { useRouter, useRoute } from 'vue-router';
 import { computed } from 'vue';
 import Titlebg from '@/components/Slide/TitleBg.vue';
 import { colleges } from '@/data/international-college.js';
+
+const CollegeMembers = [
+    {
+        img: sivvuthy,
+        name: 'Dr. Siv Vuthy',
+        position: 'Head of International College'
+    },
+    {
+        img: toursreyleak,
+        name: 'Ms. Tour Sreyleak',
+        position: 'Deputy Chief of International College'
+    },
+]
 
 const route = useRoute();
 const router = useRouter();

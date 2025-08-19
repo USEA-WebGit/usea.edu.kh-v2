@@ -6,8 +6,11 @@ const routes = [
     component: () => import('@/views/Home.vue'),
     meta: { title: 'Home - USEA', breadcrumb: 'Home' },
   },
+
+
+  // start about
   {
-    path: '/about',
+    path: '/about', 
     name: 'About',
     meta: {title: 'About - USEA', breadcrumb: 'About'},
     children: [
@@ -73,7 +76,9 @@ const routes = [
       },
     ],
   },
-  
+  // end about 
+
+  // start academic 
   {
     path: '/academic',
     children: [
