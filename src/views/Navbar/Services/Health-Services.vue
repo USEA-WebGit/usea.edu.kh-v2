@@ -2,132 +2,115 @@
   <div>
     <Titlebg title="Health Services" breadcrumb="Health Services" />
   </div>
-  <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
+
+  <!-- Main container -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[2fr_1fr]">
+    <!-- LEFT -->
     <div>
-      <section class="flex justify-center items-center gap-5 flex-col">
-        <div class="flex gap-10 overflow-hidden mt-10">
-          <div class="flex flex-col gap-5">
-            <h3 class="text-2xl text-usea_secondary font-bold">
+      <!-- ABOUT -->
+      <section class="mt-8">
+        <div class="flex flex-col gap-6 md:flex-row md:items-start">
+          <!-- Text -->
+          <div class="md:w-1/2 flex flex-col gap-4">
+            <h3 class="text-2xl sm:text-3xl text-usea_secondary font-bold">
               ABOUT MEDICAL ROOM
             </h3>
-            <span class="text-justify text-xl"
-              >The curriculum is designed to provide training to students who
-              are proficient in software and good at public administration,
-              public administration, private administration and local NGOs.The
+            <p class="text-justify text-base sm:text-lg leading-7">
+              The curriculum is designed to provide training to students who are
+              proficient in software and good at public administration, public
+              administration, private administration and local NGOs. The
               curriculum is designed to provide training to students who are
               proficient in software and good at public administration, public
-              administration, private administration and local NGOs.</span
-            >
+              administration, private administration and local NGOs.
+            </p>
           </div>
-          <img
-            :src="medicalRoom1"
-            alt="image"
-            class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg"
-          />
-        </div>
-      </section>
-      <section class="bg-gray-500 p-10 mt-10 rounded-xl">
-        <div class="flex flex-col justify-center items-start text-white">
-          <!-- <div class="h-1 w-[5%] bg-usea_secondary"></div> -->
-        </div>
-        <div class="flex gap-10 text-white bg-opacity-80 p-5 rounded-lg mt-5">
-          <div>
+
+          <!-- Image -->
+          <div class="md:w-1/2">
             <img
-              :src="medicalRoom"
-              alt="image"
-              class="w-full transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
+              :src="medicalRoom1"
+              alt="Medical room"
+              class="w-full h-48 sm:h-64 md:h-72 lg:h-80 object-cover rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
             />
           </div>
-          <div class="flex flex-col gap-5">
-            <h3 class="text-2xl font-bold text-white">HEALTH SERVICES</h3>
-            <ul class="space-y-3 font-noto_sans text-xl">
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="bg-gray-600 mt-10 rounded-xl p-6 sm:p-8">
+        <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-start text-white">
+          <!-- Image -->
+          <div class="w-full md:w-1/2">
+            <img
+              :src="medicalRoom"
+              alt="Health services"
+              class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+
+          <!-- List -->
+          <div class="w-full md:w-1/2 flex flex-col gap-4">
+            <h3 class="text-2xl sm:text-3xl font-bold">HEALTH SERVICES</h3>
+            <ul class="space-y-3 text-base sm:text-lg leading-7">
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                <i class="fa-solid fa-check mt-1"></i>
                 ផ្ដល់សេវាកម្មសុខភាពស្របតាមម៉ោងការងាររបស់សាកលវិទ្យាល័យ
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                <i class="fa-solid fa-check mt-1"></i>
                 ផ្ដល់សេវាពិនិត្យសុខភាព និងកាយសម្បទា
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                <i class="fa-solid fa-check mt-1"></i>
                 ផ្ដល់សេវាសង្គ្រោះបឋម
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                <i class="fa-solid fa-check mt-1"></i>
                 ផ្ដល់សេវាប្រឹក្សាសុខភាពផ្លូវកាយ និងផ្លូវចិត្ត
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                <i class="fa-solid fa-check mt-1"></i>
                 ផ្ដល់ថ្នាំបង្ការ ឬថ្នាំព្យាបាលនានាស្របតាមគោលនយោបាយជាតិ ឬ
                 កម្មវិធីជាតិផ្ដល់ថ្នាំបង្ការរបស់ក្រសួរសុខាភិបាល
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                ផ្ដល់ព័ត៌មានបន្ទាន់ដល់អ្នកអាណាព្យាបាលពីស្ថានភាពជំងឺរបស់បុគ្គលិករដ្ឋបាលគ្រូបង្រៀន
-                និងសិស្សានុសិស្ស ក្នុងលក្ខខណ្ឌតម្រូវមកទទួលទៅព្យាបាលបន្តនៅផ្ទះ
-                ឬទទួលការឯកភាពមុននឹងបញ្ជូនអ្នកជំងឺទៅព្យាបាលនៅបន្ទីពេទ្យ
+                <i class="fa-solid fa-check mt-1"></i>
+                ផ្ដល់ព័ត៌មានបន្ទាន់ដល់អ្នកអាណាព្យាបាលពីស្ថានភាពជំងឺ...
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                រៀបចំ និងចូលរួមអប់រំផ្សព្វផ្សាយស្ដីពីការលើកកម្ពស់សុខភាព
-                សុវត្ថភាព និងបរិស្ថានស្អាត ដល់បុគ្គលិករដ្ឋបាល គ្រូបង្រៀន
-                សិស្សានុសិស្ស និងអ្នកពាក់ព័ន្ធ
+                <i class="fa-solid fa-check mt-1"></i>
+                រៀបចំ និងចូលរួមអប់រំផ្សព្វផ្សាយស្ដីពីការលើកកម្ពស់សុខភាព...
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                រក្សាឯកជនភាព
-                និងរក្សាការសម្ងាត់នូវរាល់ព័ត៌មានពាក់ព័ន្ធនឹងស្ថានភាពសុខភាពរបស់បុគ្គលិករដ្ឋបាល
-                គ្រូបង្រៀន និងសិស្សានុសិស្សដែលមកទទួលសេវានៅបន្ទប់សុខភាព
-                ព្រមទាំងគោរពក្រមសីលធម៌វិជ្ជាជីវៈ
+                <i class="fa-solid fa-check mt-1"></i>
+                រក្សាឯកជនភាព និងរក្សាការសម្ងាត់នូវរាល់ព័ត៌មានពាក់ព័ន្ធ...
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <div class="mt-10">
-        <div class="flex flex-col justify-center items-start">
-          <span class="text-2xl text-usea_secondary font-bold">ACTIVITIES</span>
-          <!-- <div class="h-1 w-[5%] bg-usea_secondary"></div> -->
+      <!-- ACTIVITIES -->
+      <section class="mt-10">
+        <div>
+          <span class="text-2xl sm:text-3xl text-usea_secondary font-bold">ACTIVITIES</span>
         </div>
-        <div class="grid grid-cols-3 gap-3 mt-5 mb-5 overflow-hidden">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-5 mb-5">
           <img
+            v-for="i in 6"
+            :key="i"
             :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
+            alt="Activity"
+            class="w-full h-36 sm:h-40 md:h-44 object-cover rounded-lg transition-transform duration-500 hover:scale-105"
           />
         </div>
-      </div>
+      </section>
     </div>
-    <div>
+
+    <!-- RIGHT -->
+    <aside class="lg:sticky lg:top-28 h-max">
       <RightServices />
-    </div>
+    </aside>
   </div>
 </template>
 
@@ -137,5 +120,4 @@ import RightServices from "@/components/SideBar/RightServices.vue";
 import demo from "@/assets/images/demoCard.png";
 import medicalRoom from "@/assets/images/medical_room.jpg";
 import medicalRoom1 from "@/assets/images/medical_room1.jpg";
-import catImg from "@/assets/images/bg_medical_room.jpg";
 </script>

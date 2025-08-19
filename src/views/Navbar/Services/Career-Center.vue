@@ -2,136 +2,108 @@
   <div>
     <Titlebg title="Career Center" breadcrumb="Career Center" />
   </div>
-  <div class="grid 2xl:grid-cols-[70%_30%] xl:grid-cols-[70%_30%] lg:grid-cols-[70%_30%] mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10 ">
+
+  <!-- Main container -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[2fr_1fr]">
+    <!-- LEFT -->
     <div>
-      <section class="flex justify-center items-center gap-5 flex-col">
-        <div class="flex flex-col justify-center items-center gap-10 overflow-hidden mt-10">
+      <!-- HERO / ABOUT -->
+      <section class="mt-8">
+        <div class="flex flex-col items-center gap-6">
+          <!-- Image scales responsively -->
           <img
             :src="careerCenter"
-            alt="image"
-            class="w-[50%] transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg shadow-lg"
+            alt="Career Center"
+            class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-48 sm:h-60 md:h-72 object-cover rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
           />
-          <div class="flex flex-col gap-5">
-            <h3 class="text-2xl text-usea_secondary font-bold">
-              CAREER CENTER
-            </h3>
-            <span class="text-justify font-noto_sans text-xl">
+
+          <!-- Title + Text (FULL WIDTH of the left column) -->
+          <div class="w-full">
+            <h3 class="text-2xl sm:text-3xl text-usea_secondary font-bold mb-4">CAREER CENTER</h3>
+            <p class="text-justify text-base sm:text-lg leading-7 font-noto_sans">
               The South East Asia University Career Center, in partnership with
-              USAID DWD Digital Workforce Development, was established to engage
-              higher education institutions (HEIs) and the local private sector
-              for the development of internship programs and / or job
-              opportunities for students. And young professionals. The center
-              will help address the mismatch between youth skills and the needs
-              of employers through soft skills training and workshops. Through
-              the University of South East Asia Student Job Center, students
-              will have access to the right career information, career networks
-              and career development opportunities that will empower them to
-              make their own decisions about their future careers. USEA Career
-              Centers are designed with the central purpose of providing the
-              University with an independent and sustainable center for students
-              across all disciplines to seek employment advice, soft skills
-              development, and to access internships and job opportunities. The
-              Career Center will directly support students by connecting them to
-              resources, events, seminars, mentoring and acting as a link to
-              them to potential employers.
-            </span>
+              USAID DWD Digital Workforce Development, was established to engage higher education
+              institutions (HEIs) and the local private sector for the development of internship
+              programs and/or job opportunities for students and young professionals. The center
+              will help address the mismatch between youth skills and employer needs through soft
+              skills training and workshops. Through the USEA Student Job Center, students will
+              access career information, networks, and development opportunities that empower them
+              to make informed decisions. The Center serves all disciplines with employment advice,
+              soft skills development, and access to internships and jobs—connecting students to
+              resources, events, mentoring, and potential employers.
+            </p>
           </div>
-          
         </div>
       </section>
-      <section class="bg-gray-500 p-10 mt-10 rounded-xl">
-        <div class="flex flex-col justify-center items-center">
-          <h3 class="text-2xl font-bold text-white">VISION & OBJECTIVE</h3>
-          <div class="h-1 w-[5%] bg-green-600"></div>
+
+      <!-- VISION & OBJECTIVE -->
+      <section class="bg-gray-600 mt-10 rounded-xl p-6 sm:p-8">
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white">VISION & OBJECTIVE</h3>
+          <div class="h-1 w-16 sm:w-20 bg-green-600 mt-2 rounded"></div>
         </div>
-        <div class="flex gap-10 text-white bg-opacity-80 rounded-lg mt-5">
+
+        <!-- 1 col on mobile, 2 cols on md+ -->
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-start text-white">
+          <!-- Image -->
           <div>
             <img
               :src="careerCenter1"
-              alt="image"
-              class="w-full transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
+              alt="Vision and Objective"
+              class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg transition-transform duration-500 hover:scale-105"
             />
           </div>
-          <div class="flex flex-col gap-5 text-xl">
-            <div class="flex flex-col gap-5">
-              <div class="flex flex-col gap-5">
-                <p class="font-noto_sans">
-                  និស្សិតត្រូវបានផ្ដល់សិទ្ធិសម្រាប់បង្កើតនូវជម្រើសរបស់ពួកគេដោយខ្លួនឯងអំពីអាជីពការងារក៏ដូច
-                  ជាអាចគ្រប់គ្រងបាននូវជីវិតដោយឆ្លងកាត់ការប្រើប្រាស់នូវអាជីពផ្ទាល់ខ្លួន
-                  ដែលភ្ជាប់ទំនាក់ទំនងទៅនឹង ព័ត៌មាន បណ្តាញវិជ្ជាជីវៈ ឱកាស
-                  និងភាពមានការងារធ្វើដែលអាចជំរុញអោយមានការអភិវឌ្ឍ ក៏ដូចជា
-                  ការពង្រឹងជំនាញដ៏ត្រឹមត្រូវនឹងច្បាស់លាស់មួយ។
-                </p>
-                <ul class="space-y-2 font-noto_sans">
-                  <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                    ភ្ជាប់និស្សិតជាមួយជំនាញមួយច្បាស់លាស់
-                    ក៏ដូចជាផ្នត់គំនិតដើម្បីត្រៀមខ្លួនជាស្រេចក្នុងការបម្រើការងារក្នុងយុគសម័យសេដ្ឋកិច្ចឌីជីថលមួយនេះ
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                    ផ្តល់ការងារហាត់ការ
-                    និងអាហារូបករណ៍ដែលជាកន្លែងនៃឱកាសទទួលបានការងាររួមទាំងបទ
-                    ពិសោធន៍ផ្សេងៗដែលពួកគេចាប់អារម្មណ៍
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                    ភ្ជាប់និស្សិតទៅនិយោជក ( ក្រុមហ៊ុនឯកជន អង្គការសង្គមស៊ីវិល
-                    និងរដ្ឋាភិបាល)
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                    បង្កើតសហគមន៍មួយដែលរឹងមាំនៃមជ្ឈមណ្ឌលការងារជាមួយអតីតនិស្សិតធ្វើអោយមានការផ្លាស់ប្តូរដោយវិជ្ជមាន។
-                  </li>
-                </ul>
-              </div>
-              ​
-            </div>
+
+          <!-- Text / List -->
+          <div class="flex flex-col gap-5 text-base sm:text-lg leading-7">
+            <p class="font-noto_sans">
+              និស្សិតត្រូវបានផ្ដល់សិទ្ធិសម្រាប់បង្កើតនូវជម្រើសរបស់ពួកគេដោយខ្លួនឯងអំពីអាជីពការងារ
+              ក៏ដូចជាអាចគ្រប់គ្រងជីវិតដោយការប្រើប្រាស់អាជីពផ្ទាល់ខ្លួន ដែលភ្ជាប់ទៅនឹងព័ត៌មាន
+              បណ្តាញវិជ្ជាជីវៈ ឱកាស និងភាពមានការងារធ្វើ ដើម្បីអភិវឌ្ឍ និងពង្រឹងជំនាញដែលត្រឹមត្រូវ។
+            </p>
+            <ul class="space-y-3 font-noto_sans">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                ភ្ជាប់និស្សិតជាមួយជំនាញច្បាស់លាស់ និងផ្នត់គំនិតសម្រាប់ការងារនៅយុគសម័យសេដ្ឋកិច្ចឌីជីថល
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                ផ្តល់ឱកាសការងារហាត់ការ និងអាហារូបករណ៍ ដើម្បីទទួលបានបទពិសោធន៍ពាក់ព័ន្ធ
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                ភ្ជាប់និស្សិតទៅនិយោជក (ឯកជន អង្គការសង្គមស៊ីវិល និងរដ្ឋ)
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                បង្កើតសហគមន៍រឹងមាំជាមួយអតីតនិស្សិត ដើម្បីជំរុញការផ្លាស់ប្តូរដោយវិជ្ជមាន
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <div class="mt-10">
-        <div class="flex flex-col justify-center items-start">
-          <span class="text-2xl text-usea_secondary font-bold">ACTIVITIES</span>
-          <!-- <div class="h-1 w-[5%] bg-usea_secondary"></div> -->
+
+      <!-- ACTIVITIES -->
+      <section class="mt-10">
+        <div>
+          <span class="text-2xl sm:text-3xl text-usea_secondary font-bold">ACTIVITIES</span>
         </div>
-        <div class="grid grid-cols-3 gap-3 mt-5 mb-5 overflow-hidden">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-5 mb-5">
           <img
+            v-for="i in 6"
+            :key="i"
             :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
-          />
-          <img
-            :src="demo"
-            alt=""
-            class="transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
+            alt="Activity"
+            class="w-full h-36 sm:h-40 md:h-44 object-cover rounded-lg transition-transform duration-500 hover:scale-105"
           />
         </div>
-      </div>
+      </section>
     </div>
-    <div>
+
+    <!-- RIGHT (sticky sidebar on desktop) -->
+    <aside class="lg:sticky lg:top-28 h-max">
       <RightServices />
-    </div>
+    </aside>
   </div>
 </template>
 
@@ -141,5 +113,4 @@ import RightServices from "@/components/SideBar/RightServices.vue";
 import demo from "@/assets/images/demoCard.png";
 import careerCenter from "@/assets/images/career-center.png";
 import careerCenter1 from "@/assets/images/career-center1.jpg";
-import ItCenter from "@/assets/images/it-center.jpg";
 </script>
