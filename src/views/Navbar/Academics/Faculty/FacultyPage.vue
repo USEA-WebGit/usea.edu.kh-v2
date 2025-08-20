@@ -157,10 +157,17 @@
         </section>
       </div>
 
-      <!-- Sidebar -->
+     <!-- Sidebar -->
       <div>
-        <component :is="faculty.sidebarComponent" />
+        <component
+          :is="faculty.sidebarComponent"
+          :facultyKey="facultyNameParam"
+          :routes="{ about: 'faculty-page', staff: 'faculty-staff', department: 'department-name' }"
+          :paramKeys="{ about: 'facultyName', staff: 'facultyStaff' }"
+          :collapseOnMobile="true"
+        />
       </div>
+
     </div>
   </div>
 </template>
@@ -170,6 +177,7 @@ import { useRouter, useRoute } from "vue-router";
 import { computed } from "vue";
 import Titlebg from "@/components/Slide/TitleBg.vue";
 import { faculties } from "@/data/faculty.js";
+import FacultySidebar from "@/components/SideBar/FacultySidebar.vue"; 
 
 const route = useRoute();
 const router = useRouter();
@@ -181,3 +189,4 @@ const goToDepartment = (departmentName) => {
   router.push({ name: "department-name", params: { departmentName } });
 };
 </script>
+

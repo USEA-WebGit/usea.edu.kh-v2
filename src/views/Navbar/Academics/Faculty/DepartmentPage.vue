@@ -142,8 +142,14 @@
             </section>
         </div>
                 
+        <!-- Sidebar -->
         <div>
-            <component :is="sidebarComponent"/>
+            <DepartmentSidebar
+            :departmentKey="departmentNameParam"
+            :routes="{ aboutDept: 'department-name', deptStaff: 'faculty-staff-language', major: 'major-name' }"
+            :paramKeys="{ departmentName: 'departmentName', departmentStaff: 'departmentStaff', majorDepartment: 'majorDepartment', majorDegree: 'majorDegree', majorName: 'majorName' }"
+            :collapseOnMobile="true"
+            />
         </div>
     </div>
 </template>
@@ -153,66 +159,32 @@ import Titlebg from '@/components/Slide/TitleBg.vue';
 import { ref, computed, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { departments } from '@/data/department.js';
-import DepartmentEnglishSidebar from '@/components/SideBar/Department/DepartEnglish.vue';
-import DepartmentChineseSidebar from '@/components/SideBar/Department/DepartChinese.vue';
-import DepartmentKhmerSidebar from '@/components/SideBar/Department/DepartKhmer.vue';
-import DepartmentITSidebar from '@/components/SideBar/Department/DepartIT.vue';
-import DepartmentArchitectureSidebar from '@/components/SideBar/Department/DepartArchitecture.vue';
-import DepartmentMathSidebar from '@/components/SideBar/Department/DepartMath.vue';
-import DepartmentBusinessSidebar from '@/components/SideBar/Department/DepartBusiness.vue';
-import DepartmentTourismSidebar from '@/components/SideBar/Department/DepartTourism.vue';
-import DepartmentEconomicSidebar from '@/components/SideBar/Department/DepartEconomic.vue';
-import DepartmentLawsSidebar from '@/components/SideBar/Department/DepartLaws.vue';
-import DepartmentSocialScienceSidebar from '@/components/SideBar/Department/DepartSocialScience.vue';
+import DepartmentSidebar from '@/components/SideBar/Department/DepartmentSidebar.vue'; // ✅ NEW
 
 const route = useRoute();
 const router = useRouter();
 
-// Component mapping for easy scaling
-const sidebarComponents = {
-  DepartEnglish: DepartmentEnglishSidebar,
-  DepartChinese: DepartmentChineseSidebar,
-  DepartKhmer: DepartmentKhmerSidebar,
-  DepartIT: DepartmentITSidebar,
-  DepartArchitecture: DepartmentArchitectureSidebar,
-  DepartMath: DepartmentMathSidebar,
-  DepartBusiness: DepartmentBusinessSidebar,
-  DepartTourism: DepartmentTourismSidebar,
-  DepartEconomic: DepartmentEconomicSidebar,
-  DepartLaws: DepartmentLawsSidebar,
-  DepartSocialScience: DepartmentSocialScienceSidebar,
-
-};
-
-
 const departmentNameParam = computed(() => route.params.departmentName);
 const department = computed(() => departments[departmentNameParam.value]);
 
-// Get the correct sidebar component
-const sidebarComponent = computed(() => {
-  return sidebarComponents[department.value?.sidebarComponent] || null;
-});
-
-
 const availableTabs = computed(() => {
-    const tabs = [];
-    const majors = department.value?.majors;
-    if (majors?.general?.length > 0) tabs.push("General Chinese Programs");
-    if (majors?.associate?.length > 0) tabs.push("Associate's Degree");
-    if (majors?.bachelor?.length > 0) tabs.push("Bachelor's Degree");
-    return tabs;
+  const tabs = [];
+  const majors = department.value?.majors;
+  if (majors?.general?.length > 0) tabs.push('General Chinese Programs');
+  if (majors?.associate?.length > 0) tabs.push("Associate's Degree");
+  if (majors?.bachelor?.length > 0) tabs.push("Bachelor's Degree");
+  return tabs;
 });
 
 const activeTab = ref();
-
 watchEffect(() => {
-    if (!activeTab.value && availableTabs.value.length > 0) {
-        activeTab.value = availableTabs.value[0];
-    }
+  if (!activeTab.value && availableTabs.value.length > 0) {
+    activeTab.value = availableTabs.value[0];
+  }
 });
 
 const goToMajor = (majorDepartment, majorDegree, majorName) => {
-  router.push({ name: 'major-name', params: {majorDepartment,majorDegree, majorName } });
+  router.push({ name: 'major-name', params: { majorDepartment, majorDegree, majorName } });
 };
 </script>
 

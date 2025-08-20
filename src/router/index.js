@@ -45,6 +45,13 @@ const routes = [
         meta: {title: 'News-Events', breadcrumb: 'News and Events'},
       },
       {
+        path: 'news-events/:slug',            // e.g. /about/news-events/news-2025-08-16
+        name: 'news-detail',
+        component: () => import('@/components/Events/Events-Detail.vue'),
+        props: true,
+        meta: { title: 'News Detail', breadcrumb: 'News Detail' },
+      },
+      {
         path: 'events-detail',
         name: 'events-detail',
         component: () => import('@/components/Events/Events-Detail.vue'),
@@ -74,6 +81,14 @@ const routes = [
         component: () => import('@/views/Navbar/About/Governance/Recognition.vue'),
         meta: {title: 'Recognition & Accreditation', breadcrumb: "Recognition & Accreditation"},
       },
+     {
+        path: '/about/recognition/:slug',
+        name: 'recognition-detail',
+        component: () => import('@/views/Navbar/About/Governance/RecognitionDetail.vue'),
+        meta: { title: 'Recognition Detail', breadcrumb: 'Recognition Detail' },
+      }
+
+
     ],
   },
   // end about 

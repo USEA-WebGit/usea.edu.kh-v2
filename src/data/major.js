@@ -52,7 +52,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartIT",
       },
     ],
     'bachelor': [
@@ -168,7 +167,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartIT",
       },
       
       {
@@ -282,7 +280,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartIT",
       },
       {
         id: "bachelor-information-technology",
@@ -395,7 +392,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartIT",
       },
     ],
 
@@ -468,7 +464,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartChinese",
       }
     ],
     'associate': [
@@ -504,7 +499,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartChinese",
       },
     ],
     'bachelor': [
@@ -540,7 +534,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartChinese",
       }
     ],
   },
@@ -579,7 +572,6 @@ export const majors = {
           },
           
         ],
-        sidebarComponent: "DepartEnglish",
       },
       {
         id: "associate-chinese",
@@ -613,7 +605,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartEnglish",
       }
     ],
     'bachelor': [
@@ -680,7 +671,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartEnglish",
       }
     ],
   },
@@ -718,7 +708,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartKhmer",
       },
     ],
     'bachelor': [
@@ -754,7 +743,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartKhmer",
       }
     ],
   },
@@ -792,7 +780,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartArchitecture",
       },
       {
         id: "bachelor-civil-engineering",
@@ -826,7 +813,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartArchitecture",
       },
     ],
   },
@@ -864,7 +850,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartMath",
       },
     ],
     'bachelor': [
@@ -900,7 +885,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartMath",
       },
       {
         id: "bachelor-physics",
@@ -934,7 +918,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartMath",
       },
       {
         id: "bachelor-mathematic",
@@ -968,7 +951,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartMath",
       }
     ],
   },
@@ -1006,7 +988,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartBusiness",
       },
       {
         id: "associate-management",
@@ -1040,7 +1021,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartBusiness",
       },
     ],
     'bachelor': [
@@ -1076,7 +1056,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartBusiness",
       },
       {
         id: "bachelor-finance-banking",
@@ -1110,7 +1089,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartBusiness",
       },
       {
         id: "bachelor-management",
@@ -1144,7 +1122,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartBusiness",
       },
       
     ],
@@ -1183,7 +1160,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartTourism",
       },
       {
         id: "associate-tourism-hospitality-management",
@@ -1217,7 +1193,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartTourism",
       },
     ],
     'bachelor': [
@@ -1253,7 +1228,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartTourism",
       },
       {
         id: "bachelor-tourism-hospitality-management",
@@ -1287,7 +1261,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartTourism",
       },
     ],
   },
@@ -1325,7 +1298,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartEconomic",
       },
     ],
     'bachelor': [
@@ -1361,7 +1333,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartEconomic",
       },
       {
         id: "bachelor-international-marketing",
@@ -1395,7 +1366,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartEconomic",
       },
       {
         id: "bachelor-marketing",
@@ -1429,7 +1399,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartEconomic",
       },
     ],
   },
@@ -1467,7 +1436,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartLaws",
       },
     ],
     'bachelor': [
@@ -1503,7 +1471,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartLaws",
       },
       {
         id: "bachelor-private-laws",
@@ -1537,7 +1504,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartLaws",
       },
       {
         id: "bachelor-international-laws",
@@ -1571,7 +1537,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartLaws",
       },
     ],
   },
@@ -1609,7 +1574,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartSocialScience",
       },
     ],
     'bachelor': [
@@ -1645,7 +1609,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartSocialScience",
       },
       {
         id: "bachelor-international-relation",
@@ -1679,7 +1642,6 @@ export const majors = {
             }
           }
         ],
-        sidebarComponent: "DepartSocialScience",
       },
     ],
   }

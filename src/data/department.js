@@ -53,7 +53,6 @@ export const departments = {
             { name: "Teaching English as a Foreign Language (TEFL)", image: majorimg, params: {majorDepartment: 'department-english',majorDegree: 'bachelor', majorName: 'bachelor-tefl'}},
         ]
       },
-      sidebarComponent: "DepartEnglish",
     },
     'department-chinese': {
       title: 'Department of Chinese',
@@ -94,7 +93,6 @@ export const departments = {
             
         ]
       },
-      sidebarComponent: "DepartChinese",
     },
 
     'department-khmer': {
@@ -137,7 +135,6 @@ export const departments = {
             { name: "Bachelors Khmer Literature", image: majorimg, params: {majorDepartment: 'department-khmer',majorDegree: 'bachelor', majorName: 'bachelor-khmer'}},
         ]
       },
-      sidebarComponent: "DepartKhmer",
     },
 
     'department-architecture': {
@@ -174,7 +171,6 @@ export const departments = {
             { name: "Civil Engineering", image: majorimg, params: {majorDepartment: 'department-architecture',majorDegree: 'bachelor', majorName: 'bachelor-civil-engineering'}},
         ]
       },
-      sidebarComponent: "DepartArchitecture",
     },
     'department-technology': {
       title: 'Department of Information and Communication Technology',
@@ -213,7 +209,6 @@ export const departments = {
             { name: "Information Technology", image: majorimg, params: {majorDepartment: 'department-technology',majorDegree: 'bachelor', majorName: 'bachelor-information-technology'}},
         ]
       },
-      sidebarComponent: "DepartIT",
     },
     'department-mathematic': {
       title: 'Department of Mathematics and Science',
@@ -252,7 +247,6 @@ export const departments = {
             { name: "Mathematic", image: majorimg, params: {majorDepartment: 'department-mathematic',majorDegree: 'bachelor', majorName: 'bachelor-mathematic'}},
         ]
       },
-      sidebarComponent: "DepartMath",
     },
     'department-business': {
       title: 'Department of Business',
@@ -295,7 +289,6 @@ export const departments = {
             { name: "International Economics", image: majorimg, params: {majorDepartment: 'department-business',majorDegree: 'bachelor', majorName: 'bachelor-international-economic'}},
         ]
       },
-      sidebarComponent: "DepartBusiness",
     },
     'department-tourism': {
       title: 'Department of Tourism',
@@ -330,7 +323,6 @@ export const departments = {
             { name: "Tourism and Hospitality Management", image: majorimg, params: {majorDepartment: 'department-tourism',majorDegree: 'bachelor', majorName: 'bachelor-tourism-hospitality-management'}},
         ]
       },
-      sidebarComponent: "DepartTourism",
     },
     'department-economic': {
       title: 'Department of Economic',
@@ -364,7 +356,6 @@ export const departments = {
             { name: "Marketing", image: majorimg, params: {majorDepartment: 'department-economic',majorDegree: 'bachelor', majorName: 'bachelor-marketing'}},
         ]
       },
-      sidebarComponent: "DepartEconomic",
     },
     'department-laws': {
       title: 'Department of Laws',
@@ -395,7 +386,7 @@ export const departments = {
       ],
       majors: {
         associate: [
-            { name: "Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'associate', majorName: 'associate-laws'}},
+            { name: "Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'associate', majorName: 'associate-laws'}}, 
         ],
         bachelor: [
             { name: "Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-laws'}},
@@ -403,7 +394,6 @@ export const departments = {
             { name: "International Laws", image: majorimg, params: {majorDepartment: 'department-laws',majorDegree: 'bachelor', majorName: 'bachelor-international-laws'}},
         ]
       },
-      sidebarComponent: "DepartLaws",
     },
     'department-social-science': {
       title: 'Department of Social Science',
@@ -442,6 +432,5 @@ export const departments = {
             
         ]
       },
-      sidebarComponent: "DepartSocialScience",
     },
   }
