@@ -33,7 +33,11 @@
     <div>
       <FacultySidebar
         :facultyKey="facultyKey"
-        :routes="{ about: 'faculty-page', staff: 'faculty-staff', department: 'department-name' }"
+        :routes="{
+          about: 'faculty-page',
+          staff: 'faculty-staff',
+          department: 'department-name',
+        }"
         :paramKeys="{ about: 'facultyName', staff: 'facultyStaff' }"
         :collapseOnMobile="true"
       />
@@ -47,14 +51,14 @@
 </template>
 
 <script setup>
-import Titlebg from '@/components/Slide/TitleBg.vue'
-import { faculties } from '@/data/faculty.js'
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-import FacultySidebar from '@/components/SideBar/FacultySidebar.vue'
+import Titlebg from "@/components/Slide/TitleBg.vue";
+import { faculties } from "@/data/faculty.js";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import FacultySidebar from "@/components/SideBar/FacultySidebar.vue";
 
 // Route: /academic/faculty/:facultyStaff/faculty-staff
-const route = useRoute()
-const facultyKey = computed(() => route.params.facultyStaff)
-const faculty = computed(() => faculties[facultyKey.value])
+const route = useRoute();
+const facultyKey = computed(() => route.params.facultyStaff);
+const faculty = computed(() => faculties[facultyKey.value]);
 </script>

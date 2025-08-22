@@ -5,13 +5,13 @@
 
     <!-- Main Layout -->
     <div
-      class="grid lg:grid-cols-[70%_30%] gap-6 lg:gap-10 mx-auto 
-             2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%]"
+      class="grid lg:grid-cols-[70%_30%] gap-6 lg:gap-10 mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%]"
     >
       <!-- Left Content -->
       <div>
         <!-- About Faculty -->
         <section class="mb-12">
+          <!-- <pre> {{ faculty }}</pre> -->
           <div class="flex flex-col items-start mb-5">
             <span class="text-usea_secondary text-2xl md:text-3xl font-bold">
               ABOUT FACULTY
@@ -19,7 +19,7 @@
             <div class="h-1 w-[15%] md:w-[5%] bg-usea_secondary"></div>
           </div>
 
-          <p class="text-justify text-base md:text-lg lg:text-xl">
+          <p class="text-justify text-base md:text-md lg:text-md">
             {{ faculty.description }}
           </p>
 
@@ -36,7 +36,10 @@
                 </div>
                 <h3 class="text-lg md:text-xl font-bold mb-2">VISION</h3>
               </div>
-              <p class="text-justify text-base md:text-lg lg:text-xl" data-aos="fade-left">
+              <p
+                class="text-justify text-base md:text-md lg:text-md"
+                data-aos="fade-left"
+              >
                 The Faculty of Arts, Humanities and Languages aims to become the
                 leading faculty in Cambodia...
               </p>
@@ -44,9 +47,12 @@
 
             <!-- Mission -->
             <div class="grid md:grid-cols-2 items-center gap-5">
-              <p class="text-justify text-base md:text-lg lg:text-xl" data-aos="fade-right">
-                Faculty of Arts, Humanities and Languages is committed to educating
-                technical skills, soft skills, and professionalism...
+              <p
+                class="text-justify text-base md:text-md lg:text-md"
+                data-aos="fade-right"
+              >
+                Faculty of Arts, Humanities and Languages is committed to
+                educating technical skills, soft skills, and professionalism...
               </p>
               <div
                 class="bg-red-500 flex flex-col items-center p-5 rounded-md text-white"
@@ -72,7 +78,10 @@
                   Educational Philosophy
                 </h3>
               </div>
-              <p class="text-justify text-base md:text-lg lg:text-xl" data-aos="fade-left">
+              <p
+                class="text-justify text-base md:text-md lg:text-md"
+                data-aos="fade-left"
+              >
                 We believe that students learn best through questioning,
                 analyzing, and interpreting the world around them.
               </p>
@@ -89,9 +98,7 @@
             <div class="h-1 w-[15%] md:w-[5%] bg-usea_secondary"></div>
           </div>
 
-          <div
-            class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-          >
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div
               v-for="department in faculty.departments"
               :key="department.name"
@@ -141,33 +148,36 @@
                 <div
                   class="absolute bottom-0 w-full h-16 bg-usea_secondary opacity-50"
                 ></div>
-                <div
-                  class="absolute bottom-3 w-full text-center"
-                >
+                <div class="absolute bottom-3 w-full text-center">
                   <span class="text-white font-bold text-base md:text-xl">
                     {{ member.name }}
                   </span>
                 </div>
               </div>
               <div class="mt-3">
-                <span class="font-bold text-sm md:text-lg">{{ member.position }}</span>
+                <span class="font-bold text-base md:text-md lg:text-md">{{
+                  member.position
+                }}</span>
               </div>
             </div>
           </div>
         </section>
       </div>
 
-     <!-- Sidebar -->
+      <!-- Sidebar -->
       <div>
         <component
           :is="faculty.sidebarComponent"
           :facultyKey="facultyNameParam"
-          :routes="{ about: 'faculty-page', staff: 'faculty-staff', department: 'department-name' }"
+          :routes="{
+            about: 'faculty-page',
+            staff: 'faculty-staff',
+            department: 'department-name',
+          }"
           :paramKeys="{ about: 'facultyName', staff: 'facultyStaff' }"
           :collapseOnMobile="true"
         />
       </div>
-
     </div>
   </div>
 </template>
@@ -177,16 +187,21 @@ import { useRouter, useRoute } from "vue-router";
 import { computed } from "vue";
 import Titlebg from "@/components/Slide/TitleBg.vue";
 import { faculties } from "@/data/faculty.js";
-import FacultySidebar from "@/components/SideBar/FacultySidebar.vue"; 
 
 const route = useRoute();
 const router = useRouter();
 
 const facultyNameParam = computed(() => route.params.facultyName);
 const faculty = computed(() => faculties[facultyNameParam.value]);
+const facultyList = computed(() => faculties);
+const facultyItems = computed(() =>
+  Object.entries(facultyList.value).map(([key, faculty]) => ({
+    key,
+    title: faculty.title,
+  }))
+);
 
 const goToDepartment = (departmentName) => {
   router.push({ name: "department-name", params: { departmentName } });
 };
 </script>
-
