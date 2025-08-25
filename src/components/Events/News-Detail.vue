@@ -1,51 +1,140 @@
-  <template>
-    <div>
-        <Titlebg title="Events Detail" breadcrumb="Events Details" />
-    </div>
-        <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
-            <div>
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="mb-5">
-                                    <div class="section-title position-relative mb-5">
-                                        <h1 class="display-4  motion-preset-slide-up">🎉✨Congratulations to the 3 winners of the 2025 Public English Speaking Competition for High School Students.</h1>
-                                    </div>
-                                    
-                                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                                    
-                                    <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut magna lorem.
-                                        Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet amet magna accusam
-                                        consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at sanctus et. Ipsum sit
-                                        gubergren dolores et, consetetur justo invidunt at et aliquyam ut et vero clita. Diam sea
-                                        sea no sed dolores diam nonumy, gubergren sit stet no diam kasd vero.</p>
-                                        <div class="grid grid-cols-3 gap-5">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event" alt="Image">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event1" alt="Image">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event2" alt="Image">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event3" alt="Image">
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div>
-                <RightNav />
-            </div> -->
+<template>
+  <div>
+    <Titlebg title="News Detail" breadcrumb="News Detail" />
+  </div>
+
+  <div
+    class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%]"
+  >
+    <article v-if="article" class="py-8">
+      <!-- Title -->
+      <header class="mb-5">
+        <h1
+          class="text-2xl md:text-3xl font-extrabold text-usea_secondary leading-snug"
+        >
+          {{ article.title }}
+        </h1>
+        <div class="mt-2 text-sm text-gray-500 flex flex-wrap gap-4">
+          <span
+            ><i class="fa-solid fa-calendar-days"></i> {{ article.date }}</span
+          >
+          <span v-if="article.time"
+            ><i class="fa-solid fa-clock"></i> {{ article.time }}</span
+          >
+          <span v-if="article.venue"
+            ><i class="fa-solid fa-location-dot"></i> {{ article.venue }}</span
+          >
         </div>
+      </header>
+
+      <!-- Hero (responsive aspect ratios to avoid layout shift) -->
+      <figure
+        v-if="article.img"
+        class="mb-6 overflow-hidden rounded-xl border border-gray-200"
+      >
+        <div
+          class="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/7]"
+        >
+          <img
+            :src="article.img"
+            :alt="article.title"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <!-- Content -->
+      <div
+        class="prose max-w-none prose-p:leading-relaxed prose-headings:mt-6 prose-headings:mb-3"
+      >
+        <p v-if="article.excerpt" class="text-gray-800 mb-4">
+          {{ article.excerpt }}
+        </p>
+        <p class="text-gray-800">
+          {{ article.body || fallbackBody }}
+        </p>
+      </div>
+
+      <!-- Optional gallery -->
+      <div
+        v-if="article.gallery?.length"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"
+      >
+        <img
+          v-for="(g, idx) in article.gallery"
+          :key="idx"
+          :src="g"
+          :alt="`${article.title} - ${idx + 1}`"
+          class="w-full h-56 object-cover rounded-lg border border-gray-200"
+          loading="lazy"
+        />
+      </div>
+    </article>
+
+    <!-- Not found -->
+    <div v-else class="py-16 text-center text-gray-600">
+      <p>We couldn’t find this news item.</p>
+      <router-link
+        :to="{ name: 'news-events' }"
+        class="text-usea_secondary font-semibold hover:underline"
+      >
+        Back to News
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import Titlebg from '@/components/Slide/TitleBg.vue';
-import RightNav from '@/components/SideBar/Right-Nav.vue';
-import event from '@/assets/images/news1.jpg';
-import event1 from '@/assets/images/news5.jpg';
-import event2 from '@/assets/images/news6.jpg';
-import event3 from '@/assets/images/news7.jpg';
+import { computed, ref, onMounted, watch } from "vue";
+import { useRoute } from "vue-router";
+import Titlebg from "@/components/Slide/TitleBg.vue";
 
+const STORAGE_KEY = "latestNewsItems";
+const route = useRoute();
+const slug = computed(() => route.params.slug);
 
+/* Load list from sessionStorage (seeded by LatestNews.vue).
+   Also accept history.state.article if you decide to pass it via <router-link :state="{ article }"> */
+const list = ref([]);
 
+const loadList = () => {
+  try {
+    list.value = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "[]");
+  } catch {
+    list.value = [];
+  }
+};
+
+onMounted(() => {
+  loadList();
+
+  // If router state has an article, merge it to list so direct nav also works
+  const stateArticle = history.state && history.state.article;
+  if (stateArticle && !list.value.find((i) => i.slug === stateArticle.slug)) {
+    list.value.push(stateArticle);
+    try {
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(list.value));
+    } catch {}
+  }
+
+  // Set page title
+  if (article.value?.title) {
+    document.title = `${article.value.title} - USEA`;
+  }
+  // Scroll to top on open
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+watch(slug, () => {
+  // If navigating between details without full reload
+  if (article.value?.title) {
+    document.title = `${article.value.title} - USEA`;
+  }
+});
+
+const article = computed(() => list.value.find((i) => i.slug === slug.value));
+
+const fallbackBody =
+  "Details coming soon. Please check back shortly for the full story and photos.";
 </script>

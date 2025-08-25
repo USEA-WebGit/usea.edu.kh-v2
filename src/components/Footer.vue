@@ -1,91 +1,188 @@
 <template>
-    <div class="bg-[#002060] mt-5">
-    <div class="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 gap-8 justify-items-center items-stretch p-10">
-        <!-- Quick Links -->
-        <div class="flex flex-col gap-5 w-[75%] h-full">
-            <span class="font-bold 2xl:text-2xl text-white">Quick Links</span>
-            <div class="text-white flex flex-col gap-3 links 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
-                <router-link :to="{name: 'history'}"><li class="block">History & Logo Meaning</li></router-link>
-                <router-link :to="{name: 'vision'}"><li class="block">Vision & Mission</li></router-link>
-                <router-link :to="{name: 'location'}"><li class="block">Location</li></router-link>
-                <router-link :to="{name: 'message'}"><li class="block">Message from President</li></router-link>
-                <router-link :to="{name: 'board-trustee'}"><li class="block">Board of Trustees</li></router-link>
-                <router-link :to="{name: 'recognition'}"><li class="block">Recognition & Accreditation</li></router-link>
-            </div>
-        </div>
-        <!-- Faculty & Information -->
-        <div class="flex flex-col gap-5 w-[75%] h-full">
-            <span class="font-bold 2xl:text-2xl text-white">Faculty & Information</span>
-            <div class="text-white flex flex-col gap-3 links 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
-                <router-link :to="{name: 'faculty-page', params: {facultyName: 'economics-business-tourism'}}"><li class="block">Faculty of Economics, Business & Tourism</li></router-link>
-                <router-link :to="{name: 'faculty-page', params: {facultyName: 'science-technology'}}"><li class="block">Faculty of Sciences & Technology</li></router-link>
-                <router-link :to="{name: 'faculty-page', params: {facultyName: 'social-science-law'}}"><li class="block">Faculty of Social Science & Law</li></router-link>
-                <router-link :to="{name: 'faculty-page', params: {facultyName: 'arts-humanities-languages'}}"><li class="block">Faculty of Arts Humanities Language</li></router-link>
-                <router-link :to="{name: 'news-events'}"><li class="block">Events & News</li></router-link>
-                <router-link :to="{name: 'faq'}"><li class="block">FAQ</li></router-link>
-            </div>
-        </div>
-        <!-- Contact Us -->
-        <div class="flex flex-col gap-5 w-[75%]">
-            <span class="font-bold 2xl:text-2xl text-white">Contact Us</span>
-            <div class="text-white flex flex-col gap-3 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm leading-relaxed">
-                <p><span class="font-bold">Address:</span> Wat Bo Village, SangKat Salakamroek Siemreap Municipality, Cambodia (Opposite Angkor High School)</p>
-                <p>(+855) 63 900 090</p>
-                <p>(+855) 92 429 966</p>
-                <p>(+855) 77 667 873</p>
-            </div>
-        </div>
-        <!-- Logo -->
-        <div class="flex justify-center items-center w-[75%]">
-            <router-link :to="{name: 'Home'}"><img :src="UseaLogo" alt="logo" class="w-3/4"></router-link>
-        </div>
-    </div>
-    <div class="bg-[#002060] text-center border-t-[1px] border-white p-5 2xl:text-lg xl:text-lg lg:text-md md:text-md sm:text-sm text-sm">
-        <p class="text-white 2xl:text-sm">Copyright © 2006 University of South-East Asia, All rights reserved.</p>
-    </div>
-</div>
+  <footer class="bg-[#002060] text-white">
+    <!-- Top -->
+    <div
+      class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%] grid gap-10 p-8 lg:p-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+    >
+      <!-- Brand + Newsletter -->
+      <section class="flex flex-col gap-4">
+        <RouterLink
+          :to="{ name: 'Home' }"
+          class="flex flex-col justify-center items-center gap-3"
+        >
+          <img
+            :src="UseaLogo"
+            alt="USEA logo"
+            class="w-32 h-32 object-contain rounded-lg"
+          />
+          <div class="leading-tight">
+            <p class="font-extrabold text-lg">University of South-East Asia</p>
+            <p class="text-white/70 text-sm">Siem Reap, Cambodia</p>
+          </div>
+        </RouterLink>
 
+        <p class="text-white/80 text-sm">
+          Empowering students through quality education, research, and community
+          engagement.
+        </p>
+
+        <!-- Socials -->
+        <div class="flex gap-3">
+          <a
+            v-for="s in socials"
+            :key="s.label"
+            :href="s.href"
+            target="_blank"
+            class="p-2"
+          >
+            <i :class="s.icon + ' text-xl hover:text-[#ffcc00] transition'"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Quick Links -->
+      <nav class="flex flex-col gap-5">
+        <h3 class="font-bold text-xl">Quick Links</h3>
+        <ul class="space-y-2 text-white/90">
+          <li v-for="item in quickLinks" :key="item.label">
+            <RouterLink
+              :to="item.to"
+              class="inline-flex items-center gap-2 hover:translate-x-1 transition hover:text-[#ffcc00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded"
+            >
+              <span class="i-dot" />
+              <span class="font-medium">{{ item.label }}</span>
+            </RouterLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Faculties -->
+      <nav class="flex flex-col gap-5">
+        <h3 class="font-bold text-xl">Faculty & Information</h3>
+        <ul class="space-y-2 text-white/90">
+          <li v-for="item in faculties" :key="item.label">
+            <RouterLink
+              :to="item.to"
+              class="inline-flex items-center gap-2 hover:translate-x-1 transition hover:text-[#ffcc00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded"
+            >
+              <span class="i-dot" />
+              <span class="font-medium">{{ item.label }}</span>
+            </RouterLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact -->
+      <section class="flex flex-col gap-5">
+        <h3 class="font-bold text-xl">Contact Us</h3>
+        <ul class="space-y-3 text-white/90">
+          <li class="leading-relaxed">
+            <span class="font-semibold">Address:</span>
+            Wat Bo Village, SangKat Salakamroek, Siem Reap (Opposite Angkor High
+            School)
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> (+855) 63 900 090
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> (+855) 92 429 966
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> (+855) 77 667 873
+          </li>
+          <li>
+            <a
+              href="mailto:info@usea.edu.kh"
+              class="inline-flex items-center gap-2 hover:text-[#ffcc00] transition"
+            >
+              <i class="fa-solid fa-envelope"></i> info@usea.edu.kh
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Divider -->
+    <div
+      class="h-px w-full bg-gradient-to-r from-transparent via-white/25 to-transparent"
+    />
+
+    <!-- Bottom -->
+    <div class="text-center px-4 py-6 text-white/80 text-sm">
+      © {{ year }} University of South-East Asia. All rights reserved.
+    </div>
+  </footer>
 </template>
 
 <script setup>
-    import UseaLogo from '@/assets/title/logo_update.png';
+import { computed } from "vue";
+import { RouterLink } from "vue-router";
+import UseaLogo from "@/assets/title/logo_update.png";
+
+const year = new Date().getFullYear();
+
+const socials = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/usea.edu.kh",
+    icon: "fab fa-facebook-f",
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@usea-edu-kh",
+    icon: "fab fa-youtube",
+  },
+  {
+    label: "Telegram",
+    href: "https://t.me/university_of_south_east_asia",
+    icon: "fab fa-telegram-plane",
+  },
+];
+
+const quickLinks = [
+  { label: "History & Logo Meaning", to: { name: "history" } },
+  { label: "Vision & Mission", to: { name: "vision" } },
+  { label: "Location", to: { name: "location" } },
+  { label: "Message from President", to: { name: "message" } },
+  { label: "Board of Trustees", to: { name: "board-trustee" } },
+  { label: "Recognition & Accreditation", to: { name: "recognition" } },
+];
+
+const faculties = [
+  {
+    label: "Faculty of Economics, Business & Tourism",
+    to: {
+      name: "faculty-page",
+      params: { facultyName: "economics-business-tourism" },
+    },
+  },
+  {
+    label: "Faculty of Sciences & Technology",
+    to: { name: "faculty-page", params: { facultyName: "science-technology" } },
+  },
+  {
+    label: "Faculty of Social Science & Law",
+    to: { name: "faculty-page", params: { facultyName: "social-science-law" } },
+  },
+  {
+    label: "Faculty of Arts Humanities Language",
+    to: {
+      name: "faculty-page",
+      params: { facultyName: "arts-humanities-languages" },
+    },
+  },
+  { label: "Events & News", to: { name: "news-events" } },
+  { label: "FAQ", to: { name: "faq" } },
+];
 </script>
 
 <style scoped>
-/* Links hover effect and alignment */
-.links a {
-    display: block;
-    transform: translateX(0); /* Remove the initial offset for better alignment */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for hover effects */
-    color: #ffffff; /* Ensure text is white for contrast */
-    white-space: nowrap; /* Prevent wrapping of long text */
-}
-
-/* Hover effect to slide the link slightly */
-.links a:hover {
-    transform: translateX(3px); /* Slide to the right on hover */
-    color: #ffcc00; /* Change color to a highlight color on hover */
-}
-
-/* Bold text for hover effect */
-.links a:focus,
-.links a:hover {
-    font-weight: bold; /* Make the text bold when hovered or focused */
-}
-
-/* Fine-tune logo appearance */
-img {
-    border-radius: 8px; /* Slightly round the corners of the logo */
-    transition: transform 0.3s ease; /* Add a hover animation */
-}
-
-/* Scale the logo on hover */
-img:hover {
-    transform: scale(1.05); /* Slightly enlarge the logo */
-}
-
-/* Text styling for address section */
-.text-sm {
-    color: #f0f0f0; /* Softer white color for readability */
+/* tiny decorative dot before links */
+.i-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
 }
 </style>
