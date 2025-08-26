@@ -55,7 +55,7 @@
 
         <!-- Text column -->
         <article
-          class="lg:col-span-7 space-y-5 text-gray-800 leading-relaxed text-[1.05rem]"
+          class="lg:col-span-7 space-y-5 text-gray-800 leading-relaxed text-[1.05rem] text-justify"
         >
           <p>
             On behalf of the University of South-East Asia, I would like to
