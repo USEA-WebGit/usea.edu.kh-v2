@@ -1,4 +1,4 @@
-<!-- views/services/career/Events.vue -->
+<!-- views/services/career/News.vue -->
 <template>
   <div>
     <Titlebg :title="pageTitle" :breadcrumb="pageTitle" />
@@ -10,60 +10,32 @@
       <section class="flex flex-col gap-6 min-w-0">
         <div class="flex items-center justify-between">
           <h2 class="text-2xl sm:text-3xl font-bold text-usea_secondary">
-            Events
+            News
           </h2>
           <div class="text-sm text-gray-500 font-medium">
-            {{ total }} event{{ total !== 1 ? "s" : "" }}
+            {{ total }} item{{ total !== 1 ? "s" : "" }}
           </div>
-        </div>
-
-        <!-- Tabs -->
-        <div class="flex items-center gap-2">
-          <button
-            class="px-3 py-1.5 rounded-lg border text-sm font-semibold"
-            :class="
-              activeTab === 'upcoming'
-                ? 'bg-[#002060] text-white border-[#002060]'
-                : 'border-gray-200 hover:bg-gray-50 text-[#002060]'
-            "
-            @click="switchTab('upcoming')"
-            title="Events happening today or tomorrow"
-          >
-            Upcoming ({{ upcoming.length }})
-          </button>
-
-          <button
-            class="px-3 py-1.5 rounded-lg border text-sm font-semibold"
-            :class="
-              activeTab === 'past'
-                ? 'bg-[#002060] text-white border-[#002060]'
-                : 'border-gray-200 hover:bg-gray-50 text-[#002060]'
-            "
-            @click="switchTab('past')"
-          >
-            Past ({{ past.length }})
-          </button>
         </div>
 
         <!-- Empty state -->
         <div
-          v-if="activeCount === 0"
+          v-if="total === 0"
           class="text-gray-500 bg-white/70 p-8 rounded-xl border border-gray-200"
         >
-          No {{ activeTab }} events.
+          No news found.
         </div>
 
         <!-- Cards -->
         <div v-else class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <article
-            v-for="ev in activeItems"
-            :key="ev.id"
+            v-for="n in items"
+            :key="n.id"
             class="group bg-white/90 backdrop-blur border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
           >
             <div class="relative">
               <img
-                :src="ev.thumbnail || career?.image"
-                :alt="ev.title"
+                :src="n.thumbnail || career?.image"
+                :alt="n.title"
                 class="h-44 w-full object-cover"
               />
               <div
@@ -74,7 +46,8 @@
                 <div
                   class="rounded-lg bg-white/90 border border-white/50 px-2 py-1 text-xs font-semibold"
                 >
-                  {{ fmt(ev.date) }} • {{ ev.time }}
+                  {{ fmt(n.date)
+                  }}<template v-if="n.time"> • {{ n.time }}</template>
                 </div>
               </div>
             </div>
@@ -82,33 +55,36 @@
             <div class="p-5">
               <h3
                 class="text-lg font-bold text-[#002060] group-hover:underline underline-offset-4 line-clamp-1"
-                :title="ev.title"
+                :title="n.title"
               >
-                {{ ev.title }}
+                {{ n.title }}
               </h3>
 
-              <div class="mt-1 text-sm text-gray-600 flex items-center gap-2">
+              <div
+                v-if="n.location"
+                class="mt-1 text-sm text-gray-600 flex items-center gap-2"
+              >
                 <i class="fa-solid fa-location-dot"></i>
-                <span class="line-clamp-1" :title="ev.location">
-                  {{ ev.location }}
+                <span class="line-clamp-1" :title="n.location">
+                  {{ n.location }}
                 </span>
               </div>
 
               <p class="mt-3 text-gray-700 line-clamp-3">
-                {{ ev.description }}
+                {{ n.description }}
               </p>
 
               <div class="mt-4 flex items-center justify-between">
                 <span
                   class="px-2.5 py-1 rounded-full text-xs border"
-                  :class="eventBadge(ev.date)"
+                  :class="newsBadge(n.date)"
                 >
-                  {{ eventBadgeText(ev.date) }}
+                  {{ newsBadgeText(n.date) }}
                 </span>
 
                 <div class="flex items-center gap-2">
                   <RouterLink
-                    :to="{ name: 'career-event-detail', params: { id: ev.id } }"
+                    :to="{ name: 'career-news-detail', params: { id: n.id } }"
                     class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-200 hover:bg-gray-50 text-sm font-semibold"
                     title="View details"
                   >
@@ -118,7 +94,7 @@
 
                   <button
                     class="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-gray-200 hover:bg-gray-50 text-[15px]"
-                    @click="share(ev)"
+                    @click="share(n)"
                     title="Copy share link"
                   >
                     <i class="fa-solid fa-share-nodes"></i>
@@ -129,25 +105,25 @@
           </article>
         </div>
 
-        <!-- Pagination (per-tab) -->
+        <!-- Pagination -->
         <div
-          v-if="activePages > 1"
+          v-if="pages > 1"
           class="flex items-center justify-center gap-2 pt-2"
         >
           <button
             class="px-3 py-1.5 rounded-lg border border-gray-200 text-sm disabled:opacity-50"
-            :disabled="activePage === 1"
+            :disabled="page === 1"
             @click="prevPage()"
           >
             Prev
           </button>
 
           <button
-            v-for="n in activePages"
+            v-for="n in pages"
             :key="n"
             class="px-3 py-1.5 rounded-lg border text-sm"
             :class="
-              n === activePage
+              n === page
                 ? 'bg-[#002060]/5 border-[#002060] text-[#002060] font-semibold'
                 : 'border-gray-200 hover:bg-gray-50'
             "
@@ -158,7 +134,7 @@
 
           <button
             class="px-3 py-1.5 rounded-lg border border-gray-200 text-sm disabled:opacity-50"
-            :disabled="activePage === activePages"
+            :disabled="page === pages"
             @click="nextPage()"
           >
             Next
@@ -182,7 +158,7 @@ import Titlebg from "@/components/Slide/TitleBg.vue";
 import RightServices from "@/components/SideBar/RightServices.vue";
 import { services } from "@/data/service.js";
 
-/* Root career node */
+/* Source */
 const career = services["career-center"] ?? {};
 const links = Array.isArray(career.links) ? career.links : [];
 const eventsBlock =
@@ -191,7 +167,7 @@ const raw = Array.isArray(eventsBlock.eventnewlist)
   ? eventsBlock.eventnewlist
   : [];
 
-const pageTitle = "Career Center Events";
+const pageTitle = "Career Center News";
 
 /* Helpers */
 function parseDMY(str) {
@@ -210,33 +186,33 @@ function fmt(str) {
   const day = String(d.getDate()).padStart(2, "0");
   return `${day}-${m}-${y}`;
 }
-function daysLeft(dateStr) {
+function daysAgo(dateStr) {
   if (!dateStr) return null;
-  const due = parseDMY(dateStr);
+  const pub = parseDMY(dateStr);
   const today = new Date();
-  due.setHours(0, 0, 0, 0);
+  pub.setHours(0, 0, 0, 0);
   today.setHours(0, 0, 0, 0);
-  return Math.round((due - today) / (1000 * 60 * 60 * 24));
+  return Math.round((today - pub) / (1000 * 60 * 60 * 24));
 }
-function eventBadge(dateStr) {
-  const left = daysLeft(dateStr);
-  if (left === null) return "bg-gray-100 border-gray-200 text-gray-700";
-  if (left < 0) return "bg-red-50 border-red-200 text-red-600";
-  if (left === 0 || left === 1)
-    return "bg-emerald-50 border-emerald-200 text-emerald-700";
-  return "bg-amber-50 border-amber-200 text-amber-700";
+function newsBadge(dateStr) {
+  const ago = daysAgo(dateStr);
+  if (ago === null) return "bg-gray-100 border-gray-200 text-gray-700";
+  if (ago < 0) return "bg-sky-50 border-sky-200 text-sky-700"; // scheduled
+  if (ago <= 1) return "bg-emerald-50 border-emerald-200 text-emerald-700";
+  if (ago <= 7) return "bg-amber-50 border-amber-200 text-amber-700";
+  return "bg-gray-50 border-gray-200 text-gray-700";
 }
-function eventBadgeText(dateStr) {
-  const left = daysLeft(dateStr);
-  if (left === null) return "Scheduled";
-  if (left < 0) return "Past";
-  if (left === 0) return "Today";
-  if (left === 1) return "Tomorrow";
-  return `${left} day(s) left`;
+function newsBadgeText(dateStr) {
+  const ago = daysAgo(dateStr);
+  if (ago === null) return "Published";
+  if (ago < 0) return "Scheduled";
+  if (ago === 0) return "Today";
+  if (ago === 1) return "Yesterday";
+  return `${ago} day(s) ago`;
 }
-async function share(ev) {
+async function share(n) {
   const base = window.location.origin;
-  const url = `${base}/services/career-center/events/${ev.id}`;
+  const url = `${base}/services/career-center/news/${n.id}`;
   try {
     await navigator.clipboard.writeText(url);
     alert("Share link copied to clipboard!");
@@ -245,100 +221,41 @@ async function share(ev) {
   }
 }
 
-// All items are events now
-const eventsOnly = computed(() => raw);
-
-/* Buckets:
-   - Upcoming = today (0) or tomorrow (1)
-   - Past     = dates < today
-*/
-// Upcoming = any future (>= today)
-const upcoming = computed(() =>
-  eventsOnly.value
-    .filter((e) => {
-      const d = daysLeft(e.date);
-      return d !== null && d >= 0; // ← was: d >= 0 && d <= 1
-    })
-    .sort((a, b) => parseDMY(a.date) - parseDMY(b.date))
-);
-
-const past = computed(() =>
-  eventsOnly.value
-    .filter((e) => {
-      const d = daysLeft(e.date);
-      return d !== null && d < 0;
-    })
+/* News only (category contains 'news'), newest first */
+const newsOnly = computed(() =>
+  raw
+    .filter((i) =>
+      String(i.category || "")
+        .toLowerCase()
+        .includes("news")
+    )
     .sort((a, b) => parseDMY(b.date) - parseDMY(a.date))
 );
 
-const total = computed(() => eventsOnly.value.length);
+const total = computed(() => newsOnly.value.length);
 
-/* Tabs + per-tab pagination */
-const activeTab = ref("upcoming"); // stays 2-tab
+/* Pagination (same UX as Events.vue) */
 const perPage = 6;
-
-const pageUpcoming = ref(1);
-const pagePast = ref(1);
-
-const pagesUpcoming = computed(() =>
-  Math.max(1, Math.ceil(upcoming.value.length / perPage))
-);
-const pagesPast = computed(() =>
-  Math.max(1, Math.ceil(past.value.length / perPage))
-);
-
-const itemsUpcoming = computed(() => {
-  const start = (pageUpcoming.value - 1) * perPage;
-  return upcoming.value.slice(start, start + perPage);
+const page = ref(1);
+const pages = computed(() => Math.max(1, Math.ceil(total.value / perPage)));
+const items = computed(() => {
+  const start = (page.value - 1) * perPage;
+  return newsOnly.value.slice(start, start + perPage);
 });
-const itemsPast = computed(() => {
-  const start = (pagePast.value - 1) * perPage;
-  return past.value.slice(start, start + perPage);
-});
-
-/* Active derived */
-const activeItems = computed(() =>
-  activeTab.value === "upcoming" ? itemsUpcoming.value : itemsPast.value
-);
-const activePages = computed(() =>
-  activeTab.value === "upcoming" ? pagesUpcoming.value : pagesPast.value
-);
-const activePage = computed({
-  get: () =>
-    activeTab.value === "upcoming" ? pageUpcoming.value : pagePast.value,
-  set: (v) => {
-    if (activeTab.value === "upcoming") pageUpcoming.value = v;
-    else pagePast.value = v;
-  },
-});
-const activeCount = computed(() =>
-  activeTab.value === "upcoming" ? upcoming.value.length : past.value.length
-);
-
-function switchTab(tab) {
-  if (activeTab.value === tab) return;
-  activeTab.value = tab;
-  if (tab === "upcoming") pageUpcoming.value = 1;
-  else pagePast.value = 1;
-}
 function go(n) {
-  if (n < 1 || n > activePages.value) return;
-  activePage.value = n;
+  if (n < 1 || n > pages.value) return;
+  page.value = n;
 }
 function prevPage() {
-  if (activePage.value > 1) activePage.value -= 1;
+  if (page.value > 1) page.value -= 1;
 }
 function nextPage() {
-  if (activePage.value < activePages.value) activePage.value += 1;
+  if (page.value < pages.value) page.value += 1;
 }
 
-/* Keep page indices valid */
-watch(upcoming, () => {
-  if (pageUpcoming.value > pagesUpcoming.value)
-    pageUpcoming.value = pagesUpcoming.value;
-});
-watch(past, () => {
-  if (pagePast.value > pagesPast.value) pagePast.value = pagesPast.value;
+/* Keep page index valid when list changes */
+watch(newsOnly, () => {
+  if (page.value > pages.value) page.value = pages.value;
 });
 </script>
 

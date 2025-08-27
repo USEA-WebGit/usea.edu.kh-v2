@@ -16,7 +16,7 @@
             {{ item.title }}
           </p>
         </div>
-        <a
+        <!-- <a
           v-if="item.website"
           :href="item.website"
           target="_blank"
@@ -34,7 +34,7 @@
             <path d="M5 5h5V3H3v7h2V5z" />
             <path d="M19 19H5V9H3v12h16v-2z" />
           </svg>
-        </a>
+        </a> -->
       </div>
     </div>
   </div>

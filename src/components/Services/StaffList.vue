@@ -1,11 +1,9 @@
-<!-- views/faculty/FacultyStaff.vue -->
 <template>
   <div>
     <Titlebg :title="pageTitle" :breadcrumb="pageTitle" />
 
     <div
-      v-if="faculty"
-      class="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[2fr_1fr] xl:gap-14"
+      class="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[2fr_1fr] xl:gap-14 mb-5"
     >
       <!-- LEFT -->
       <section class="flex flex-col gap-6 min-w-0">
@@ -13,20 +11,24 @@
           Our Team
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          v-if="members.length"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
           <article
-            v-for="(m, i) in faculty.members"
+            v-for="(m, i) in members"
             :key="i"
             :id="'member-' + slug(m.name)"
             class="bg-white/95 border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
           >
-            <!-- top stripe -->
+            <!-- Top gradient header with rounded corners -->
             <div
               class="h-3 w-full rounded-t-2xl bg-gradient-to-r from-[#002060] via-[#2246b8] to-[#6aa6ff]"
             ></div>
 
+            <!-- Body -->
             <div class="p-5">
-              <!-- avatar (no overlap for a clean stripe) -->
+              <!-- Avatar now sits BELOW the stripe, no overlap / notch -->
               <div class="mb-3">
                 <div
                   class="h-full w-full rounded-xl overflow-hidden ring-2 ring-gray-100 shadow-sm bg-gray-100"
@@ -82,48 +84,55 @@
             </div>
           </article>
         </div>
+
+        <div
+          v-else
+          class="text-gray-500 bg-white/70 p-8 rounded-xl border border-gray-200 text-center"
+        >
+          No staff members found.
+        </div>
       </section>
 
       <!-- RIGHT -->
       <aside
         class="w-full lg:w-[340px] xl:w-[380px] shrink-0 lg:sticky lg:top-28 h-max"
       >
-        <FacultySidebar
-          :facultyKey="facultyKey"
-          :routes="{
-            about: 'faculty-page',
-            staff: 'faculty-staff',
-            department: 'department-name',
-          }"
-          :paramKeys="{ about: 'facultyName', staff: 'facultyStaff' }"
-          :collapseOnMobile="true"
-        />
+        <RightServices />
       </aside>
-    </div>
-
-    <!-- Fallback -->
-    <div v-else class="mx-auto max-w-[800px] p-6 text-center text-gray-600">
-      Faculty not found.
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from "vue";
-import { useRoute } from "vue-router";
 import Titlebg from "@/components/Slide/TitleBg.vue";
-import FacultySidebar from "@/components/SideBar/FacultySidebar.vue";
-import { faculties } from "@/data/faculty.js";
+import RightServices from "@/components/SideBar/RightServices.vue";
+import { services } from "@/data/service.js";
 
-/* Route: /academic/faculty/:facultyStaff/faculty-staff */
-const route = useRoute();
-const facultyKey = computed(() => String(route.params.facultyStaff || ""));
-const faculty = computed(() => faculties?.[facultyKey.value] || null);
-
-const pageTitle = computed(() => {
-  const base = faculty?.value?.title || "Faculty Staff";
-  return `${base} Staff`;
+const props = defineProps({
+  // 'career-center' | 'library' | 'it-services' | 'health-services'
+  serviceKey: { type: String, required: true },
 });
+
+const service = computed(() => services?.[props.serviceKey] || {});
+
+/* Members:
+   - career/it/health: links[*-staff].members
+   - library: service.members
+*/
+const members = computed(() => {
+  const s = service.value || {};
+  const fromLink = Array.isArray(s.links)
+    ? s.links.find((l) => /\-staff$/.test(String(l?.key || l?.name || "")))
+        ?.members || []
+    : [];
+  if (fromLink.length) return fromLink;
+  return Array.isArray(s.members) ? s.members : [];
+});
+
+const pageTitle = computed(() =>
+  service.value?.title ? `${service.value.title} Staff` : "Staff"
+);
 
 /* Helpers */
 function slug(s = "") {
@@ -139,7 +148,7 @@ function initials(name = "") {
   const parts = name.trim().split(/\s+/).slice(0, 2);
   return (
     parts
-      .map((p) => p[0])
+      .map((p) => p.charAt(0))
       .join("")
       .toUpperCase() || "U"
   );

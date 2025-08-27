@@ -1,135 +1,223 @@
+<!-- views/services/it/About.vue -->
 <template>
   <div>
-    <Titlebg title="Career Center" breadcrumb="Career Center" />
-  </div>
+    <Titlebg
+      :title="it?.title || 'IT Services'"
+      :breadcrumb="it?.title || 'IT Services'"
+    />
 
-  <!-- Main container -->
-  <div
-    class="container mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[2fr_1fr]"
-  >
-    <!-- LEFT -->
-    <div>
-      <!-- HERO / ABOUT -->
-      <section class="mt-8">
-        <div class="flex flex-col items-center gap-6">
-          <!-- Image scales responsively -->
-          <img
-            :src="careerCenter"
-            alt="Career Center"
-            class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-48 sm:h-60 md:h-72 object-cover rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
-          />
-
-          <!-- Title + Text (FULL WIDTH of the left column) -->
-          <div class="w-full">
-            <h3 class="text-2xl sm:text-3xl text-usea_secondary font-bold mb-4">
-              CAREER CENTER
-            </h3>
-            <p
-              class="text-justify text-base sm:text-lg leading-7 font-noto_sans"
-            >
-              The South East Asia University Career Center, in partnership with
-              USAID DWD Digital Workforce Development, was established to engage
-              higher education institutions (HEIs) and the local private sector
-              for the development of internship programs and/or job
-              opportunities for students and young professionals. The center
-              will help address the mismatch between youth skills and employer
-              needs through soft skills training and workshops. Through the USEA
-              Student Job Center, students will access career information,
-              networks, and development opportunities that empower them to make
-              informed decisions. The Center serves all disciplines with
-              employment advice, soft skills development, and access to
-              internships and jobs—connecting students to resources, events,
-              mentoring, and potential employers.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- VISION & OBJECTIVE -->
-      <section class="bg-gray-600 mt-10 rounded-xl p-6 sm:p-8">
-        <div class="flex flex-col items-center text-center">
-          <h3 class="text-2xl sm:text-3xl font-bold text-white">
-            VISION & OBJECTIVE
-          </h3>
-          <div class="h-1 w-16 sm:w-20 bg-green-600 mt-2 rounded"></div>
-        </div>
-
-        <!-- 1 col on mobile, 2 cols on md+ -->
-        <div
-          class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-start text-white"
-        >
-          <!-- Image -->
-          <div>
-            <img
-              :src="careerCenter1"
-              alt="Vision and Objective"
-              class="w-full h-56 sm:h-64 md:h-72 object-cover rounded-lg transition-transform duration-500 hover:scale-105"
-            />
-          </div>
-
-          <!-- Text / List -->
-          <div class="flex flex-col gap-5 text-base sm:text-lg leading-7">
-            <p class="font-noto_sans">
-              និស្សិតត្រូវបានផ្ដល់សិទ្ធិសម្រាប់បង្កើតនូវជម្រើសរបស់ពួកគេដោយខ្លួនឯងអំពីអាជីពការងារ
-              ក៏ដូចជាអាចគ្រប់គ្រងជីវិតដោយការប្រើប្រាស់អាជីពផ្ទាល់ខ្លួន
-              ដែលភ្ជាប់ទៅនឹងព័ត៌មាន បណ្តាញវិជ្ជាជីវៈ ឱកាស និងភាពមានការងារធ្វើ
-              ដើម្បីអភិវឌ្ឍ និងពង្រឹងជំនាញដែលត្រឹមត្រូវ។
-            </p>
-            <ul class="space-y-3 font-noto_sans">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                ភ្ជាប់និស្សិតជាមួយជំនាញច្បាស់លាស់
-                និងផ្នត់គំនិតសម្រាប់ការងារនៅយុគសម័យសេដ្ឋកិច្ចឌីជីថល
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                ផ្តល់ឱកាសការងារហាត់ការ និងអាហារូបករណ៍
-                ដើម្បីទទួលបានបទពិសោធន៍ពាក់ព័ន្ធ
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                ភ្ជាប់និស្សិតទៅនិយោជក (ឯកជន អង្គការសង្គមស៊ីវិល និងរដ្ឋ)
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-green-400 mt-1"></i>
-                បង្កើតសហគមន៍រឹងមាំជាមួយអតីតនិស្សិត
-                ដើម្បីជំរុញការផ្លាស់ប្តូរដោយវិជ្ជមាន
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ACTIVITIES -->
-      <section class="mt-10">
-        <div>
-          <span class="text-2xl sm:text-3xl text-usea_secondary font-bold"
-            >ACTIVITIES</span
+    <div
+      class="grid lg:grid-cols-[70%_30%] gap-6 lg:gap-10 mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%] mb-5"
+    >
+      <div>
+        <!-- LEFT -->
+        <div class="flex flex-col gap-10 min-w-0">
+          <!-- HERO / ABOUT -->
+          <section
+            class="relative overflow-hidden rounded-2xl border border-gray-100 bg-white/80 shadow-sm backdrop-blur"
           >
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-5 mb-5">
-          <img
-            v-for="i in 6"
-            :key="i"
-            :src="demo"
-            alt="Activity"
-            class="w-full h-36 sm:h-40 md:h-44 object-cover rounded-lg transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-      </section>
-    </div>
+            <div class="grid md:grid-cols-2">
+              <!-- Text -->
+              <div class="p-6 sm:p-8 lg:p-10 flex flex-col gap-5">
+                <div class="inline-flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-usea_secondary"></span>
+                  <span
+                    class="uppercase tracking-wide text-xs sm:text-sm text-usea_secondary/80 font-semibold"
+                  >
+                    {{ it?.title || "IT Services" }}
+                  </span>
+                </div>
 
-    <!-- RIGHT (sticky sidebar on desktop) -->
-    <aside class="lg:sticky lg:top-28 h-max">
-      <RightServices />
-    </aside>
+                <h2
+                  class="text-2xl sm:text-3xl font-bold text-usea_secondary leading-tight"
+                >
+                  ABOUT {{ (it?.title || "IT Services").toUpperCase() }}
+                </h2>
+
+                <p
+                  v-if="about?.description"
+                  class="text-justify text-base sm:text-lg leading-7 text-gray-700 font-noto_sans"
+                >
+                  {{ about.description }}
+                </p>
+              </div>
+
+              <!-- Image -->
+              <div class="relative order-1 md:order-none">
+                <img
+                  :src="it?.image"
+                  :alt="it?.title || 'IT Services'"
+                  class="h-full w-full object-cover md:rounded-l-2xl"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 md:inset-y-0 md:inset-x-auto md:w-1/6"
+                ></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SERVICES (from about.content) -->
+          <section
+            v-if="sections.length"
+            class="rounded-2xl bg-gradient-to-br from-[#334155] to-[#1f2937] text-white p-6 sm:p-8 lg:p-10 shadow-md"
+          >
+            <div class="flex flex-col items-center text-center mb-2">
+              <h3 class="text-2xl sm:text-3xl font-bold leading-tight">
+                IT SERVICES
+              </h3>
+              <div class="h-1 w-16 sm:w-20 bg-emerald-400 mt-2 rounded"></div>
+            </div>
+
+            <div class="mt-6 grid gap-6 md:gap-8">
+              <div
+                v-for="(sec, idx) in sections"
+                :key="idx"
+                class="grid md:grid-cols-2 gap-6 md:gap-10 items-start"
+              >
+                <!-- Image (reuse service image) -->
+                <div class="group relative overflow-hidden rounded-xl">
+                  <img
+                    :src="it?.image"
+                    :alt="(it?.title || 'IT Services') + ' image'"
+                    class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
+                  ></div>
+                </div>
+
+                <!-- Bullet list -->
+                <div class="rounded-xl text-white p-5 border border-white/20">
+                  <h4 class="text-lg font-semibold mb-3">{{ sec.title }}</h4>
+                  <ul class="space-y-2 text-[15px] leading-6">
+                    <li
+                      v-for="(li, i) in sec.li || []"
+                      :key="i"
+                      class="flex gap-2"
+                    >
+                      <i
+                        class="fa-regular fa-circle-check mt-0.5 text-emerald-500"
+                      ></i>
+                      <span>{{ li }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TEAM (from it-staff link, if present) -->
+          <section v-if="staff.length" class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl sm:text-3xl font-bold text-usea_secondary">
+                Our Team
+              </h3>
+            </div>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6"
+            >
+              <div
+                v-for="m in staff"
+                :key="m.name"
+                class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden"
+              >
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                  <img
+                    :src="m.image"
+                    :alt="m.name"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="p-4">
+                  <div
+                    class="font-semibold text-[#002060] leading-tight line-clamp-1"
+                    :title="m.name"
+                  >
+                    {{ m.name }}
+                  </div>
+                  <div
+                    class="text-sm text-gray-600 line-clamp-2"
+                    :title="m.position"
+                  >
+                    {{ m.position }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACTIVITIES -->
+          <section
+            v-if="(it?.activities || []).length"
+            class="flex flex-col gap-6"
+          >
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl sm:text-3xl font-bold text-usea_secondary">
+                Activities
+              </h3>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div
+                v-for="(a, i) in it.activities"
+                :key="i"
+                class="group overflow-hidden rounded-xl bg-gray-100"
+              >
+                <img
+                  :src="a.image"
+                  alt="IT activity"
+                  class="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- RIGHT -->
+      <aside>
+        <RightServices />
+      </aside>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { computed } from "vue";
 import Titlebg from "@/components/Slide/TitleBg.vue";
 import RightServices from "@/components/SideBar/RightServices.vue";
-import demo from "@/assets/images/demoCard.png";
-import careerCenter from "@/assets/images/career-center.png";
-import careerCenter1 from "@/assets/images/career-center1.jpg";
+import { services } from "@/data/service.js";
+
+/* Root node for IT Services from service.js */
+const it = services["it-services"] ?? {};
+
+/* Find the "About IT Services" link block */
+const about = computed(() => {
+  const links = Array.isArray(it.links) ? it.links : [];
+  return links.find((l) => (l.key || "").toLowerCase() === "it-about") || {};
+});
+
+/* Sections inside the about block -> lists we render */
+const sections = computed(() =>
+  Array.isArray(about.value?.content) ? about.value.content : []
+);
+
+/* Highlights: use section titles */
+const sectionTitles = computed(() =>
+  sections.value.map((s) => s.title).filter(Boolean)
+);
+
+/* Staff (optional) from the 'it-staff' link */
+const staff = computed(() => {
+  const links = Array.isArray(it.links) ? it.links : [];
+  const staffLink = links.find(
+    (l) => (l.key || "").toLowerCase() === "it-staff"
+  );
+  return Array.isArray(staffLink?.members) ? staffLink.members : [];
+});
 </script>
+
+<style scoped>
+/* Keep custom CSS minimal; Tailwind handles layout/visuals */
+</style>

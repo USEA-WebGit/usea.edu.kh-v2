@@ -1,3 +1,3 @@
 <template>
-  <div>Activity</div>
+  <div>IT Staff</div>
 </template>

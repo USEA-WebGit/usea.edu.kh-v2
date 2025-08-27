@@ -12,7 +12,7 @@
         {{ item.title }}
       </p>
     </div>
-    <div class="flex-shrink-0">
+    <!-- <div class="flex-shrink-0">
       <a
         v-if="item.website"
         :href="item.website"
@@ -22,7 +22,7 @@
       >
         Website
       </a>
-    </div>
+    </div> -->
   </div>
 </template>
 

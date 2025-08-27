@@ -210,24 +210,24 @@
               </ul>
             </div>
           </li>
-          <!-- <router-link :to="{name: 'research'}"><li class="nav-item pb-10">RESEARCH</li></router-link> -->
+          <!-- Desktop mega menu: Services -->
           <li class="nav-item group relative pb-10">
             SERVICES
             <div
               class="mega-menu hidden absolute top-full left-0 w-max bg-white shadow-lg p-7 grid grid-cols-1 z-50 rounded-md"
             >
               <ul class="text-lg text-gray-500">
-                <router-link :to="{ name: 'health-services' }"
-                  ><li class="flex gap-2">Health Services</li></router-link
+                <router-link :to="{ name: 'career-about' }"
+                  ><li class="flex gap-2">Career Center</li></router-link
                 >
-                <router-link :to="{ name: 'it-services' }"
-                  ><li class="flex gap-2">IT Services</li></router-link
-                >
-                <router-link :to="{ name: 'library-services' }"
+                <router-link :to="{ name: 'library-about' }"
                   ><li class="flex gap-2">Library</li></router-link
                 >
-                <router-link :to="{ name: 'career-center' }"
-                  ><li class="flex gap-2">Career Center</li></router-link
+                <router-link :to="{ name: 'it-about' }"
+                  ><li class="flex gap-2">IT Services</li></router-link
+                >
+                <router-link :to="{ name: 'health-about' }"
+                  ><li class="flex gap-2">Health Services</li></router-link
                 >
               </ul>
             </div>
@@ -438,25 +438,26 @@
               v-if="subNavs.services"
               class="pl-4 space-y-2 text-gray-500 text-lg mt-5 flex flex-col"
             >
+              <!-- Mobile > Services menu -->
               <router-link
-                :to="{ name: 'health-services' }"
-                @click="navigateAndClose('health-services')"
-                ><li>Health Services</li></router-link
+                :to="{ name: 'career-about' }"
+                @click="navigateAndClose('career-about')"
+                ><li>Career Center</li></router-link
               >
               <router-link
-                :to="{ name: 'it-services' }"
-                @click="navigateAndClose('it-services')"
-                ><li>IT Services</li></router-link
-              >
-              <router-link
-                :to="{ name: 'library-services' }"
-                @click="navigateAndClose('library-services')"
+                :to="{ name: 'library-about' }"
+                @click="navigateAndClose('library-about')"
                 ><li>Library</li></router-link
               >
               <router-link
-                :to="{ name: 'career-center' }"
-                @click="navigateAndClose('career-center')"
-                ><li>Career Center</li></router-link
+                :to="{ name: 'it-about' }"
+                @click="navigateAndClose('it-about')"
+                ><li>IT Services</li></router-link
+              >
+              <router-link
+                :to="{ name: 'health-about' }"
+                @click="navigateAndClose('health-about')"
+                ><li>Health Services</li></router-link
               >
             </ul>
           </transition>

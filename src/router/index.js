@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 const routes = [
   {
     path: "/",
@@ -7,7 +8,7 @@ const routes = [
     meta: { title: "Home - USEA", breadcrumb: "Home" },
   },
 
-  // start about
+  // ===== About =====
   {
     path: "/about",
     name: "About",
@@ -50,8 +51,9 @@ const routes = [
           import("@/views/Navbar/About/Information/News-Events.vue"),
         meta: { title: "News-Events", breadcrumb: "News and Events" },
       },
+      // NOTE: leading slash makes it root-level; keep if intentional
       {
-        path: "/news/:slug", // e.g. /about/news-events/news-2025-08-16
+        path: "/news/:slug",
         name: "news-detail",
         component: () => import("@/components/Events/News-Detail.vue"),
         props: true,
@@ -95,6 +97,7 @@ const routes = [
           breadcrumb: "Recognition & Accreditation",
         },
       },
+      // NOTE: leading slash = root-level; keep if intentional
       {
         path: "/about/recognition/:slug",
         name: "recognition-detail",
@@ -104,9 +107,8 @@ const routes = [
       },
     ],
   },
-  // end about
 
-  // start academic
+  // ===== Academics =====
   {
     path: "/academic",
     children: [
@@ -235,6 +237,8 @@ const routes = [
       },
     ],
   },
+
+  // ===== Partnership =====
   {
     path: "/partnership",
     name: "Partnership",
@@ -250,39 +254,170 @@ const routes = [
       },
     ],
   },
+
+  // ===== Research =====
   {
     path: "/research",
     name: "research",
     component: () => import("@/views/Navbar/Research/Research.vue"),
     meta: { title: "Research", breadcrumb: "Research" },
   },
+
+  // ===== Services =====
+  // router/index.js (only the staff children changed)
+
   {
     path: "/services",
     name: "services",
     children: [
-      {
-        path: "health-services",
-        name: "health-services",
-        component: () => import("@/views/Navbar/Services/Health-Services.vue"),
-        meta: { title: "Health Services", breadcrumb: "Health Services" },
-      },
-      {
-        path: "it-services",
-        name: "it-services",
-        component: () => import("@/views/Navbar/Services/IT-Services.vue"),
-        meta: { title: "IT Services", breadcrumb: "IT Services" },
-      },
-      {
-        path: "library-services",
-        name: "library-services",
-        component: () => import("@/views/Navbar/Services/Library.vue"),
-        meta: { title: "Library Services", breadcrumb: "Library Services" },
-      },
+      // Career
       {
         path: "career-center",
         name: "career-center",
-        component: () => import("@/views/Navbar/Services/Career-Center.vue"),
         meta: { title: "Career Center", breadcrumb: "Career" },
+        children: [
+          {
+            path: "about",
+            name: "career-about",
+            component: () => import("@/views/Navbar/Services/Career/About.vue"),
+          },
+          {
+            path: "career-staff",
+            name: "career-staff",
+            component: () => import("@/components/Services/StaffList.vue"),
+            props: { serviceKey: "career-center" },
+          },
+          {
+            path: "jobs",
+            name: "career-jobs",
+            component: () => import("@/views/Navbar/Services/Career/Jobs.vue"),
+          },
+          {
+            path: "jobs/:id",
+            name: "career-job-detail",
+            component: () =>
+              import("@/views/Navbar/Services/Career/JobDetail.vue"),
+            props: true,
+            meta: { title: "Job Detail", breadcrumb: "Job Detail" },
+          },
+          {
+            path: "events",
+            name: "career-events",
+            component: () =>
+              import("@/views/Navbar/Services/Career/Events.vue"),
+          },
+          {
+            path: "events/:id",
+            name: "career-event-detail",
+            component: () =>
+              import("@/views/Navbar/Services/Career/EventDetail.vue"),
+            props: true,
+            meta: { title: "Event Detail", breadcrumb: "Event Detail" },
+          },
+          {
+            path: "news",
+            name: "career-news",
+            component: () => import("@/views/Navbar/Services/Career/News.vue"),
+          },
+          {
+            path: "news/:id",
+            name: "career-news-detail",
+            component: () =>
+              import("@/views/Navbar/Services/Career/NewsDetail.vue"),
+            props: true,
+            meta: { title: "News Detail", breadcrumb: "News Detail" },
+          },
+        ],
+      },
+
+      // Library
+      {
+        path: "library-services",
+        name: "library-services",
+        // component: () => import("@/views/Navbar/Services/Library.vue"),
+        meta: { title: "Library Services", breadcrumb: "Library Services" },
+        children: [
+          {
+            path: "about",
+            name: "library-about",
+            component: () =>
+              import("@/views/Navbar/Services/Library/About.vue"),
+          },
+          {
+            path: "staff",
+            name: "library-staff",
+            component: () => import("@/components/Services/StaffList.vue"),
+            props: { serviceKey: "library" },
+          },
+          {
+            path: "library/:libraryName",
+            name: "library-unit",
+            component: () =>
+              import("@/views/Navbar/Services/Library/LibraryUnit.vue"),
+            props: true,
+          },
+          // router snippet (add under children of "library-services")
+          {
+            path: "library/:libraryName/events/:id",
+            name: "library-unit-event-detail",
+            component: () =>
+              import(
+                "@/views/Navbar/Services/Library/LibraryUnitEventDetail.vue"
+              ),
+            props: true,
+          },
+          {
+            path: "library/:libraryName/news/:id",
+            name: "library-unit-news-detail",
+            component: () =>
+              import(
+                "@/views/Navbar/Services/Library/LibraryUnitNewsDetail.vue"
+              ),
+            props: true,
+          },
+        ],
+      },
+
+      // IT
+      {
+        path: "it-services",
+        name: "it-services",
+        // component: () => import("@/views/Navbar/Services/IT-Services.vue"),
+        meta: { title: "IT Services", breadcrumb: "IT Services" },
+        children: [
+          {
+            path: "about",
+            name: "it-about",
+            component: () => import("@/views/Navbar/Services/IT/About.vue"),
+          },
+          {
+            path: "staff",
+            name: "it-staff",
+            component: () => import("@/components/Services/StaffList.vue"),
+            props: { serviceKey: "it-services" },
+          },
+        ],
+      },
+
+      // Health
+      {
+        path: "health-services",
+        name: "health-services",
+        // component: () => import("@/views/Navbar/Services/Health-Services.vue"),
+        meta: { title: "Health Services", breadcrumb: "Health Services" },
+        children: [
+          {
+            path: "about",
+            name: "health-about",
+            component: () => import("@/views/Navbar/Services/Health/About.vue"),
+          },
+          {
+            path: "staff",
+            name: "health-staff",
+            component: () => import("@/components/Services/StaffList.vue"),
+            props: { serviceKey: "health-services" },
+          },
+        ],
       },
     ],
   },

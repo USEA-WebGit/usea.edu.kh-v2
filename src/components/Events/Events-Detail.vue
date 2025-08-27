@@ -1,51 +1,128 @@
-  <template>
-    <div>
-        <Titlebg title="Events Detail" breadcrumb="Events Details" />
-    </div>
-        <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[300px] gap-10">
-            <div>
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="mb-5">
-                                    <div class="section-title position-relative mb-5">
-                                        <h1 class="display-4  motion-preset-slide-up text-2xl font-bold">🎉✨Congratulations to the 3 winners of the 2025 Public English Speaking Competition for High School Students.</h1>
-                                    </div>
-                                    
-                                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                                    
-                                    <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut magna lorem.
-                                        Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet amet magna accusam
-                                        consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at sanctus et. Ipsum sit
-                                        gubergren dolores et, consetetur justo invidunt at et aliquyam ut et vero clita. Diam sea
-                                        sea no sed dolores diam nonumy, gubergren sit stet no diam kasd vero.</p>
-                                        <div class="grid grid-cols-3 gap-3 mt-5">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event" alt="Image">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event1" alt="Image">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event2" alt="Image">
-                                            <img class="img-fluid rounded w-100 mb-4 motion-preset-slide-down" :src="event3" alt="Image">
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div>
-                <RightNav />
-            </div> -->
+<template>
+  <div>
+    <Titlebg title="Event Detail" breadcrumb="Event Detail" />
+  </div>
+
+  <div
+    class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%]"
+  >
+    <article v-if="ev" class="py-8">
+      <!-- Title -->
+      <header class="mb-5">
+        <h1
+          class="text-2xl md:text-3xl font-extrabold text-usea_secondary leading-snug"
+        >
+          {{ ev.title }}
+        </h1>
+        <div class="mt-2 text-sm text-gray-500 flex flex-wrap gap-4">
+          <span
+            ><i class="fa-solid fa-calendar-days"></i>
+            {{ formatDisplayDate(ev.date) }}</span
+          >
+          <span v-if="ev.time"
+            ><i class="fa-solid fa-clock"></i>
+            {{ formatDisplayTime(ev.time) }}</span
+          >
+          <span v-if="ev.location"
+            ><i class="fa-solid fa-location-dot"></i> {{ ev.location }}</span
+          >
         </div>
+      </header>
+
+      <!-- Optional hero (if your event has image/thumbnail) -->
+      <figure
+        v-if="hero"
+        class="mb-6 overflow-hidden rounded-xl border border-gray-200"
+      >
+        <div
+          class="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/7]"
+        >
+          <img
+            :src="hero"
+            :alt="ev.title"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <!-- Body -->
+      <div
+        class="prose max-w-none prose-p:leading-relaxed prose-headings:mt-6 prose-headings:mb-3"
+      >
+        <p class="text-gray-800">
+          {{ ev.description || fallbackBody }}
+        </p>
+      </div>
+
+      <!-- Gallery (fallback to 4 local images if none on item) -->
+      <div
+        v-if="galleryToShow.length"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"
+      >
+        <img
+          v-for="(g, idx) in galleryToShow"
+          :key="idx"
+          :src="g"
+          :alt="`${ev.title} - ${idx + 1}`"
+          class="w-full h-56 object-cover rounded-lg border border-gray-200"
+          loading="lazy"
+        />
+      </div>
+    </article>
+
+    <!-- Not found -->
+    <div v-else class="py-16 text-center text-gray-600">
+      <p>We couldn’t find this event.</p>
+      <router-link
+        :to="{ name: 'news-events', query: { tab: 'Upcoming' } }"
+        class="text-usea_secondary font-semibold hover:underline"
+      >
+        Back to Events
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import Titlebg from '@/components/Slide/TitleBg.vue';
-import RightNav from '@/components/SideBar/Right-Nav.vue';
-import event from '@/assets/images/news1.jpg';
-import event1 from '@/assets/images/news5.jpg';
-import event2 from '@/assets/images/news6.jpg';
-import event3 from '@/assets/images/news7.jpg';
+import { ref, computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import Titlebg from "@/components/Slide/TitleBg.vue";
+import {
+  EVENTS,
+  formatDisplayDate,
+  formatDisplayTime,
+} from "@/data/news-events.js";
 
+/* Fallback gallery (remove/change if you’ll have real per-event images) */
+import g0 from "@/assets/images/news1.jpg";
+import g1 from "@/assets/images/news5.jpg";
+import g2 from "@/assets/images/news6.jpg";
+import g3 from "@/assets/images/news7.jpg";
 
+const route = useRoute();
 
+/* Preferred: item passed via RouterLink state. Fallbacks: ?id=ev-... or first item. */
+const stateItem =
+  history.state && history.state.item ? history.state.item : null;
+const byQuery = route.query.id
+  ? EVENTS.find((e) => e.id === route.query.id)
+  : null;
+
+const ev = ref(stateItem || byQuery || EVENTS[0] || null);
+
+const hero = computed(() => ev.value?.image || ev.value?.thumbnail || null);
+const galleryToShow = computed(() =>
+  Array.isArray(ev.value?.gallery) && ev.value.gallery.length
+    ? ev.value.gallery
+    : [g0, g1, g2, g3]
+);
+
+const fallbackBody =
+  "Details coming soon. Please check back shortly for the full program and photos.";
+
+onMounted(() => {
+  if (ev.value?.title) document.title = `${ev.value.title} - USEA`;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 </script>
