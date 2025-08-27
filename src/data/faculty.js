@@ -23,6 +23,8 @@ import eomrathanak from "@/assets/images/eom_rathanak.png";
 import departmentbg from "@/assets/building/department.png";
 import sivvuthy from "@/assets/images/dr_siv_vuthy.png";
 import toursreyleak from "@/assets/images/tour_sreyleak.png";
+import drsothan from '@/assets/images/dr_sothan.png';
+import bunthoeun from '@/assets/images/sor_bunthoeun.png';
 // ✅ Use only the reusable sidebar
 import FacultySidebar from "@/components/SideBar/FacultySidebar.vue";
 
@@ -316,18 +318,18 @@ export const faculties = {
     ],
     members: [
       {
-        name: "Dr. Siv Vuthy",
-        position: "Head of International College",
-        image: sivvuthy,
+        name: "Dr. Yoeung Sothan",
+        position: "Head of Post Graduate",
+        image: drsothan,
         number: "012 345 678",
-        email: "sivvuthy@usea.edu.kh",
+        email: "yoeung.sothan@usea.edu.kh",
       },
       {
-        name: "Mrs. Tour Srey Leak",
-        position: "Deputy Chief of International College",
-        image: toursreyleak,
+        name: "Mr. Sor Bunthoeun",
+        position: "Deputy Chief of Post Graduate",
+        image: bunthoeun,
         number: "012 345 678",
-        email: "toursreyleak@usea.edu.kh",
+        email: "sorbunthoeun@usea.edu.kh",
       },
     ],
     activities: [{ image: demoCard }, { image: demoCard }, { image: demoCard }],

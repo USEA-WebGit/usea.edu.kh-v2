@@ -21,7 +21,7 @@ const normalizeThumb = (item) => {
 // ---------- DATA ----------
 export const NEWS = [
   {
-    id: "news-2025-08-16",
+    id: 1,
     thumbnail: news1, // <— unified key
     title:
       "🎉✨Congratulations to the 3 winners of the 2025 Public English Speaking Competition for High School Students.",
@@ -33,7 +33,7 @@ export const NEWS = [
     url: { name: "news-detail", params: { slug: "news-2025-08-16" } },
   },
   {
-    id: "news-2025-08-26",
+    id: 2,
     thumbnail: news1, // <— unified key
     title:
       "🎉✨Congratulations to the 3 winners of the 2025 Public English Speaking Competition for High School Students.",
@@ -45,7 +45,7 @@ export const NEWS = [
     url: { name: "news-detail", params: { slug: "news-2025-08-16" } },
   },
   {
-    id: "news-2025-09-16",
+    id: 3,
     thumbnail: news1, // <— unified key
     title:
       "🎉✨Congratulations to the 3 winners of the 2025 Public English Speaking Competition for High School Students.",
@@ -57,7 +57,7 @@ export const NEWS = [
     url: { name: "news-detail", params: { slug: "news-2025-08-16" } },
   },
   {
-    id: "news-2025-09-26",
+    id: 4,
     thumbnail: news1, // <— unified key
     title:
       "🎉✨Congratulations to the 3 winners of the 2025 Public English Speaking Competition for High School Students.",
@@ -69,7 +69,7 @@ export const NEWS = [
     url: { name: "news-detail", params: { slug: "news-2025-08-16" } },
   },
   {
-    id: "news-2025-08-11",
+    id: 5,
     thumbnail: news2,
     title:
       "The University of Southeast Asia hosted the finals of the University Entrepreneur Program (USEA-Unipreneur BMC 2025) supported by Khmer Entrepreneurs (KE).",
@@ -81,7 +81,7 @@ export const NEWS = [
     url: { name: "news-detail", params: { slug: "news-2025-08-11" } },
   },
   {
-    id: "news-2025-08-09",
+    id: 6,
     thumbnail: news3,
     title:
       "🎉 Congratulations!!! The top 3 startup teams won a total of approximately 8,400,000 riels... (USEA-Unipreneur BMC 2025).",
@@ -93,7 +93,7 @@ export const NEWS = [
     url: { name: "news-detail", params: { slug: "news-2025-08-09" } },
   },
   {
-    id: "news-2025-08-04",
+    id: 7,
     thumbnail: news4,
     title:
       'Seminar on "Sustainable & Eco-Tourism" organized by USEA and the Boule Du Bruel School of Hotel and Tourism.',
@@ -108,7 +108,7 @@ export const NEWS = [
 
 export const EVENTS = [
   {
-    id: "ev-2025-10-16",
+    id: 1,
     thumbnail: news1, // reuse existing images or swap for event images
     title:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.",
@@ -120,7 +120,7 @@ export const EVENTS = [
     url: { name: "events-detail", query: { id: "ev-2025-10-16" } },
   },
   {
-    id: "ev-2025-10-10",
+    id: 2,
     thumbnail: news2,
     title:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.",
@@ -132,7 +132,7 @@ export const EVENTS = [
     url: { name: "events-detail", query: { id: "ev-2025-10-10" } },
   },
   {
-    id: "ev-2025-10-25",
+    id: 3,
     thumbnail: news3,
     title:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.",
@@ -144,7 +144,7 @@ export const EVENTS = [
     url: { name: "events-detail", query: { id: "ev-2025-10-25" } },
   },
   {
-    id: "ev-2025-10-21",
+    id: 4,
     thumbnail: news4,
     title:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dignissimos qui necessitatibus velit eum est.",

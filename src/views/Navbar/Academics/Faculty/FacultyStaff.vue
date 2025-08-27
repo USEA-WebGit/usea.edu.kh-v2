@@ -3,9 +3,8 @@
   <div>
     <Titlebg :title="pageTitle" :breadcrumb="pageTitle" />
 
-    <div
-      v-if="faculty"
-      class="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[2fr_1fr] xl:gap-14"
+     <div v-if="faculty"
+      class="grid lg:grid-cols-[70%_30%] gap-6 lg:gap-10 mx-auto 2xl:max-w-[1320px] xl:max-w-[1152px] lg:max-w-[1024px] sm:max-w-[600px] max-w-[95%] mb-5"
     >
       <!-- LEFT -->
       <section class="flex flex-col gap-6 min-w-0">

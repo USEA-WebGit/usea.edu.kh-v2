@@ -24,7 +24,7 @@
             class="px-4 py-2 text-sm font-medium transition hover:bg-gray-50"
             :class="
               viewMode === 'grid'
-                ? 'bg-[#002060] text-white hover:bg-[#002060] hover:text-white'
+                ? 'bg-usea_secondary text-white hover:bg-usea_primary hover:text-white'
                 : 'bg-white text-gray-700'
             "
             @click="viewMode = 'grid'"
@@ -48,7 +48,7 @@
             class="px-4 py-2 text-sm font-medium transition hover:bg-gray-50"
             :class="
               viewMode === 'list'
-                ? 'bg-[#002060] text-white hover:bg-[#002060] hover:text-white'
+                ? 'bg-usea_secondary text-white hover:bg-usea_primary hover:text-white'
                 : 'bg-white text-gray-700 '
             "
             @click="viewMode = 'list'"

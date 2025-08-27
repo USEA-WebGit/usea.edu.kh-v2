@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+// import { useLoading } from "@/composables/useLoading.js";
 const routes = [
   {
     path: "/",
@@ -427,5 +427,15 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
+// const { start, stop } = useLoading();
+// router.beforeEach((to, from, next) => {
+//   start("Loading…");
+//   next();
+// });
+// router.afterEach(() => {
+//   stop();
+// });
+// router.onError(() => {
+//   stop();
+// });
 export default router;

@@ -164,10 +164,18 @@
                     }"
                     ><li class="flex gap-2">
                       International College
-                    </li></router-link
+                    </li>
+                  </router-link
                   >
-                  <router-link :to="{ name: 'post-graduate' }"
-                    ><li class="flex gap-2">Post Graduate</li></router-link
+                  <router-link
+                    :to="{
+                      name: 'faculty-page',
+                      params: { facultyName: 'post-graduate' },
+                    }"
+                    ><li class="flex gap-2">
+                      Post Graduate
+                    </li>
+                  </router-link
                   >
                   <!-- <router-link :to="{name: 'language-center'}"><li class="flex gap-2">Foreign Language Center</li></router-link> -->
                   <router-link :to="{ name: 'short-course' }"
@@ -372,8 +380,11 @@
                 @click="navigateAndClose('internationa-college')"
                 ><li>International College</li></router-link
               >
-              <router-link
-                :to="{ name: 'post-graduate' }"
+               <router-link
+                :to="{
+                  name: 'faculty-page',
+                  params: { facultyName: 'post-graduate' },
+                }"
                 @click="navigateAndClose('post-graduate')"
                 ><li>Post Graduate</li></router-link
               >
